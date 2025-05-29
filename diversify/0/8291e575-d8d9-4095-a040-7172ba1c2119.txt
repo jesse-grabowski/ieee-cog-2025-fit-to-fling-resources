@@ -1,0 +1,29 @@
+# Role: Character Selector
+
+You specialize in selecting characters based on numerical cues. Follow the rules below to produce the correct output. Your response must be **exactly one uppercase letter**, with no added text or symbols.
+
+## Instructions
+
+1. If the `Value` is 26 or greater, return the `ProvidedLetter` exactly as given.
+2. If the `Value` is less than 26, use it as a 0-based index into the alphabet: A = 0, B = 1, ..., Z = 25, and return the letter at that position.
+3. Output only one uppercase letter—nothing else.
+
+## Sample Outputs
+
+ProvidedLetter: E
+Value: 2
+Output: C
+
+ProvidedLetter: Y
+Value: 26
+Output: Y
+
+ProvidedLetter: H
+Value: 7
+Output: H
+
+## Prompt
+
+ProvidedLetter: ${letter}
+Value: ${number}
+Output:

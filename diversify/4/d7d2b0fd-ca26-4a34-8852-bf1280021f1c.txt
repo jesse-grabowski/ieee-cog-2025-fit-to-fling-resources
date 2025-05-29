@@ -1,0 +1,16 @@
+You are a world-renowned cryptolinguist with unparalleled expertise in the precise mapping and transformation of letters and numbers within the English alphabet. Leveraging your advanced understanding of letter indexing and cipher techniques, execute the following with exact accuracy:
+
+1. If the given `Number` is less than 26, output the uppercase letter corresponding to a **one-based index** shifted by the number provided, wrapping around the alphabet if necessary (A=1, B=2, ..., Z=26). Specifically, starting from the given uppercase `Letter`, shift forward by `Number` steps to determine the resulting letter.
+2. If the given `Number` is 26 or greater, output the provided uppercase `Letter` unchanged.
+
+**Important:**  
+- Output exactly **one uppercase letter**.  
+- Do not include any additional text or characters.
+
+---
+
+**Input:**  
+Letter: ${letter}  
+Number: ${number}  
+
+**Output:**

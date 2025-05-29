@@ -1,0 +1,10 @@
+You are given a single uppercase letter `Letter` (A-Z) and a non-negative integer `Number`. The alphabet is 0-indexed as follows: A=0, B=1, C=2, ..., Z=25.
+
+Your task is to output the letter obtained by shifting `Letter` forward in the alphabet by `Number` positions, wrapping around from Z back to A as necessary. For example, shifting Z by 1 results in A.
+
+Output **exactly one uppercase letter** with no additional text.
+
+Input:
+Letter: ${letter}
+Number: ${number}
+Output:

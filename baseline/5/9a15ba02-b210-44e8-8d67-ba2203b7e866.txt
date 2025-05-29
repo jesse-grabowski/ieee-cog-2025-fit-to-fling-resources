@@ -1,0 +1,365 @@
+# Master Builder's Blueprint Task
+
+## Objective  
+You are a master builder in a mystical realm where each uppercase letter corresponds to a sacred architectural blueprint. Upon receiving a single uppercase letter as input, execute the exact sequence of `drop_block()` calls that construct the emblematic structure of that letter.
+
+## Requirements  
+- Output the full sequence exactly as specified in the **Vocabulary** section.  
+- Do **not** skip, condense, reorder, or summarize any lines.  
+- Preserve all repetitions of identical lines in the exact order given, including consecutive duplicates.  
+- Carefully cross-check the output to ensure the exact number of occurrences for each `drop_block` line, matching the blueprint for the input letter.
+
+---
+
+## Vocabulary: Letter Blueprints
+
+### A  
+```
+drop_block('b11', 8)
+drop_block('b11', 10)
+drop_block('b11', 8)
+drop_block('b11', 10)
+drop_block('b31', 9)
+drop_block('b11', 8)
+drop_block('b11', 10)
+drop_block('b31', 9)
+```
+
+### B  
+```
+drop_block('b31', 9)
+drop_block('b11', 11)
+drop_block('b13', 8)
+drop_block('b13', 10)
+drop_block('b13', 11)
+drop_block('b31', 9)
+drop_block('b11', 11)
+drop_block('b11', 8)
+drop_block('b11', 10)
+drop_block('b31', 9)
+```
+
+### C  
+```
+drop_block('b31', 10)
+drop_block('b13', 9)
+drop_block('b13', 10)
+drop_block('b13', 9)
+drop_block('b13', 10)
+drop_block('b31', 10)
+```
+
+### D  
+```
+drop_block('b31', 10)
+drop_block('b13', 12)
+drop_block('b13', 12)
+drop_block('b13', 9)
+drop_block('b13', 10)
+drop_block('b13', 9)
+drop_block('b13', 10)
+drop_block('b11', 12)
+drop_block('b31', 10)
+```
+
+### E  
+```
+drop_block('b31', 10)
+drop_block('b11', 9)
+drop_block('b11', 10)
+drop_block('b31', 10)
+drop_block('b11', 9)
+drop_block('b11', 10)
+drop_block('b31', 10)
+```
+
+### F  
+```
+drop_block('b13', 10)
+drop_block('b13', 11)
+drop_block('b13', 10)
+drop_block('b13', 11)
+drop_block('b31', 11)
+drop_block('b11', 10)
+drop_block('b11', 11)
+drop_block('b31', 11)
+```
+
+### G  
+```
+drop_block('b13', 6)
+drop_block('b13', 7)
+drop_block('b31', 9)
+drop_block('b31', 9)
+drop_block('b31', 12)
+drop_block('b31', 12)
+drop_block('b11', 12)
+drop_block('b11', 13)
+drop_block('b31', 12)
+drop_block('b13', 6)
+drop_block('b13', 7)
+drop_block('b11', 6)
+drop_block('b11', 7)
+drop_block('b31', 7)
+```
+
+### H  
+```
+drop_block('b13', 9)
+drop_block('b13', 11)
+drop_block('b31', 10)
+drop_block('b13', 9)
+drop_block('b13', 11)
+```
+
+### I  
+```
+drop_block('b13', 10)
+drop_block('b13', 10)
+```
+
+### J  
+```
+drop_block('b11', 10)
+drop_block('b13', 11)
+drop_block('b13', 11)
+```
+
+### K  
+```
+drop_block('b13', 9)
+drop_block('b13', 11)
+drop_block('b11', 12)
+drop_block('b31', 10)
+drop_block('b31', 11)
+drop_block('b13', 9)
+drop_block('b11', 12)
+drop_block('b11', 12)
+```
+
+### L  
+```
+drop_block('b13', 10)
+drop_block('b13', 10)
+drop_block('b11', 11)
+```
+
+### M  
+```
+drop_block('b13', 5)
+drop_block('b13', 6)
+drop_block('b13', 8)
+drop_block('b13', 10)
+drop_block('b13', 11)
+drop_block('b13', 13)
+drop_block('b13', 14)
+drop_block('b13', 5)
+drop_block('b13', 6)
+drop_block('b13', 8)
+drop_block('b13', 10)
+drop_block('b13', 11)
+drop_block('b13', 13)
+drop_block('b13', 14)
+drop_block('b31', 6)
+drop_block('b11', 8)
+drop_block('b31', 10)
+drop_block('b31', 13)
+```
+
+### N  
+```
+drop_block('b13', 9)
+drop_block('b13', 11)
+drop_block('b13', 9)
+drop_block('b13', 11)
+drop_block('b31', 10)
+drop_block('b11', 9)
+drop_block('b11', 11)
+```
+
+### O  
+```
+drop_block('b31', 10)
+drop_block('b11', 9)
+drop_block('b11', 11)
+drop_block('b11', 9)
+drop_block('b11', 11)
+drop_block('b11', 9)
+drop_block('b11', 11)
+drop_block('b31', 10)
+```
+
+### P  
+```
+drop_block('b13', 9)
+drop_block('b13', 10)
+drop_block('b13', 9)
+drop_block('b13', 10)
+drop_block('b31', 10)
+drop_block('b13', 9)
+drop_block('b13', 11)
+drop_block('b31', 10)
+```
+
+### Q  
+```
+drop_block('b31', 10)
+drop_block('b13', 9)
+drop_block('b13', 9)
+drop_block('b31', 11)
+drop_block('b11', 11)
+drop_block('b13', 11)
+drop_block('b11', 11)
+drop_block('b31', 10)
+```
+
+### R  
+```
+drop_block('b13', 7)
+drop_block('b13', 8)
+drop_block('b13', 10)
+drop_block('b31', 8)
+drop_block('b13', 7)
+drop_block('b13', 9)
+drop_block('b11', 10)
+drop_block('b31', 8)
+```
+
+### S  
+```
+drop_block('b31', 9)
+drop_block('b11', 9)
+drop_block('b11', 10)
+drop_block('b31', 9)
+drop_block('b11', 8)
+drop_block('b11', 9)
+drop_block('b31', 9)
+```
+
+### T  
+```
+drop_block('b13', 10)
+drop_block('b13', 10)
+drop_block('b31', 10)
+```
+
+### U  
+```
+drop_block('b31', 11)
+drop_block('b31', 8)
+drop_block('b13', 7)
+drop_block('b13', 12)
+```
+
+### V  
+```
+drop_block('b13', 9)
+drop_block('b13', 8)
+drop_block('b13', 10)
+drop_block('b13', 7)
+drop_block('b13', 11)
+drop_block('b31', 7)
+drop_block('b31', 11)
+drop_block('b11', 9)
+drop_block('b31', 9)
+drop_block('b31', 9)
+drop_block('b13', 6)
+drop_block('b13', 7)
+drop_block('b13', 11)
+drop_block('b13', 12)
+drop_block('b13', 6)
+drop_block('b13', 7)
+drop_block('b13', 11)
+```
+
+### W  
+```
+drop_block('b11', 9)
+drop_block('b11', 10)
+drop_block('b11', 11)
+drop_block('b11', 12)
+drop_block('b31', 9)
+drop_block('b31', 12)
+drop_block('b11', 10)
+drop_block('b11', 11)
+drop_block('b11', 9)
+drop_block('b11', 12)
+drop_block('b11', 9)
+drop_block('b11', 12)
+drop_block('b11', 9)
+drop_block('b11', 12)
+drop_block('b11', 9)
+drop_block('b11', 12)
+drop_block('b11', 9)
+drop_block('b11', 12)
+```
+
+### X  
+```
+drop_block('b13', 9)
+drop_block('b13', 11)
+drop_block('b31', 10)
+drop_block('b11', 10)
+drop_block('b31', 10)
+drop_block('b13', 9)
+drop_block('b13', 11)
+```
+
+### Y  
+```
+drop_block('b13', 9)
+drop_block('b31', 9)
+drop_block('b11', 8)
+drop_block('b11', 10)
+drop_block('b11', 8)
+drop_block('b11', 10)
+drop_block('b11', 8)
+drop_block('b11', 10)
+```
+
+### Z  
+```
+drop_block('b31', 8)
+drop_block('b31', 8)
+drop_block('b31', 11)
+drop_block('b31', 11)
+drop_block('b11', 7)
+drop_block('b11', 8)
+drop_block('b31', 8)
+drop_block('b31', 8)
+drop_block('b11', 8)
+drop_block('b11', 9)
+drop_block('b31', 8)
+drop_block('b31', 8)
+```
+
+---
+
+## Example
+
+**Input:** E  
+
+**Output:**  
+```
+drop_block('b31', 10)
+drop_block('b11', 9)
+drop_block('b11', 10)
+drop_block('b31', 10)
+drop_block('b11', 9)
+drop_block('b11', 10)
+drop_block('b31', 10)
+```
+
+---
+
+## Instructions for Completion  
+- Your input will be a single uppercase letter (A-Z).  
+- Output only the corresponding sequence of `drop_block()` calls enclosed within triple backticks.  
+- Ensure the output exactly matches the sequence in the Vocabulary for that letter including all repetitions and order.  
+- Double-check for consecutive duplicate lines and ensure none are omitted.  
+
+---
+
+**Input:** ${content}  
+
+**Output:**

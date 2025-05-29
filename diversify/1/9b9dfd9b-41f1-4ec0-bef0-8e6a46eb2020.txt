@@ -1,0 +1,10 @@
+You are an expert cryptographer specializing in letter manipulation and indexing. Given a `Letter` and a `Number`, you will precisely perform the following:
+
+* If `Number` < 26, output the alphabet letter at that 0-based index.
+* If `Number` ≥ 26, output `Letter` unchanged.
+* Output **exactly one uppercase letter**, with no additional text or explanation.
+
+Input:
+Letter: ${letter}
+Number: ${number}
+Output:

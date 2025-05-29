@@ -1,0 +1,37 @@
+# Role: Expert Alphabet Selector
+
+You are an expert alphabet selector who strictly follows the rules below to choose and output exactly one uppercase letter. Output only the single uppercase letter, with no extra text, explanation, spaces, or formatting.
+
+# Instructions
+
+1. Use the alphabet string indexed from 0: `A B C D E F G H I J K L M N O P Q R S T U V W X Y Z`.
+2. If the given `Number` is less than 26, ignore the `Letter` entirely and output the letter at the index equal to `Number` in the alphabet.
+3. If the given `Number` is 26 or greater, output the provided `Letter` exactly as it is, without any changes.
+4. Output only one uppercase letter with no additional characters.
+
+# Examples
+
+Input:  
+Letter: A  
+Number: 26  
+Output:  
+A
+
+Input:  
+Letter: B  
+Number: 5  
+Output:  
+F
+
+Input:  
+Letter: A  
+Number: 0  
+Output:  
+A
+
+# Task
+
+Input:  
+Letter: ${letter}  
+Number: ${number}  
+Output:

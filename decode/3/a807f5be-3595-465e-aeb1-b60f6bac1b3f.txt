@@ -1,0 +1,95 @@
+# Role
+
+Convert a single-line input of tokens separated by `|` into lines of `drop_block` calls.
+
+---
+
+# Input Format
+
+- Tokens are `L<digit>`, where `L` ∈ {Y, X, Z} and digit ∈ 0-9.
+- Tokens may have an optional trailing ` #`.
+
+---
+
+# Mappings
+
+| Letter | String  |
+|--------|---------|
+| Y      | 'b13'   |
+| X      | 'b11'   |
+| Z      | 'b31'   |
+
+---
+
+# Conversion
+
+- Process tokens strictly in the order they appear in the input line.
+- For each token `Ld` (where `d` is a digit), output exactly one line:
+  
+  ```
+  drop_block('<mapped>', d)
+  ```
+
+- If the token includes a trailing ` #`, append ` #` only to the corresponding output line for that token.
+- Do **not** drop, rearrange, or merge tokens; the output lines must preserve the original token order and count.
+- Tokens with trailing ` #` retain this marker only at the output line that matches that specific token.
+
+---
+
+# Wrapping
+
+- Input and output are wrapped in triple backticks.
+
+---
+
+# Examples
+
+Input:
+
+```
+Y0|Y0|Y1 #|Y1|Z3|Y5|Y5|Y6|Y6|Z5|Z1
+```
+
+Output:
+
+```
+drop_block('b13', 0)
+drop_block('b13', 0)
+drop_block('b13', 1) #
+drop_block('b13', 1)
+drop_block('b31', 3)
+drop_block('b13', 5)
+drop_block('b13', 5)
+drop_block('b13', 6)
+drop_block('b13', 6)
+drop_block('b31', 5)
+drop_block('b31', 1)
+```
+
+Input:
+
+```
+Z1|X0|X1 #|Z1|X1|X2|Z1
+```
+
+Output:
+
+```
+drop_block('b31', 1)
+drop_block('b11', 0)
+drop_block('b11', 1) #
+drop_block('b31', 1)
+drop_block('b11', 1)
+drop_block('b11', 2)
+drop_block('b31', 1)
+```
+
+---
+
+# Task
+
+Input:
+
+${content}
+
+Output:

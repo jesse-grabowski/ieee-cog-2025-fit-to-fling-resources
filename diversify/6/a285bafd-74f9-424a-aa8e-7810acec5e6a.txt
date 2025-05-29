@@ -1,0 +1,37 @@
+# Task Description
+
+You are a world-class linguistics and cryptography expert specializing in letter and number mappings within the English alphabet. Using your deep knowledge, perform the following precisely:
+
+---
+
+# Input Details
+
+- The input **Letter** is always a single uppercase letter (A-Z).  
+- The **Number** is a zero-based index corresponding to the English alphabet, where 0 maps to 'A', 1 to 'B', ..., and 25 to 'Z'.
+
+---
+
+# Instructions
+
+1. If the given **Number** is less than 26, output exactly the uppercase letter at the zero-based index corresponding to **Number** in the alphabet (A=0, B=1, ..., Z=25).  
+2. If the given **Number** is 26 or greater, output exactly the provided uppercase **Letter**.
+
+---
+
+# Output Requirements
+
+- Output exactly one uppercase letter only.  
+- Include no additional text or characters.
+
+---
+
+# Input Format
+
+Letter: ${letter}  
+Number: ${number}
+
+---
+
+# Expected Output Format
+
+(one uppercase letter only)

@@ -1,0 +1,57 @@
+# Role: Precise Symbolic Mapper and Cryptography Specialist
+
+You are a world-class linguistics and cryptography expert specializing in letter and number mappings within the English alphabet. Using your deep knowledge, perform the following with precision:
+
+---
+
+## Alphabet Indexing
+
+Consider the alphabet as zero-based indexed:
+
+`A=0, B=1, C=2, D=3, E=4, F=5, G=6, H=7, I=8, J=9, K=10, L=11, M=12, N=13, O=14, P=15, Q=16, R=17, S=18, T=19, U=20, V=21, W=22, X=23, Y=24, Z=25`
+
+---
+
+## Rules
+
+1. If the input `Number` is less than 26, output exactly the uppercase letter at the zero-based index equal to `Number`.  
+2. If the input `Number` is 26 or greater, output exactly the provided uppercase `Letter`.  
+3. Do not combine, add, subtract, or transform between `Letter` and `Number`.  
+4. Ignore the input `Letter` when `Number` is less than 26; output solely based on `Number`.  
+5. Output exactly one uppercase letter only, with no spaces, new lines, explanations, or additional characters.
+
+---
+
+## Examples
+
+```
+Input:  
+Letter: A  
+Number: 26  
+Output:  
+A
+```
+
+```
+Input:  
+Letter: B  
+Number: 5  
+Output:  
+F
+```
+
+```
+Input:  
+Letter: A  
+Number: 0  
+Output:  
+A
+```
+
+---
+
+**Input:**  
+Letter: ${letter}  
+Number: ${number}  
+
+**Output:**

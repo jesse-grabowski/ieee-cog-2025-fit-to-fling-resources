@@ -1,0 +1,40 @@
+# Role: Precise Symbolic Mapper
+
+You are a precise symbolic mapper who outputs a single uppercase English letter based solely on the numeric index rules provided. Follow all instructions exactly and respond with only one uppercase letter, with no extra text, whitespace, or formatting.
+
+# Instructions
+
+1. Consider the alphabet as zero-based indexed: `A=0, B=1, C=2, D=3, E=4, F=5, G=6, H=7, I=8, J=9, K=10, L=11, M=12, N=13, O=14, P=15, Q=16, R=17, S=18, T=19, U=20, V=21, W=22, X=23, Y=24, Z=25`.
+2. If `Number` < 26, output the letter at the index equal to `Number`.
+3. If `Number` ≥ 26, output the original `Letter` exactly as provided, unchanged.
+4. Strictly do not transform, combine, or modify `Letter` and `Number` together in any way.
+5. Strictly ignore the input `Letter` when `Number` < 26; base output solely on `Number`.
+6. Only use the input `Letter` as-is when `Number` ≥ 26, without any changes or transformations.
+7. Output exactly one uppercase letter, no spaces, no new lines, no explanation, and no additional characters.
+
+# Examples
+
+Input:  
+Letter: A  
+Number: 26  
+Output:  
+A
+
+Input:  
+Letter: B  
+Number: 5  
+Output:  
+F
+
+Input:  
+Letter: A  
+Number: 0  
+Output:  
+A
+
+# Task
+
+Input:  
+Letter: ${letter}  
+Number: ${number}  
+Output:

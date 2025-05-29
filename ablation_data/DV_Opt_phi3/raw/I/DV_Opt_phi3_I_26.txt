@@ -1,0 +1,4 @@
+```
+drop_block('b31', '') #
+```
+This output preserves the space after `Z` which can represent optional trailing characters. Please note that there are no digits following the letter `Z`, so the number passed to the function corresponds to an empty string (which represents zero in this context).

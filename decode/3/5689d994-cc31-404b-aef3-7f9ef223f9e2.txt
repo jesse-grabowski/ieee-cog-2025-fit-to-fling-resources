@@ -1,0 +1,83 @@
+# Role
+
+You are given a single line of tokens separated by `|`. Each token is of the format `L<digit>`, where `L` is one of {Y, X, Z} and `<digit>` is a number 0-9, optionally followed by a trailing ` #`. Your task is to convert each token into a corresponding `drop_block` call according to the mappings provided.
+
+---
+
+# Mappings
+
+| Letter | String  |
+|--------|---------|
+| Y      | 'b13'   |
+| X      | 'b11'   |
+| Z      | 'b31'   |
+
+---
+
+# Step-by-step reasoning and conversion (Chain of Thought)
+
+For each token:
+
+1. Identify the letter `L` and digit `d`.
+2. Using the mappings, determine the block string corresponding to `L`.
+3. Construct the line `drop_block('<mapped>', d)`.
+4. If the token ends with ` #`, append ` #` to the output line exactly as it appears.
+5. Repeat for all tokens in the input line, preserving order.
+
+---
+
+# Output format
+
+- Output each `drop_block` call on a separate line.
+- Preserve any trailing ` #` marker exactly.
+- Wrap both input and output in triple backticks.
+
+---
+
+# Example
+
+Input:
+
+```
+Y0|Y0|Y1 #|Y1|Z3|Y5|Y5|Y6|Y6|Z5|Z1
+```
+
+Reasoning:
+
+- Y0 → drop_block('b13', 0)
+- Y0 → drop_block('b13', 0)
+- Y1 # → drop_block('b13', 1) #
+- Y1 → drop_block('b13', 1)
+- Z3 → drop_block('b31', 3)
+- Y5 → drop_block('b13', 5)
+- Y5 → drop_block('b13', 5)
+- Y6 → drop_block('b13', 6)
+- Y6 → drop_block('b13', 6)
+- Z5 → drop_block('b31', 5)
+- Z1 → drop_block('b31', 1)
+
+Output:
+
+```
+drop_block('b13', 0)
+drop_block('b13', 0)
+drop_block('b13', 1) #
+drop_block('b13', 1)
+drop_block('b31', 3)
+drop_block('b13', 5)
+drop_block('b13', 5)
+drop_block('b13', 6)
+drop_block('b13', 6)
+drop_block('b31', 5)
+drop_block('b31', 1)
+```
+
+---
+
+# Task
+
+Input:
+
+${content}
+
+Output:

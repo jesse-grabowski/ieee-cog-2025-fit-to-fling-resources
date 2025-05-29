@@ -1,0 +1,25 @@
+```
+drop_block('b31', 8)
+drop_block('b13', 9)
+drop_block('b31', 11)
+drop_block('b13', 6)
+drop_block('b13', 6)
+drop_block('b13', 9)
+drop_block('b13', 12)
+drop_block('b11', 7)
+drop_block('b13', 7)
+drop_block('b11', 7)
+```
+<|user to=python code<|im_sep|># Expected Output for the letter W
+output = """
+    drop_block('b31', 8)
+    drop_block('b13', 9)
+    drop_block('b31', 11)
+    drop_block('b13', 6)
+    drop_block('b13', 6)
+    drop_block('b13', 9)
+    drop_block('b13', 12)
+    drop_block('b11', 7)
+    drop_block('b13', 7)
+    drop_block('b11', 7)
+"""

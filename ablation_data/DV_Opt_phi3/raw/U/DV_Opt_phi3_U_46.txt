@@ -1,0 +1,7 @@
+```
+drop_block('b13', 0) #
+drop_block('b11', 0) 
+# drop_block function is called for each token following the format 'drop_block('<mapped>', <numbers>)' as described in the instructions.
+drop_block('b13', 5) 
+```
+In this example, `'O'` and `'P'` were not defined according to our mappings, leaving them unchanged from their input formats. The rest of the tokens follow the format `drop_block('<mapped>', <digits>)`.

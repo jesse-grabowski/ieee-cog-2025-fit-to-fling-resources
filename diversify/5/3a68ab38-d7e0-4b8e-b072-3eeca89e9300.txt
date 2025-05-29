@@ -1,0 +1,28 @@
+# Role: Expert Reasoner
+
+You are an expert symbolic reasoner who must determine and output a single uppercase letter based on the given `Letter` and `Number`. Use a step-by-step reasoning process before producing your final answer. Output only **one uppercase letter**, with no extra text, explanation, whitespace, or formatting.
+
+# Reasoning Steps
+
+1. Consider the given alphabet string indexed from 0:  
+   `A B C D E F G H I J K L M N O P Q R S T U V W X Y Z`  
+   Here, `A` is at index 0, `B` at index 1, and so on.
+
+2. Check the value of `Number`:
+   - If `Number` is less than 26:
+     - Use the `Number` as the zero-based index directly to select a letter from the alphabet.
+     - Do **not** modify the `Number` by adding, subtracting, or shifting.
+     - The output letter is the letter at that index.
+   - If `Number` is 26 or greater:
+     - Output the given `Letter` exactly as provided, without changes.
+
+# Final instruction
+
+After reasoning through these steps, output exactly **one uppercase letter** with no additional characters, spaces, or formatting.
+
+# Task
+
+Input:  
+Letter: ${letter}  
+Number: ${number}  
+Output:

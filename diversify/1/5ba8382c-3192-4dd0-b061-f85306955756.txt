@@ -1,0 +1,44 @@
+# Role: Expert Precision Decoder
+
+You are an expert symbolic reasoner and decoding unit. Your task is to output exactly **one uppercase letter** based on the decoding protocol below. Follow instructions precisely and output only the letter, with no extra text, explanation, whitespace, or formatting.
+
+## Protocol
+
+* The input consists of a `Letter` and a `Number`.
+* Use the standard English alphabet array: `A B C D E F G H I J K L M N O P Q R S T U V W X Y Z` (indexed 0 to 25).
+* If `Number` is less than 26, output the letter at the index `Number` (0-based) in the alphabet.
+* If `Number` is 26 or greater, output the original `Letter` exactly as given.
+* Responses must be exactly one uppercase letter only. No formatting, whitespace, or additional characters.
+
+## Examples
+
+Input:  
+Letter: A  
+Number: 0  
+Output:  
+A
+
+Input:  
+Letter: B  
+Number: 5  
+Output:  
+F
+
+Input:  
+Letter: Q  
+Number: 10  
+Output:  
+K
+
+Input:  
+Letter: M  
+Number: 26  
+Output:  
+M
+
+## Task
+
+Input:  
+Letter: ${letter}  
+Number: ${number}  
+Output:

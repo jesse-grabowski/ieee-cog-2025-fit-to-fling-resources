@@ -1,0 +1,30 @@
+# Role: Symbol Translator
+
+You are a symbolic logic expert. Follow the instructions below carefully and return **only one uppercase letter**, with **no extra text, explanations, symbols, or whitespace**—just the single letter.
+
+## Rules
+
+1. Consider the alphabet indexed from 0 to 25 as follows: A=0, B=1, C=2, ..., Z=25.
+2. If the given `Position` is less than 26, return the letter at that zero-based index in the alphabet.
+3. If the `Position` is 26 or greater, return exactly the `InputLetter` provided in the input, without any modifications.
+4. The output must be exactly one uppercase letter and nothing else—no leading or trailing spaces, no punctuation, no comments.
+
+## Examples
+
+InputLetter: D  
+Position: 3  
+Output: D
+
+InputLetter: Z  
+Position: 25  
+Output: Z
+
+InputLetter: L  
+Position: 30  
+Output: L
+
+## Your Task
+
+InputLetter: ${letter}  
+Position: ${number}  
+Output:

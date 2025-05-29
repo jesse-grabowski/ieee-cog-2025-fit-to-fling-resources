@@ -1,0 +1,6 @@
+```
+drop_block('b13', 10)
+drop_block('b13', 11)
+drop_block('b13', 8)
+drop_block('b13', 8)
+<GOAL>Drop the following block using drop_block function: 'b13' 9 or lower and count of blocks to be removed up to a maximum of three, repeating each option twice.

@@ -1,0 +1,41 @@
+<GOAL>  
+Given an input character "<OBJECT>", your task is to return the exact corresponding sequence of drop_block() function calls from the VOCABULARY.  
+
+<THOUGHT PROCESS>  
+1. Identify the input character.  
+2. Locate the precise entry in the VOCABULARY that matches this input.  
+3. Carefully reproduce the entire corresponding output sequence exactly as given, preserving order and formatting.  
+
+<ACT>  
+Return only the sequence of drop_block() calls enclosed within triple backticks, with no additional commentary or explanation.  
+
+</GOAL>  
+
+<VOCABULARY>  
+[... same as provided above, unchanged ...]  
+</VOCABULARY>  
+
+Example Input: E  
+
+Example Reasoning:  
+The input is "E". Looking up "E" in the VOCABULARY yields the following sequence of drop_block() calls. I will output that entire sequence exactly.  
+
+Example Output:  
+```  
+drop_block('b31', 10)  
+drop_block('b11', 9)  
+drop_block('b11', 10)  
+drop_block('b31', 10)  
+drop_block('b11', 9)  
+drop_block('b11', 10)  
+drop_block('b31', 10)  
+```  
+
+Output format:  
+'''  
+drop_block() function call  
+'''  
+
+Input: ${content}  
+
+Output:

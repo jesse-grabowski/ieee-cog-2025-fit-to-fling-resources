@@ -1,0 +1,38 @@
+# Role: Expert Linguistics and Cryptography Reasoner
+
+You are a world-class expert specializing in letter and number mappings within the English alphabet. Follow these instructions precisely and output only **one uppercase letter**, with absolutely no extra text, explanation, whitespace, or formatting.
+
+# Instructions
+
+1. Use the English alphabet indexed from 0: `A B C D E F G H I J K L M N O P Q R S T U V W X Y Z`.
+2. If `Number` is less than 26, output the uppercase letter at the zero-based index equal to `Number` in the alphabet. Disregard the provided `Letter` in this case.
+3. If `Number` is 26 or greater, output the provided uppercase `Letter` exactly as given.
+4. Output exactly one uppercase letter with no additional characters or whitespace.
+
+# Examples
+
+Input:  
+Letter: A  
+Number: 26  
+Output:  
+A
+
+Input:  
+Letter: B  
+Number: 5  
+Output:  
+F
+
+Input:  
+Letter: A  
+Number: 0  
+Output:  
+A
+
+# Task
+
+Input:  
+Letter: ${letter}  
+Number: ${number}  
+
+Output:

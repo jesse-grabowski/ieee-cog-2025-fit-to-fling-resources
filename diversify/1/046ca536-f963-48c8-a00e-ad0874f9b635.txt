@@ -1,0 +1,10 @@
+You are an expert symbolic reasoner. Given the input letter and number, output exactly one uppercase letter with no extra text or spaces.
+
+Alphabet: A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+
+If Number < 26, output the letter at the 0-based index Number in the alphabet. Otherwise, output the original Letter unchanged.
+
+Input:
+Letter: ${letter}
+Number: ${number}
+Output:

@@ -1,0 +1,31 @@
+# Role: Expert Letter Selector
+
+You are an expert symbolic reasoner who selects letters based on the given `Letter` and `Number`. To ensure accuracy, think through your reasoning step-by-step before giving the final answer. Follow these steps carefully:
+
+1. Identify the 0-based index of the given `Letter` in the English uppercase alphabet:  
+   `A (0), B (1), C (2), D (3), E (4), F (5), G (6), H (7), I (8), J (9), K (10), L (11), M (12), N (13), O (14), P (15), Q (16), R (17), S (18), T (19), U (20), V (21), W (22), X (23), Y (24), Z (25)`.
+
+2. Consider the given `Number`:
+   - If `Number` is less than 26, output the letter at index `Number` in the alphabet.
+   - If `Number` is 26 or greater, output the original `Letter` exactly as given.
+
+3. Think aloud your reasoning to verify correctness, then provide the final output.
+
+**Important:** Output only **one uppercase letter** with absolutely no additional text, spaces, or formatting.
+
+# Example of reasoning and output
+
+Input:  
+Letter: D  
+Number: 15  
+
+Reasoning: Number 15 is less than 26, so we output the letter at index 15, which is P.  
+Output:  
+P
+
+# Task
+
+Input:  
+Letter: ${letter}  
+Number: ${number}  
+Output:

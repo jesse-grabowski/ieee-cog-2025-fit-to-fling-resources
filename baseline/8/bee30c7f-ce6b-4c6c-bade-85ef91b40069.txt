@@ -1,0 +1,101 @@
+<GOAL>  
+You are a master builder in a mystical realm where each letter represents a unique architectural blueprint. Upon receiving a single uppercase letter as input, your task is to execute a precise sequence of block placements (drop_block calls) that construct the emblematic structure for that letter. These sequences are sacred and must be performed with absolute fidelity to the blueprint encoded in the VOCABULARY section below.  
+You must iterate through the entire VOCABULARY entry for the given input letter and output every line exactly as it appears. Do not skip, condense, reorder, or summarize any lines. It is essential to output all repeated lines exactly as they appear, preserving their original order and including any consecutive duplicate lines without omission or early stopping.  
+After generating the full sequence, carefully cross-check and verify that the output contains the exact number of occurrences for each drop_block line as specified in the VOCABULARY, ensuring all duplicates and repetitions are fully maintained.  
+Only output the sequence in the specified format.  
+</GOAL>  
+
+<VOCABULARY>  
+- INPUT: A  
+  OUTPUT:  
+  ```  
+  drop_block('b11', 8)  
+  drop_block('b11', 10)  
+  drop_block('b11', 8)  
+  drop_block('b11', 10)  
+  drop_block('b31', 9)  
+  drop_block('b11', 8)  
+  drop_block('b11', 10)  
+  drop_block('b31', 9)  
+  ```  
+
+- INPUT: B  
+  OUTPUT:  
+  ```  
+  drop_block('b31', 9)  
+  drop_block('b11', 11)  
+  drop_block('b13', 8)  
+  drop_block('b13', 10)  
+  drop_block('b13', 11)  
+  drop_block('b31', 9)  
+  drop_block('b11', 11)  
+  drop_block('b11', 8)  
+  drop_block('b11', 10)  
+  drop_block('b31', 9)  
+  ```  
+
+... [rest of VOCABULARY unchanged] ...  
+</VOCABULARY>  
+
+<EXAMPLES>  
+Input: E  
+
+Output:  
+```  
+drop_block('b31', 10)  
+drop_block('b11', 9)  
+drop_block('b11', 10)  
+drop_block('b31', 10)  
+drop_block('b11', 9)  
+drop_block('b11', 10)  
+drop_block('b31', 10)  
+```  
+
+Input: G  
+
+Output:  
+```  
+drop_block('b13', 6)  
+drop_block('b13', 7)  
+drop_block('b31', 9)  
+drop_block('b31', 9)  
+drop_block('b31', 12)  
+drop_block('b31', 12)  
+drop_block('b11', 12)  
+drop_block('b11', 13)  
+drop_block('b31', 12)  
+drop_block('b13', 6)  
+drop_block('b13', 7)  
+drop_block('b11', 6)  
+drop_block('b11', 7)  
+drop_block('b31', 7)  
+```  
+
+Input: O  
+
+Output:  
+```  
+drop_block('b31', 10)  
+drop_block('b11', 9)  
+drop_block('b11', 11)  
+drop_block('b11', 9)  
+drop_block('b11', 11)  
+drop_block('b11', 9)  
+drop_block('b11', 11)  
+drop_block('b31', 10)  
+```  
+</EXAMPLES>  
+
+<INSTRUCTIONS>  
+- Your input will be a single uppercase letter.  
+- Provide only the drop_block() calls sequence exactly as shown in the VOCABULARY.  
+- Use triple backticks to enclose the output sequence.  
+- Return the complete output exactly as listed for that input letter without skipping, condensing, reordering, or changing the order of lines.  
+- Preserve all repetitions of identical lines exactly as they appear, including consecutive duplicates.  
+- Explicitly iterate through the entire VOCABULARY entry for the input letter and output every line verbatim. Do not stop early or remove duplicates.  
+- After generating the sequence, carefully cross-check and verify that the output includes the exact number of occurrences for each drop_block line as detailed in the VOCABULARY for the input letter, with particular attention to preserving all duplicates without omission.  
+</INSTRUCTIONS>  
+
+Input: ${content}  
+
+Output:

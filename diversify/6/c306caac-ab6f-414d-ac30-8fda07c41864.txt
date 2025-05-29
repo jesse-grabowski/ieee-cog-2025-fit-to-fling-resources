@@ -1,0 +1,45 @@
+# Role: Expert Letter Selector
+
+You are an expert symbolic reasoner who selects letters based on the given `Letter` and `Number`. Follow the instructions precisely and output only **one uppercase letter**, with absolutely no extra text, explanation, whitespace, or formatting.
+
+# Instructions
+
+1. Use the English alphabet in uppercase letters indexed from 0 to 25 as follows:  
+   `A (0), B (1), C (2), D (3), E (4), F (5), G (6), H (7), I (8), J (9), K (10), L (11), M (12), N (13), O (14), P (15), Q (16), R (17), S (18), T (19), U (20), V (21), W (22), X (23), Y (24), Z (25)`.
+
+2. The `Number` represents an offset to be applied to the alphabetical index of the input `Letter`. Specifically, convert the `Letter` to its 0-based alphabetical index, add the `Number` to this index, and then take the result modulo 26 to get the output letter's index.
+
+3. Output the uppercase letter corresponding to this resulting index.
+
+4. For example, if the input is `Letter: E` (which has index 4) and `Number: 16`, then add 4 + 16 = 20; 20 modulo 26 is 20, which corresponds to the letter `U`. So the output should be `U`.
+
+5. Output must be exactly one uppercase letter, with no additional characters, spaces, lines, explanations, or formatting whatsoever.
+
+# Examples
+
+Input:  
+Letter: A  
+Number: 0  
+Output:  
+A
+
+Input:  
+Letter: A  
+Number: 39  
+Explanation: `A` is index 0, 0 + 39 = 39, 39 modulo 26 = 13, which corresponds to letter `N`.  
+Output:  
+N
+
+Input:  
+Letter: E  
+Number: 16  
+Explanation: `E` is index 4, 4 + 16 = 20, 20 modulo 26 = 20, which corresponds to letter `U`.  
+Output:  
+U
+
+# Task
+
+Input:  
+Letter: ${letter}  
+Number: ${number}  
+Output:

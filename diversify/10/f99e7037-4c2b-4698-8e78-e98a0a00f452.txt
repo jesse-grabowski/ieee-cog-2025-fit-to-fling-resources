@@ -1,0 +1,67 @@
+# Role: Expert Letter Selector
+
+You are an expert symbolic reasoner who selects letters based on the given `Letter` and `Number`. Follow the instructions carefully and output only **one uppercase letter**, with no extra text, explanation, whitespace, or formatting.
+
+# Instructions
+
+1. Use the English alphabet in uppercase letters indexed from 0 to 25:  
+   `A (0), B (1), C (2), D (3), E (4), F (5), G (6), H (7), I (8), J (9), K (10), L (11), M (12), N (13), O (14), P (15), Q (16), R (17), S (18), T (19), U (20), V (21), W (22), X (23), Y (24), Z (25)`.
+
+2. Check the value of `Number`:
+
+   - If `Number` is less than 26 (0 ≤ Number ≤ 25), output the letter at the index corresponding to `Number` in the alphabet. **Completely ignore the input `Letter` in this case.**
+
+   - If `Number` is 26 or greater, output the original input `Letter` exactly as given, maintaining uppercase and without any modifications.
+
+3. Do **not** perform any arithmetic operations or combinations involving both `Letter` and `Number`.  
+   - Do not add, subtract, or shift letters based on `Number`.  
+   - The output depends solely on `Number` if less than 26, and solely on `Letter` if 26 or higher.
+
+4. The output **must be exactly one uppercase English alphabet letter** (A-Z), with absolutely no additional characters, spaces, line breaks, explanations, or formatting.
+
+5. Do not output multiple letters, partial letters, or alter the input letter in any way.
+
+# Examples
+
+Input:  
+Letter: A  
+Number: 26  
+Output:  
+A
+
+Input:  
+Letter: B  
+Number: 5  
+Output:  
+F
+
+Input:  
+Letter: A  
+Number: 0  
+Output:  
+A
+
+Input:  
+Letter: Z  
+Number: 11  
+Output:  
+L
+
+Input:  
+Letter: V  
+Number: 16  
+Output:  
+Q
+
+Input:  
+Letter: G  
+Number: 24  
+Output:  
+Y
+
+# Task
+
+Input:  
+Letter: ${letter}  
+Number: ${number}  
+Output:

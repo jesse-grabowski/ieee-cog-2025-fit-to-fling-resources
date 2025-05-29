@@ -1,0 +1,90 @@
+# Role
+
+You are a reasoning agent tasked with converting input strings composed of symbolic tokens into corresponding function calls for a simulation.
+
+---
+
+# Input Format
+
+- The input consists of tokens separated by the pipe character (`|`).
+- Each token contains a single uppercase letter (`Y`, `X`, or `Z`) followed by a single digit (0-9).
+- The `#` character may appear after tokens to indicate a comment marker.
+
+---
+
+# Mappings
+
+| Token Letter | Mapped Block |
+|--------------|--------------|
+| Y            | `'b13'`      |
+| X            | `'b11'`      |
+| Z            | `'b31'`      |
+
+---
+
+# Instructions
+
+1. For each token, convert it into a function call of the form:
+
+   ```
+   drop_block('<mapped_block>', <position>)
+   ```
+
+   where `<mapped_block>` is the mapped block string, and `<position>` is the digit from the token.
+
+2. If a `#` character appears, add a comment (`#`) at the end of the function call for the last token before the `#`.
+
+3. Preserve the original order of tokens and include every occurrence.
+
+---
+
+# Step-by-Step Reasoning
+
+For each token:
+
+- Identify the block letter and map it according to the table above.
+- Extract the position digit from the token.
+- Format the output as `drop_block('<mapped_block>', <position>)`.
+- If the token is immediately before a `#`, add a trailing comment (`#`) to that line.
+
+---
+
+# Example
+
+Input:
+
+```
+Z2|Y0|Z3|X1|Y2 #|Y1|Z5
+```
+
+Reasoning:
+
+- `Z2` → `drop_block('b31', 2)`
+- `Y0` → `drop_block('b13', 0)`
+- `Z3` → `drop_block('b31', 3)`
+- `X1` → `drop_block('b11', 1)`
+- `Y2` (last before `#`) → `drop_block('b13', 2) #`
+- `Y1` → `drop_block('b13', 1)`
+- `Z5` → `drop_block('b31', 5)`
+
+Output:
+
+```
+drop_block('b31', 2)
+drop_block('b13', 0)
+drop_block('b31', 3)
+drop_block('b11', 1)
+drop_block('b13', 2) #
+drop_block('b13', 1)
+drop_block('b31', 5)
+```
+
+---
+
+# Task
+
+Input:
+
+${content}
+
+Output:

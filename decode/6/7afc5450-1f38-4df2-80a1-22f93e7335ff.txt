@@ -1,0 +1,132 @@
+# Role
+
+You are a parsing agent responsible for converting structured input strings made of symbolic tokens into a sequence of function calls used in a block-dropping simulation.
+
+---
+
+# Input Format
+
+- The input is a single line consisting of tokens separated strictly by the pipe character (`|`).
+- Each token has this structure:
+  - A single uppercase letter: one of `Y`, `X`, or `Z`
+  - Immediately followed by one or two digits (e.g., `0`, `10`), with no spaces
+  - Optionally followed by trailing characters (such as `#` or spaces)
+
+---
+
+# Mapping Rules
+
+| Letter | Mapped Block ID |
+|--------|-----------------|
+| Y      | `'b13'`         |
+| X      | `'b11'`         |
+| Z      | `'b31'`         |
+
+- The numeric portion following the letter is treated as a whole integer (one or two digits) and used as-is.
+- Do **not** split, truncate, or modify digits.
+
+---
+
+# Conversion Instructions
+
+For each token in the input, output a line in the format:
+
+```
+drop_block('<mapped_block_id>', <number>)<optional_trailing_chars>
+```
+
+where:
+
+- `<mapped_block_id>` is the corresponding block ID from the letter mapping
+- `<number>` is the integer numeric part of the token
+- `<optional_trailing_chars>` are any trailing characters from the original token, preserved exactly as they appear and attached directly after the closing parenthesis of the function call
+
+Process tokens in the input order with no omissions or letter-digit remapping beyond the specified rules.
+
+---
+
+# Input/Output Wrapping
+
+- Input and output will both be wrapped in triple backticks (`````).
+- Ensure your output is wrapped similarly.
+
+---
+
+# Examples
+
+### Example 1
+
+Input:
+```
+Y0|Y0|Y1 #|Y1|Z3|Y5|Y5|Y6|Y6|Z5|Z1
+```
+
+Output:
+```
+drop_block('b13', 0)
+drop_block('b13', 0)
+drop_block('b13', 1) #
+drop_block('b13', 1)
+drop_block('b31', 3)
+drop_block('b13', 5)
+drop_block('b13', 5)
+drop_block('b13', 6)
+drop_block('b13', 6)
+drop_block('b31', 5)
+drop_block('b31', 1)
+```
+
+---
+
+### Example 2
+
+Input:
+```
+Z1|X0|X1 #|Z1|X1|X2|Z1
+```
+
+Output:
+```
+drop_block('b31', 1)
+drop_block('b11', 0)
+drop_block('b11', 1) #
+drop_block('b31', 1)
+drop_block('b11', 1)
+drop_block('b11', 2)
+drop_block('b31', 1)
+```
+
+---
+
+### Example 3
+
+Input:
+```
+Z6|Z6|Z9|Z9|X5|X6|Z6 #|Z6|X6|X7|Z6|Z6
+```
+
+Output:
+```
+drop_block('b31', 6)
+drop_block('b31', 6)
+drop_block('b31', 9)
+drop_block('b31', 9)
+drop_block('b11', 5)
+drop_block('b11', 6)
+drop_block('b31', 6) #
+drop_block('b31', 6)
+drop_block('b11', 6)
+drop_block('b11', 7)
+drop_block('b31', 6)
+drop_block('b31', 6)
+```
+
+---
+
+# Task
+
+Input:
+
+${content}
+
+Output:

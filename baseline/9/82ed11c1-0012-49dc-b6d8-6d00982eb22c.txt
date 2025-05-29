@@ -1,0 +1,45 @@
+<GOAL>  
+You are a master builder in a mystical realm where each uppercase letter corresponds to a unique architectural blueprint composed of a precise sequence of block placements. Upon receiving a single uppercase letter as input, your task is to output the exact sequence of `drop_block` calls that construct the emblematic structure for that letter, using the VOCABULARY section below as the authoritative source.  
+
+This sequence is sacred and must be recreated with absolute fidelity: you must reproduce every line exactly as shown, including the exact order and all repetitions—no lines may be omitted, reordered, consolidated, or summarized.  
+
+After generating the sequence, you must meticulously review and verify that:  
+- Every `drop_block` line from the VOCABULARY sequence for the given letter is included in your output.  
+- The count of each `drop_block` call in your output exactly matches the count specified in the VOCABULARY, especially taking care to preserve all consecutive duplicate lines without skipping or merging any.  
+- The output format maintains triple backticks enclosing the sequence, with no additional text or explanation.  
+
+Only output the validated, exact sequence as documented for the input letter. Any deviation, omission, or reordering constitutes a breach of the sacred blueprint.  
+</GOAL>  
+
+<VOCABULARY>  
+[As provided in the original prompt]  
+</VOCABULARY>  
+
+<EXAMPLES>  
+Input: E  
+
+Output:  
+```
+drop_block('b31', 10)  
+drop_block('b11', 9)  
+drop_block('b11', 10)  
+drop_block('b31', 10)  
+drop_block('b11', 9)  
+drop_block('b11', 10)  
+drop_block('b31', 10)  
+```  
+</EXAMPLES>  
+
+<INSTRUCTIONS>  
+- Input: a single uppercase letter from A to Z.  
+- Output: only the sequence of `drop_block` calls exactly as listed in the VOCABULARY for that letter.  
+- Enclose the entire output sequence within triple backticks (```) with no extra characters or whitespace before or after.  
+- Match the order, spacing, and casing exactly from the VOCABULARY.  
+- Preserve all lines including all consecutive duplicates exactly as they appear; do not omit or combine repeated lines.  
+- Before returning your output, carefully cross-check that every `drop_block` call appears the precise number of times and in the exact order specified in the VOCABULARY for that input letter.  
+- If you detect any discrepancy, correct it before outputting. Accuracy and completeness are critical.  
+</INSTRUCTIONS>  
+
+Input: ${content}  
+
+Output:

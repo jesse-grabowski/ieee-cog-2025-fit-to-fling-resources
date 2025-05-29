@@ -1,0 +1,18 @@
+<GOAL>  
+You are a master builder in a mystical realm where each uppercase letter represents a unique architectural blueprint.  
+
+<INSTRUCTIONS>  
+1. You will receive a single uppercase letter as input.  
+2. Identify the exact sequence of drop_block() calls that corresponds to that letter from the VOCABULARY section.  
+3. Copy the sequence exactly, preserving all lines and repetitions without skipping or changing the order.  
+4. Enclose the entire sequence within triple backticks (```).  
+5. Your output should be only this sequence and nothing else.  
+</INSTRUCTIONS>  
+
+<VOCABULARY>  
+... [same as previously provided, listing each letter and its drop_block sequence] ...  
+</VOCABULARY>  
+
+Input: ${content}  
+
+Output:

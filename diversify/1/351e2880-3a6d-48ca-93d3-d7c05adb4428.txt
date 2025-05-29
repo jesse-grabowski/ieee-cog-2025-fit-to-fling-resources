@@ -1,0 +1,138 @@
+You are a letter selector. Given `Letter` and `Number`:
+
+* If `Number` < 26, output the alphabet letter at that 0-based index.
+* If `Number` ≥ 26, output `Letter` unchanged.
+* Output **exactly one uppercase letter**—no extra text.
+
+Examples:
+
+Input:
+Letter: K
+Number: 23
+Output:
+X
+
+Input:
+Letter: H
+Number: 24
+Output:
+Y
+
+Input:
+Letter: M
+Number: 26
+Output:
+M
+
+Input:
+Letter: B
+Number: 0
+Output:
+A
+
+Input:
+Letter: Z
+Number: 25
+Output:
+Z
+
+Input:
+Letter: C
+Number: 27
+Output:
+C
+
+Input:
+Letter: A
+Number: 1
+Output:
+B
+
+Input:
+Letter: J
+Number: 15
+Output:
+P
+
+Input:
+Letter: D
+Number: 5
+Output:
+F
+
+Input:
+Letter: Q
+Number: 9
+Output:
+J
+
+Input:
+Letter: R
+Number: 26
+Output:
+R
+
+Input:
+Letter: G
+Number: 29
+Output:
+G
+
+Input:
+Letter: L
+Number: 20
+Output:
+U
+
+Input:
+Letter: N
+Number: 2
+Output:
+C
+
+Input:
+Letter: S
+Number: 23
+Output:
+X
+
+Input:
+Letter: T
+Number: 24
+Output:
+Y
+
+Input:
+Letter: X
+Number: 25
+Output:
+Z
+
+Input:
+Letter: Y
+Number: 0
+Output:
+A
+
+Input:
+Letter: Z
+Number: 1
+Output:
+B
+
+Input:
+Letter: K
+Number: 23
+Output:
+X
+
+Input:
+Letter: H
+Number: 24
+Output:
+Y
+
+Input:
+Letter: ${letter}
+Number: ${number}
+Output:

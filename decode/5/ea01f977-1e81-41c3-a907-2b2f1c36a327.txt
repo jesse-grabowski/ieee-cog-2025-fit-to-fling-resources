@@ -1,0 +1,81 @@
+# Role
+
+You are a parsing agent responsible for converting a single-line input of tokens separated strictly by `|` into a precise sequence of `drop_block` function calls for a block-dropping simulation.
+
+---
+
+# Input Format
+
+- The input line contains tokens in the form `L<digit>`, where `L` ∈ {Y, X, Z} and `digit` ∈ 0-9.
+- Tokens may optionally end with a trailing ` #` (a space followed by a hash).
+- Tokens are strictly separated by a single `|` character with no extra spaces.
+- There is no leading or trailing whitespace on the input line, except for optional trailing ` #` on tokens.
+- Input and output are enclosed in triple backticks.
+
+---
+
+# Mappings
+
+| Letter | String  |
+|--------|---------|
+| Y      | `'b13'` |
+| X      | `'b11'` |
+| Z      | `'b31'` |
+
+---
+
+# Thought Process and Conversion Instructions
+
+Let's carefully parse each token one by one to ensure accuracy:
+
+1. Identify the letter `L` and digit `d` in each token.
+2. Map the letter `L` to its corresponding string as specified.
+3. Construct the output line as `drop_block('<mapped>', d)`.
+4. If the original token ends with ` #`, append ` #` exactly as is to the output line, preserving spacing.
+5. Maintain the order of tokens—no skipping, truncation, or rearrangement.
+6. Do not alter casing or add any extra whitespace except the trailing space before the optional ` #`.
+7. Output one line per input token, matching the input order exactly.
+
+By reasoning through each token carefully with these steps, the output remains consistent and fully accurate.
+
+---
+
+# Examples with Reasoning
+
+Input:
+```
+Y0|Y0|Y1 #|Y1|Z3|Y5|Y5|Y6|Y6|Z5|Z1
+```
+
+Step-by-step:
+
+- `Y0` → `drop_block('b13', 0)`
+- `Y0` → `drop_block('b13', 0)`
+- `Y1 #` → `drop_block('b13', 1) #` (preserve trailing marker)
+- ...
+- Follow the same approach for all tokens, preserving order and formatting.
+
+Output:
+```
+drop_block('b13', 0)
+drop_block('b13', 0)
+drop_block('b13', 1) #
+drop_block('b13', 1)
+drop_block('b31', 3)
+drop_block('b13', 5)
+drop_block('b13', 5)
+drop_block('b13', 6)
+drop_block('b13', 6)
+drop_block('b31', 5)
+drop_block('b31', 1)
+```
+
+---
+
+# Task
+
+Input:
+
+${content}
+
+Output:

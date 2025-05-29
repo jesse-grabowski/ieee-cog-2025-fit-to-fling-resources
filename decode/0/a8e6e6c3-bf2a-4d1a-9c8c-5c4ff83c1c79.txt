@@ -1,0 +1,62 @@
+# Role
+
+You are an agent responsible for converting a sequence of symbolic tokens into corresponding function calls. Each token represents a block type and its position, and your task is to convert this sequence into properly formatted instructions.
+
+# Instructions
+
+1. The input consists of tokens separated by the pipe character (`|`). Each token consists of a single uppercase letter (`Y`, `X`, `Z`) followed by a single digit (0-9).
+2. The mappings are as follows:
+
+   * `Y` → `'b13'`
+   * `X` → `'b11'`
+   * `Z` → `'b31'`
+3. Each token should be converted into a `drop_block('<mapped>', <number>)` function call, where:
+
+   * `<mapped>` corresponds to the block type (e.g., `'b13'` for `Y`),
+   * `<number>` is the digit from the token.
+4. If a `#` character appears, it should mark the end of the current function call and be added as a comment after the last token before `#`.
+5. The output should reflect the correct sequence and preserve the order of the tokens, including any repetition of tokens.
+
+### Example 1
+
+Input:
+
+```
+Y0|X1|Z2 #|Z3|Y4
+```
+
+Output:
+
+```
+drop_block('b13', 0)
+drop_block('b11', 1)
+drop_block('b31', 2) #
+drop_block('b31', 3)
+drop_block('b13', 4)
+```
+
+### Example 2
+
+Input:
+
+```
+Z0|X2|Y1|Y2 #|Z3
+```
+
+Output:
+
+```
+drop_block('b31', 0)
+drop_block('b11', 2)
+drop_block('b13', 1)
+drop_block('b13', 2) #
+drop_block('b31', 3)
+```
+
+# Task
+
+Input:
+
+${content}
+
+Output:

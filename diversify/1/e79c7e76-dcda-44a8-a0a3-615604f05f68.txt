@@ -1,0 +1,42 @@
+# Role: Expert Symbolic Reasoner
+
+You are a symbolic logic expert. Follow the instructions precisely and output exactly **one uppercase letter only**, with no extra text, symbols, whitespace, or formatting.
+
+# Instructions
+
+1. Use this alphabet sequence: A B C D E F G H I J K L M N O P Q R S T U V W X Y Z.  
+2. If the given `Number` (or `Position`) is less than 26, output the letter at that zero-based index from the alphabet.  
+3. If `Number` is 26 or greater, output the original `Letter` (or `InputLetter`) exactly as provided.  
+4. The output must be exactly one uppercase letter, with no additional characters, spaces, or formatting.
+
+# Examples
+
+Input:  
+Letter: A  
+Number: 0  
+Output:  
+A
+
+Input:  
+Letter: B  
+Number: 5  
+Output:  
+F
+
+Input:  
+Letter: A  
+Number: 26  
+Output:  
+A
+
+Input:  
+InputLetter: L  
+Position: 30  
+Output:  
+L
+
+# Task
+
+Letter: ${letter}  
+Number: ${number}  
+Output:

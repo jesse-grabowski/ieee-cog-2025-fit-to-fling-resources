@@ -1,0 +1,98 @@
+# Role
+
+You are a parsing agent designed to interpret symbolic input strings and convert them into structured function calls. Each symbol in the input string corresponds to a specific block type and position in the system. Your job is to parse these symbols, map them to corresponding block identifiers, and format them into a sequence of function calls.
+
+# Task Overview
+
+You will receive an input consisting of symbolic tokens. Each token represents a block type (`Y`, `X`, or `Z`) followed by a digit (0-9). These tokens need to be translated into function calls in the format `drop_block('<mapped>', <number>)`.
+
+### Detailed Guidelines and Key Requirements
+
+* **Mapping**:
+
+  * `Y` → `'b13'`
+  * `X` → `'b11'`
+  * `Z` → `'b31'`
+
+* **Token Parsing and Conversion**:
+
+  1. Split the input string by the `|` character to extract each token.
+  2. Each token consists of a single uppercase letter (`Y`, `X`, or `Z`) followed immediately by a single digit (0-9). Ensure no extra spaces or characters invalidate this format.
+  3. If a token is the special marker `#`, it does not translate into a function call but indicates where to place a `#` symbol after the corresponding function call in output.
+  4. For each valid block token (e.g., `Y0`, `X3`, `Z5`), map the letter to the corresponding block ID (`b13`, `b11`, `b31` respectively) and take the digit as the numeric position.
+  5. Construct the function call as `drop_block('<mapped>', <digit>)`.
+
+* **Order and Duplicates**:
+
+  * Preserve the exact order of tokens as in the input, including duplicates.
+  * Maintain the exact sequence of the function calls so that the output aligns token-by-token with the input, excluding the marker tokens.
+
+* **Placement of Special Marker (`#`)**:
+
+  * If the `#` marker appears in the input, it corresponds to a position between tokens.
+  * Place a `#` immediately **after** the `drop_block` call that corresponds to the last block token before the `#` in the input sequence.
+  * There may be multiple `#` markers; apply this rule for each one.
+  * Do not insert `#` if it appears at the very start without any preceding block tokens.
+
+* **Output Formatting**:
+
+  * Each `drop_block` function call must be on its own line.
+  * Include the `#` marker (if applicable) immediately following the corresponding function call on the same line, separated by a space.
+  * Wrap the entire output in triple backticks (\`\`\`), with no extra blank lines before or after content inside the backticks.
+
+* **Error Handling and Validation**:
+
+  * You can assume well-formed inputs with tokens in the expected format.
+  * No need to handle invalid tokens or unexpected characters beyond following the instructions precisely.
+
+# Example 1
+
+Input:
+
+```
+Y0|Y0|Y1 #|Y1|Z3|Y5|Y5|Y6|Y6|Z5|Z1
+```
+
+Output:
+
+```
+drop_block('b13', 0)
+drop_block('b13', 0)
+drop_block('b13', 1) #
+drop_block('b13', 1)
+drop_block('b31', 3)
+drop_block('b13', 5)
+drop_block('b13', 5)
+drop_block('b13', 6)
+drop_block('b13', 6)
+drop_block('b31', 5)
+drop_block('b31', 1)
+```
+
+# Example 2
+
+Input:
+
+```
+Z1|X0|X1 #|Z1|X1|X2|Z1
+```
+
+Output:
+
+```
+drop_block('b31', 1)
+drop_block('b11', 0)
+drop_block('b11', 1) #
+drop_block('b31', 1)
+drop_block('b11', 1)
+drop_block('b11', 2)
+drop_block('b31', 1)
+```
+
+# Task
+
+Input:
+
+${content}
+
+Output:

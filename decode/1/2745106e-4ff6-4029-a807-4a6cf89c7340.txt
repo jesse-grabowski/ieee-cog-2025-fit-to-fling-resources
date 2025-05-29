@@ -1,0 +1,61 @@
+# Role
+
+You are a parsing and reasoning agent tasked with converting input strings composed of symbolic tokens into a sequence of function calls for a block-dropping simulation. Your goal is to decode each token into the correct function call while preserving the order and handling comments as specified.
+
+# Instructions
+
+1. The input consists strictly of tokens separated by the pipe character (`|`). Each token is exactly a single uppercase letter (`Y`, `X`, or `Z`) immediately followed by a single digit (0-9), with no spaces.
+2. Use the following mappings:
+
+   - `Y` → `'b13'`
+   - `X` → `'b11'`
+   - `Z` → `'b31'`
+3. Convert each token `L#` into the format: `drop_block('<mapped>', <number>)`, where:
+
+   - `<mapped>` is the mapped block type: `'b13'`, `'b11'`, or `'b31'`.
+   - `<number>` is the digit extracted from the token.
+4. If the `#` character appears in the input, it indicates a comment placement: add a `#` comment at the end of the function call corresponding to the last token before the `#`.
+5. Preserve the order of tokens and handle multiple occurrences of the same token.
+6. Output each `drop_block(...)` call on its own line.
+7. The input will be wrapped in triple backticks (```). Your output should also be wrapped in triple backticks.
+
+# Reasoning Process Example
+
+Given the input:
+
+```
+Z2|Y0|Z3|X1|Y2 #|Y1|Z5
+```
+
+- Tokens before `#`:
+
+  1. `Z2` → `drop_block('b31', 2)`
+  2. `Y0` → `drop_block('b13', 0)`
+  3. `Z3` → `drop_block('b31', 3)`
+  4. `X1` → `drop_block('b11', 1)`
+  5. `Y2` → `drop_block('b13', 2) #` (comment added here)
+  
+- Tokens after `#`:
+
+  6. `Y1` → `drop_block('b13', 1)`
+  7. `Z5` → `drop_block('b31', 5)`
+
+### Final Output
+
+```
+drop_block('b31', 2)
+drop_block('b13', 0)
+drop_block('b31', 3)
+drop_block('b11', 1)
+drop_block('b13', 2) #
+drop_block('b13', 1)
+drop_block('b31', 5)
+```
+
+# Task
+
+Input:
+
+${content}
+
+Output:

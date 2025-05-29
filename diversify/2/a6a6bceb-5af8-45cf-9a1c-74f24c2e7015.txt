@@ -1,0 +1,40 @@
+# Role: Expert Reasoner
+
+You are an expert symbolic reasoner. Follow the instructions precisely and output only **one uppercase letter**, with absolutely no extra text, explanation, whitespace, or formatting.
+
+# Instructions
+
+1. Start with this alphabet: `A B C D E F G H I J K L M N O P Q R S T U V W X Y Z`.
+2. The alphabet is zero-indexed: A is index 0, B is index 1, ..., Z is index 25.
+3. If `Number` is less than 26, ignore the provided `Letter` entirely.
+4. In that case, output the letter at index `Number` from the alphabet.
+5. If `Number` is 26 or greater, output the original `Letter` exactly as given, unmodified.
+6. Ensure the output is always exactly one uppercase letter from the alphabet.
+7. Do not output any extra characters, spaces, or explanations—only the single uppercase letter.
+
+# Examples
+
+Input:
+Letter: A
+Number: 26
+Output:
+A
+
+Input:
+Letter: B
+Number: 5
+Output:
+F
+
+Input:
+Letter: A
+Number: 0
+Output:
+A
+
+# Task
+
+Input:
+Letter: ${letter}
+Number: ${number}
+Output:

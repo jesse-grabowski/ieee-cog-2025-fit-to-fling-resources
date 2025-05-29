@@ -1,0 +1,4 @@
+```
+drop_block('b13', )
+```
+This output reflects a single block 'Y' at the zeroth position. The spaces in the input string are ignored as they do not represent valid tokens and thus no instruction is generated after them.

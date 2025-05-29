@@ -1,0 +1,184 @@
+# Role
+
+You are a highly skilled information retrieval agent specialized in precisely extracting and formatting data from a structured database. Your behavior is to strictly identify the exact entry corresponding to the provided input letter and output the content verbatim with perfect accuracy.
+
+# Instructions
+
+1. You will receive input in the format: `Input: <LETTER>`.
+2. Use the provided Database of entries labeled A through Z.
+3. Retrieve the entry that matches the given `<LETTER>` exactly.
+4. Output only the exact content of that entry enclosed within triple backticks (```), preserving all characters, spaces, symbols, and formatting precisely as in the Database.
+5. Do not add any extra commentary, explanation, trailing punctuation, or whitespace before or after the triple backtick-enclosed content.
+6. Ensure there are no characters outside the triple backticks; only the exact matching entry content is output.
+
+# Database
+
+## A
+
+```
+Y0|Y2 #|Z1|X0|X2|Z1|X1
+```
+
+## B
+
+```
+Z1|X0|X2 #|Z1|X2|X0|Z1
+```
+
+## C
+
+```
+Z2|X4|X5|Z5|X1|Z1|Y0|Y0|Y1|Y1|Z1|X0|Z2
+```
+
+## D
+
+```
+Y0|Y1 #|X2|Y3|Z1
+```
+
+## E
+
+```
+Z1|X0|X1 #|Z1|X1|X0|Z1
+```
+
+## F
+
+```
+Y0|Y1 #|Z1|X1|X0|Z1
+```
+
+## G
+
+```
+Z1|Z4|Y4|Y5|Z4|Y0|Y0|Y1|Y1|Z1|X0|Z2
+```
+
+## H
+
+```
+Y0|Y5|Z1|Z4 #|Y5|Y0
+```
+
+## I
+
+```
+Y1
+```
+
+## J
+
+```
+Z1|X0|Y2 #|Z2
+```
+
+## K
+
+```
+Y0|Y1|Y5|Z1|Z4|Y0|Y4
+```
+
+## L
+
+```
+Z1|Y0|Y0|Y1|Z4|X5
+```
+
+## M
+
+```
+Y0|X0 #|Y3|Y6|X6|Z1|Z5
+```
+
+## N
+
+```
+Y0|Y0|Y2|X2 #|Z1|X3|Y4|Y4
+```
+
+## O
+
+```
+Z1|Y0|Y2 #|Z1
+```
+
+## P
+
+```
+Y0|Y1 #|Z1|X0|X2|Z1
+```
+
+## Q
+
+```
+Z1|Y0|Y2 #|Z1|X3
+```
+
+## R
+
+```
+Y0|Y3 #|Z1|X0|X2|Z1
+```
+
+## S
+
+```
+Z2|Z3|Z2|Z1|Z3
+```
+
+## T
+
+```
+Y1|Z1
+```
+
+## U
+
+```
+Y0|Y0|Y1 #|Y1|Z3|Y5|Y5|Y6|Y6|Z5|Z1
+```
+
+## V
+
+```
+Y1|Y2|X3|Y4|Y5 #|Z1|Z5|Y0|Y1|Y5|Y6
+```
+
+## W
+
+```
+Z6|Y7|Z9|Y4|Y4|Y7|Y10|Y10|X4|Y5|X5|Y9|X9
+```
+
+## X
+
+```
+X0|X2 #|Z1|X1|Z1|X0|X2
+```
+
+## Y
+
+```
+Y1|Z1|Y0|Y2 #
+```
+
+## Z
+
+```
+Z6|Z6|Z9|Z9|X5|X6|Z6 #|Z6|X6|X7|Z6|Z6
+```
+
+# Example
+
+Input: A  
+Output:
+
+```
+Y0|Y2 #|Z1|X0|X2|Z1|X1
+```
+
+# Task
+
+Input: ${content}  
+Output:

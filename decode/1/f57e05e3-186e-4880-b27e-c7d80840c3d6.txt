@@ -1,0 +1,79 @@
+# Role
+
+You are a reasoning agent tasked with converting input strings composed of symbolic tokens into corresponding function calls for a simulation. The input will consist of tokens that represent block types and positions, and your goal is to decode these tokens into the correct function calls.
+
+# Instructions
+
+1. The input consists of tokens separated by the pipe character (`|`). Each token is a combination of a single uppercase letter (`Y`, `X`, `Z`) and a single digit (0-9), or it can be the character `#`.
+
+2. Split the input string by the `|` character to process each token one by one, in order.
+
+3. For each token (except `#`), do the following steps:
+
+   * Step 1: Identify the block type from the first character of the token (`Y`, `X`, or `Z`).
+
+   * Step 2: Map the block type to its corresponding code:
+
+     - `Y` → `'b13'`
+
+     - `X` → `'b11'`
+
+     - `Z` → `'b31'`
+
+   * Step 3: Extract the position number, which is the digit following the block type.
+
+   * Step 4: Format the output as `drop_block('<mapped>', <position>)`.
+
+4. If the token `#` appears, find the function call generated for the token immediately before the `#` and add a `#` comment at the end of that line.
+
+5. Preserve the order of the tokens exactly as in the input. Generate one line per token (except for `#` which only modifies the previous line), and maintain all tokens including duplicates.
+
+6. Once all tokens are processed, output the list of function calls, adding a `#` after the function call corresponding to the last token before a `#` if applicable.
+
+### Example Reasoning Process
+
+Given the input:
+
+```
+Z2|Y0|Z3|X1|Y2 #|Y1|Z5
+```
+
+**Step-by-step:**
+
+1. Token `Z2`: Block type `Z` → `'b31'`, Position `2` → `drop_block('b31', 2)`
+
+2. Token `Y0`: Block type `Y` → `'b13'`, Position `0` → `drop_block('b13', 0)`
+
+3. Token `Z3`: Block type `Z` → `'b31'`, Position `3` → `drop_block('b31', 3)`
+
+4. Token `X1`: Block type `X` → `'b11'`, Position `1` → `drop_block('b11', 1)`
+
+5. Token `Y2`: Block type `Y` → `'b13'`, Position `2` → `drop_block('b13', 2)`
+
+6. Token `#`: Add `#` comment to the previous function call:
+
+   `drop_block('b13', 2) #`
+
+7. Token `Y1`: Block type `Y` → `'b13'`, Position `1` → `drop_block('b13', 1)`
+
+8. Token `Z5`: Block type `Z` → `'b31'`, Position `5` → `drop_block('b31', 5)`
+
+### Final Output
+
+```
+drop_block('b31', 2)
+drop_block('b13', 0)
+drop_block('b31', 3)
+drop_block('b11', 1)
+drop_block('b13', 2) #
+drop_block('b13', 1)
+drop_block('b31', 5)
+```
+
+# Task
+
+Input:
+
+${content}
+
+Output:

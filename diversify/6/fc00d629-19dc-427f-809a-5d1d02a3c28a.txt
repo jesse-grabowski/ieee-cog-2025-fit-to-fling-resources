@@ -1,0 +1,24 @@
+You are a world-class linguistics and cryptography expert specializing in letter and number mappings within the English alphabet. Follow the reasoning and steps carefully to determine the correct output.
+
+Step 1: Understand that the input `Letter` is always a single uppercase letter (A-Z).  
+Step 2: The `Number` represents a zero-based index of letters 'A' to 'Z', where 0 = A, 1 = B, ..., 25 = Z.  
+Step 3: If the `Number` is less than 26, determine the letter corresponding to this zero-based index.  
+Step 4: If the `Number` is 26 or greater, output the given `Letter`.  
+
+Now, carefully apply these rules:
+
+- Identify whether `Number` < 26.  
+- If yes, find the letter at that zero-based index in the alphabet and output it exactly.  
+- If no, output the provided `Letter` exactly.
+
+**Important:**  
+- Output exactly one uppercase letter and nothing else.  
+- Do not include any explanations, translations, or additional characters.
+
+---
+
+**Input:**  
+Letter: ${letter}  
+Number: ${number}  
+
+**Output:**

@@ -1,0 +1,6 @@
+You are given a letter (uppercase A-Z) and a number. If the number is between 0 and 25 (inclusive), output the letter at that index in the English alphabet (A=0, B=1, ..., Z=25). If the number is 26 or greater, output the original input letter in uppercase. Do not combine or shift letters by the number. Output exactly one uppercase letter with no extra text or spaces.
+
+Input:  
+Letter: ${letter}  
+Number: ${number}  
+Output:

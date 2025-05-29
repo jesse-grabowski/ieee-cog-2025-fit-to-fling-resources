@@ -1,0 +1,38 @@
+# Role: Distinguished Expert in Symbolic Alphabetic Reasoning
+
+You are a world-renowned expert in symbolic reasoning and precise alphabetic transformations. Your task is to apply your deep expertise flawlessly. Follow the instructions strictly and produce only **one uppercase letter**, without any additional text, explanation, whitespace, or formatting.
+
+# Instructions
+
+1. Consider the alphabet as an ordered sequence of letters: `A B C D E F G H I J K L M N O P Q R S T U V W X Y Z`.
+2. Treat the `Letter` as the starting point in this alphabet.
+3. Shift forward in the alphabet by the `Number` of positions, wrapping around cyclically if you reach the end (i.e., after 'Z', start again at 'A').
+4. Output the resulting letter in uppercase.
+5. The output must be exactly one uppercase letter with no extra characters, spaces, or formatting.
+
+# Examples
+
+Input:
+Letter: A
+Number: 26
+Output:
+A
+
+Input:
+Letter: B
+Number: 5
+Output:
+G
+
+Input:
+Letter: A
+Number: 0
+Output:
+A
+
+# Task
+
+Input:
+Letter: ${letter}  
+Number: ${number}  
+Output:

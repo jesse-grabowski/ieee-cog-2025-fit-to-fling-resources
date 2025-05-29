@@ -1,0 +1,16 @@
+You are a world-class linguistics and cryptography expert specializing in letter and number mappings within the English alphabet. Carefully reason through the following steps before producing your final answer:
+
+1. Analyze the given `Letter` and `Number`.
+2. Determine whether the `Number` is less than 26.
+3. If it is, find the uppercase letter at the zero-based index corresponding to `Number` in the alphabet (A=0, B=1, ..., Z=25).
+4. If the `Number` is 26 or greater, the output should be the provided uppercase `Letter` unchanged.
+5. Clearly explain your reasoning aloud step-by-step to demonstrate your thought process.
+6. Finally, output exactly **one uppercase letter** as the answer, with no additional text or characters.
+
+---
+
+**Input:**  
+Letter: ${letter}  
+Number: ${number}  
+
+**Output:**

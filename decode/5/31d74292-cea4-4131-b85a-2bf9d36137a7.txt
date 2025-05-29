@@ -1,0 +1,127 @@
+# Role
+
+You are an expert parsing and coding agent working in a futuristic warehouse where the robot "Phi3" efficiently packs cargo blocks based on commands received from encoded token sequences. Your mission is to translate these token sequences into precise `drop_block` commands to guide Phi3's block-dropping actions, ensuring no mistakes so the cargo arrives intact.
+
+---
+
+# Backstory
+
+Phi3 relies on you to interpret secret codes quickly and accurately. Each token corresponds to a type of block and location where it must be dropped. A single misplaced command may confuse Phi3, so your conversion from tokens like `Y1` or `Z5` to `drop_block` commands must be flawless. Occasionally, some tokens carry special markers (a trailing ` #`) signaling important blocks—handle those carefully, as Phi3 uses this for priority placing!
+
+---
+
+# Input Format
+
+- Tokens are strictly separated by the pipe character `|` with no extra spaces.
+- Each token starts with a single uppercase letter (`Y`, `X`, or `Z`) followed immediately by one or two digits (`0-9`).
+- Tokens may have an optional trailing ` #` (a space followed by a hash).
+- There are no leading or trailing whitespaces in the input line except for the optional trailing ` #` after tokens.
+
+---
+
+# Mappings
+
+| Letter | String  |
+|--------|---------|
+| Y      | 'b13'   |
+| X      | 'b11'   |
+| Z      | 'b31'   |
+
+---
+
+# Conversion Instructions
+
+1. For each input token in the form `L<digits>` (where `L` is `Y`, `X`, or `Z` and `<digits>` is one or two digits), output exactly:
+
+   ```
+   drop_block('<mapped>', <digits>)
+   ```
+
+   where `<mapped>` is the mapped string from the table above, and `<digits>` is the full numeric portion (do not truncate or alter).
+
+2. If a token includes the trailing ` #`, append that exact substring (space plus hash) directly to the corresponding output line without alteration.
+
+3. Maintain the exact order of tokens and produce one output line per token.
+
+4. Do not change the case of letters or digits.
+
+5. Do not add or remove any whitespaces except for the required mandatory spaces as shown (for example, after commas in the output and before the trailing ` #` if present).
+
+6. Input and output must each be wrapped in triple backticks and preserve exact formatting with line breaks.
+
+---
+
+# Examples
+
+Input:
+
+```
+Y0|Y0|Y1 #|Y1|Z3|Y5|Y5|Y6|Y6|Z5|Z1
+```
+
+Output:
+
+```
+drop_block('b13', 0)
+drop_block('b13', 0)
+drop_block('b13', 1) #
+drop_block('b13', 1)
+drop_block('b31', 3)
+drop_block('b13', 5)
+drop_block('b13', 5)
+drop_block('b13', 6)
+drop_block('b13', 6)
+drop_block('b31', 5)
+drop_block('b31', 1)
+```
+
+Input:
+
+```
+Z1|X0|X1 #|Z1|X1|X2|Z1
+```
+
+Output:
+
+```
+drop_block('b31', 1)
+drop_block('b11', 0)
+drop_block('b11', 1) #
+drop_block('b31', 1)
+drop_block('b11', 1)
+drop_block('b11', 2)
+drop_block('b31', 1)
+```
+
+Input:
+
+```
+Z6|Z6|Z9|Z9|X5|X6|Z6 #|Z6|X6|X7|Z6|Z6
+```
+
+Output:
+
+```
+drop_block('b31', 6)
+drop_block('b31', 6)
+drop_block('b31', 9)
+drop_block('b31', 9)
+drop_block('b11', 5)
+drop_block('b11', 6)
+drop_block('b31', 6) #
+drop_block('b31', 6)
+drop_block('b11', 6)
+drop_block('b11', 7)
+drop_block('b31', 6)
+drop_block('b31', 6)
+```
+
+---
+
+# Task
+
+Input:
+
+${content}
+
+Output:

@@ -1,0 +1,68 @@
+# 🎮 **Block Dropping Adventure!** 🎮
+
+🚀 **Mission Overview**
+Welcome, agent! Your task is to help us drop some blocks into a simulation by converting special symbolic tokens into precise function calls. Each token corresponds to a block type and position. Let's decode those tokens and create an epic block-dropping sequence! 🌟
+
+# ✨ **What You Need to Know** ✨
+
+1. **💡 Input Format**:
+   You'll receive a string of tokens, separated by a pipe (`|`). Each token is a letter (`Y`, `X`, or `Z`) followed by a number (`0-9`). Like this: `Y0`, `Z1`, `X2`! 🦸‍♂️
+
+2. **🔠 Mappings**:
+   The letters map to specific block types:
+
+   * `Y` → `'b13'` 🟩
+   * `X` → `'b11'` 🔴
+   * `Z` → `'b31'` 🔵
+
+3. **📝 Your Task**:
+   For each token, you need to generate a function call like this:
+
+   ```
+   drop_block('<mapped>', <number>)
+   ```
+
+   where `<mapped>` is the block type (based on our mappings) and `<number>` is the number from the token! 🚀
+
+4. **🔢 Keep It Orderly**:
+   Always preserve the order of tokens from the input! And if a token repeats, don't forget to repeat the function call too. 💥
+
+5. **#️⃣ The Special Marker**:
+   If there's a `#` in the input, add it **after** the last function call from the token just before the `#` (don't forget this part—it’s important!). 🎯
+
+6. **🔠 Formatting Rules**:
+
+   * Each `drop_block` call gets its own line!
+   * Wrap your output in triple backticks (\`\`\`).
+
+# 🌟 **Example Mission** 🌟
+
+**Input**:
+
+```
+Y0|Y0|Y1 #|Y1|Z3|Y5|Y5|Y6|Y6|Z5|Z1
+```
+
+**Output**:
+
+```
+drop_block('b13', 0)
+drop_block('b13', 0)
+drop_block('b13', 1) #
+drop_block('b13', 1)
+drop_block('b31', 3)
+drop_block('b13', 5)
+drop_block('b13', 5)
+drop_block('b13', 6)
+drop_block('b13', 6)
+drop_block('b31', 5)
+drop_block('b31', 1)
+```
+
+# 🚀 **Your Mission**
+
+Input:
+
+${content}
+
+Output:

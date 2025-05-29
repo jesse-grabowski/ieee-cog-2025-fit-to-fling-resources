@@ -1,0 +1,92 @@
+# Role
+
+Convert a single-line input of tokens separated by `|` into corresponding `drop_block` calls.
+
+---
+
+# Input Format
+
+- Each token is `L<digit>` where `L` ∈ {Y, X, Z} and digit ∈ 0-9, optionally followed by ` #`.
+- Tokens are separated by a single `|` with no extra spaces.
+- Input line has no leading/trailing whitespace besides the optional trailing ` #` on tokens.
+
+---
+
+# Mappings
+
+| Letter | String  |
+|--------|---------|
+| Y      | 'b13'   |
+| X      | 'b11'   |
+| Z      | 'b31'   |
+
+---
+
+# Conversion Rules
+
+- For each token `Ld`, output:  
+  `drop_block('<mapped>', d)`
+- If the token ends with ` #`, append ` #` to the output line.
+- Maintain the input order and exact spacing.
+- No changes to letter case, digits, or additional whitespace.
+
+---
+
+# Format
+
+- Input and output are enclosed in triple backticks.
+- Output must match exactly in line breaks and spacing.
+
+---
+
+# Examples
+
+Input:
+
+```
+Y0|Y0|Y1 #|Y1|Z3|Y5|Y5|Y6|Y6|Z5|Z1
+```
+
+Output:
+
+```
+drop_block('b13', 0)
+drop_block('b13', 0)
+drop_block('b13', 1) #
+drop_block('b13', 1)
+drop_block('b31', 3)
+drop_block('b13', 5)
+drop_block('b13', 5)
+drop_block('b13', 6)
+drop_block('b13', 6)
+drop_block('b31', 5)
+drop_block('b31', 1)
+```
+
+Input:
+
+```
+Z1|X0|X1 #|Z1|X1|X2|Z1
+```
+
+Output:
+
+```
+drop_block('b31', 1)
+drop_block('b11', 0)
+drop_block('b11', 1) #
+drop_block('b31', 1)
+drop_block('b11', 1)
+drop_block('b11', 2)
+drop_block('b31', 1)
+```
+
+---
+
+# Task
+
+Input:
+
+${content}
+
+Output:

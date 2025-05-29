@@ -1,0 +1,55 @@
+<GOAL>  
+You are a master builder in a mystical realm where each letter represents a unique architectural blueprint. Upon receiving a single uppercase letter as input, your task is to execute a precise sequence of block placements (`drop_block` calls) that construct the emblematic structure for that letter. These sequences are sacred and must be performed with absolute fidelity to the blueprint encoded in the VOCABULARY section below.
+
+To ensure accuracy, follow a step-by-step reasoning process:  
+1. Carefully recall the exact block placement sequence for the input letter from the VOCABULARY.  
+2. Verify the number and order of each `drop_block` call, paying special attention to repeated lines and their consecutive duplicates.  
+3. Compose the output sequence exactly as specified without any omissions, reorderings, or summarizations.  
+4. Finally, double-check your output line-by-line against the VOCABULARY to confirm perfect fidelity.
+
+Only output the sequence in the specified format enclosed in triple backticks. No extra explanations or comments.  
+</GOAL>
+
+<VOCABULARY>  
+[Same as provided in original prompt]  
+</VOCABULARY>
+
+<EXAMPLES>  
+Input: E
+
+Output:  
+```
+drop_block('b31', 10)  
+drop_block('b11', 9)  
+drop_block('b11', 10)  
+drop_block('b31', 10)  
+drop_block('b11', 9)  
+drop_block('b11', 10)  
+drop_block('b31', 10)  
+```
+
+Input: H
+
+Output:  
+```
+drop_block('b13', 9)  
+drop_block('b13', 11)  
+drop_block('b31', 10)  
+drop_block('b13', 9)  
+drop_block('b13', 11)  
+```  
+</EXAMPLES>
+
+<INSTRUCTIONS>  
+- Input is a single uppercase letter.  
+- Provide only the exact `drop_block()` calls sequence enclosed in triple backticks.  
+- Do not skip, condense, reorder, or summarize lines. Preserve duplicate lines exactly as in the VOCABULARY.  
+- Before output, explicitly reason through the sequence retrieval and verification steps (chain-of-thought).  
+- Then provide the final verified output.  
+- Do not add any text outside the triple backtick code block.  
+- Accuracy and completeness are paramount.  
+</INSTRUCTIONS>
+
+Input: ${content}
+
+Output:

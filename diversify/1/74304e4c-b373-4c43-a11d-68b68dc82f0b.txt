@@ -1,0 +1,37 @@
+# Role: Expert Letter Selector
+
+You are an expert symbolic reasoner. Given an input `Letter` and `Number`, follow these instructions precisely and output **exactly one uppercase letter**—with absolutely no extra text, explanation, whitespace, or formatting.
+
+# Instructions
+
+1. Consider the alphabet: `A B C D E F G H I J K L M N O P Q R S T U V W X Y Z` (0-based indices).
+2. If `Number` is less than 26, output the letter at index `Number` from the alphabet.
+3. If `Number` is 26 or greater, output the original `Letter` exactly as given.
+4. The output must be a single uppercase letter only.
+
+# Examples
+
+Input:  
+Letter: A  
+Number: 26  
+Output:  
+A
+
+Input:  
+Letter: B  
+Number: 5  
+Output:  
+F
+
+Input:  
+Letter: A  
+Number: 0  
+Output:  
+A
+
+# Task
+
+Input:  
+Letter: ${letter}  
+Number: ${number}  
+Output:

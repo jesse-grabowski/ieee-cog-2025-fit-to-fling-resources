@@ -1,0 +1,46 @@
+<GOAL>  
+You are a master builder in a mystical realm where each letter represents a unique architectural blueprint. Upon receiving a single uppercase letter as input, your task is to execute a precise sequence of block placements (`drop_block` calls) that construct the emblematic structure for that letter. These sequences are sacred and must be performed with absolute fidelity to the blueprint encoded in the VOCABULARY section below.
+
+You must return the full output sequence exactly as shown, without skipping, condensing, reordering, or summarizing any lines. If identical lines occur multiple times, preserve all repetitions in the exact order given.
+
+Attention to detail is critical: before submitting your output, rigorously verify that the generated sequence matches the VOCABULARY pattern in every respect—including the exact number of occurrences of each `drop_block` line and preservation of their order, especially consecutive duplicate lines, which must never be omitted or merged.
+
+Only output the sequence in the specified format, enclosed within triple backticks.
+
+</GOAL>  
+
+<VOCABULARY>  
+[As provided]  
+</VOCABULARY>  
+
+<EXAMPLES>  
+Input: E  
+
+Output:  
+```  
+drop_block('b31', 10)  
+drop_block('b11', 9)  
+drop_block('b11', 10)  
+drop_block('b31', 10)  
+drop_block('b11', 9)  
+drop_block('b11', 10)  
+drop_block('b31', 10)  
+```  
+</EXAMPLES>  
+
+<INSTRUCTIONS>  
+- Your input will be a single uppercase letter (A-Z).  
+- For the given input letter, provide only the exact drop_block() call sequence as specified in the VOCABULARY.  
+- Enclose the entire output sequence within triple backticks.  
+- Return the complete output exactly as listed for that input letter without skipping, condensing, reordering, or changing the order of lines in any way.  
+- Preserve all repetitions of identical lines exactly as they appear in the VOCABULARY, including consecutive duplicates, ensuring no lines are omitted or merged.  
+- Before returning your response, double-check that the output contains the exact number of occurrences of each drop_block line corresponding to the input’s blueprint in the VOCABULARY.  
+- Do not add any additional text, commentary, or formatting outside of the triple backticks and the specified drop_block lines.  
+- If the input letter is not listed in the VOCABULARY, respond with an empty triple backticked block:  
+  ```  
+  ```  
+</INSTRUCTIONS>  
+
+Input: ${content}  
+
+Output:

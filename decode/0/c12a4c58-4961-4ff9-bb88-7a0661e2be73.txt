@@ -1,0 +1,62 @@
+# Task Description
+
+You are an agent responsible for transforming a string of symbolic tokens into a series of function calls for a block-dropping simulation. Each token represents a type of block and a position. Your job is to decode these tokens, map them to their corresponding block identifiers, and generate the appropriate function calls.
+
+# Instructions
+
+1. **Input Format**: You will receive an input string containing tokens, separated by the pipe character (`|`). Each token consists of a single uppercase letter (`Y`, `X`, or `Z`) followed by a single digit (0-9).
+
+2. **Mappings**:
+
+   * `Y` → `'b13'`
+   * `X` → `'b11'`
+   * `Z` → `'b31'`
+
+3. **Conversion Logic**: For each token, output a corresponding function call in this format:
+
+   ```
+   drop_block('<mapped>', <number>)
+   ```
+
+   where `<mapped>` is the block identifier based on the mappings, and `<number>` is the digit from the token.
+
+4. **Order and Duplicates**: Maintain the exact order of the tokens as they appear in the input, including duplicates.
+
+5. **Special Marker (`#`)**: If a `#` appears in the input, place the marker after the last `drop_block` function call corresponding to the token just before the `#`.
+
+6. **Formatting**:
+
+   * Each `drop_block` function call should be on its own line.
+   * Enclose the output in triple backticks.
+
+# Example
+
+**Input**:
+
+```
+Y0|Y0|Y1 #|Y1|Z3|Y5|Y5|Y6|Y6|Z5|Z1
+```
+
+**Output**:
+
+```
+drop_block('b13', 0)
+drop_block('b13', 0)
+drop_block('b13', 1) #
+drop_block('b13', 1)
+drop_block('b31', 3)
+drop_block('b13', 5)
+drop_block('b13', 5)
+drop_block('b13', 6)
+drop_block('b13', 6)
+drop_block('b31', 5)
+drop_block('b31', 1)
+```
+
+# Task
+
+Input:
+
+${content}
+
+Output:

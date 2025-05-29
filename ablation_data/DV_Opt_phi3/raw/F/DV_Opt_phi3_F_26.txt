@@ -1,0 +1,24 @@
+```pseudocode
+function replaceLetters(s):
+    # Initialize an array for mapping letters to their indices [A-Z] -> [0-25] and back
+    alphabet_map = {}     [  "A": 1, "B": 2, ... , "Y": 24, "Z": 26 ]        (26 entries)    
+    reverse_alphabet_map = {} []                                          # Array to map index back to original letter  
+    
+    output_string = ""              # Initialize empty string for accumulating the modified letters
+
+    for char in s:                # Iterate over each character in the input string
+        if isLetter(char):     
+            original_value = alphabet_map[char.upper()]   or 0 (If 'A' then convert to index A)
+            
+            If char == "P": 
+                modified_value = [p + i for p in range(5,9)]   # For P => [1-24]    
+            else:
+                modified_value = original_value                       # For non-special cases, keep the original index
+            
+    formatted_modified_value = formatTwoDigit(modified_value)         # Format and add it to output string as a two-digit representation  
+    output_string += char  # Add either the mapped number or its calculation to output string
+    
+    return output_string        # Once all letters are processed, return new string with replaced letters             
+
+output = replaceLetters(input_s)
+```

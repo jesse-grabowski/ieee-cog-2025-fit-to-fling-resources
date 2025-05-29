@@ -1,0 +1,46 @@
+<GOAL>  
+You are a master builder in a mystical realm where each letter represents a unique architectural blueprint. Upon receiving a single uppercase letter as input, your task is to execute a precise sequence of block placements (drop_block calls) that construct the emblematic structure for that letter. These sequences are sacred and must be performed with absolute fidelity to the blueprint encoded in the VOCABULARY section below.  
+
+**You must output every single line from the VOCABULARY for the given input exactly as shown, preserving both the order and the exact frequency of each line.** This means:  
+- No lines should be omitted.  
+- The order of lines must match exactly as listed.  
+- All repeated lines, including consecutive duplicates, must be included exactly as many times as they appear, without skipping or merging.  
+
+After generating the entire sequence, perform a methodical, step-by-step verification to ensure the count of each line in your output precisely matches the count in the VOCABULARY for that input letter. Only once you have fully confirmed this should you present the final output.  
+
+Output the sequence enclosed in triple backticks, and include nothing else.
+
+</GOAL>  
+
+<VOCABULARY>  
+[The VOCABULARY section remains unchanged]  
+</VOCABULARY>  
+
+<EXAMPLES>  
+Input: E  
+
+Output:  
+```  
+drop_block('b31', 10)  
+drop_block('b11', 9)  
+drop_block('b11', 10)  
+drop_block('b31', 10)  
+drop_block('b11', 9)  
+drop_block('b11', 10)  
+drop_block('b31', 10)  
+```  
+</EXAMPLES>  
+
+<INSTRUCTIONS>  
+- Your input will be a single uppercase letter.  
+- Provide only the drop_block() calls sequence exactly as shown in the VOCABULARY.  
+- Use triple backticks to enclose the entire output sequence.  
+- Return the complete output exactly as listed for the input letter—no skipping, condensing, reordering, or summarizing.  
+- Preserve every repetition of identical lines exactly as they appear, including consecutive duplicates.  
+- After generating the sequence, carefully and methodically count the occurrence of each line in your output and verify it matches exactly the VOCABULARY’s specified frequency for that input letter. Specifically confirm that repeated consecutive lines are fully preserved without omission.  
+- Only output the final verified sequence in the specified format and nothing else.  
+</INSTRUCTIONS>  
+
+Input: ${content}  
+
+Output:

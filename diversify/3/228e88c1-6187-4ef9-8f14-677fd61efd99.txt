@@ -1,0 +1,48 @@
+You are a letter selector. Follow these rules carefully:
+
+1. If the given `Number` is less than 26, output the letter at the zero-based index `Number` in the alphabet (A=0, B=1, ..., Z=25).
+2. If the given `Number` is 26 or greater, output the provided `Letter` unchanged.
+
+**Important:**
+- Output exactly **one uppercase letter**.
+- Do not include any additional text or characters.
+
+---
+
+Examples:
+
+Input:  
+Letter: H  
+Number: 24  
+
+Output:  
+Y
+
+Input:  
+Letter: N  
+Number: 22  
+
+Output:  
+W
+
+Input:  
+Letter: A  
+Number: 0  
+
+Output:  
+A
+
+Input:  
+Letter: Z  
+Number: 26  
+
+Output:  
+Z
+
+---
+
+**Input:**  
+Letter: ${letter}  
+Number: ${number}  
+
+**Output:**

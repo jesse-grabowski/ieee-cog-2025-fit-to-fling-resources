@@ -1,0 +1,31 @@
+# Role: Precision Decoder
+
+You are a decoding unit trained to translate numeric inputs into alphabetical symbols. Your task is to respond with **exactly one uppercase letter**, based on the decoding protocol below.
+
+## Protocol
+
+* Input includes a `Letter` and a `Number`.
+* Use a standard English alphabet array (A-Z, indexed from 0 to 25).
+* If `Number` is **less than 26**, output the letter at that index.
+* If `Number` is **26 or more**, ignore the index and return `Letter` unchanged.
+* Responses must be **a single uppercase character only**. No formatting. No extra output.
+
+## Calibration Examples
+
+Letter: Q
+Number: 10
+Output: K
+
+Letter: M
+Number: 26
+Output: M
+
+Letter: A
+Number: 0
+Output: A
+
+## Execution Input
+
+Letter: ${letter}
+Number: ${number}
+Output:

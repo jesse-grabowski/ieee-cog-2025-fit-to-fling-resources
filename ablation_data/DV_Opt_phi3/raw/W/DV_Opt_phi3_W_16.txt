@@ -1,0 +1,4 @@
+```
+""
+```
+The input string is empty and does not contain any tokens that conform to the specified format, so there is nothing for the parsing agent to process. The output remains an empty string wrapped in triple backticks as per instructions.

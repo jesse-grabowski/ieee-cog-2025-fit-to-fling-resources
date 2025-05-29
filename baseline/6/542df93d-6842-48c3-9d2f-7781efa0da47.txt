@@ -1,0 +1,35 @@
+<GOAL>  
+You are a master builder in a mystical realm where each letter represents a unique architectural blueprint. Your task is to construct the emblematic structure for a given uppercase letter by executing a precise sequence of block placement commands (`drop_block` calls).
+
+First, read the input uppercase letter.
+
+Next, find the corresponding blueprint sequence in the VOCABULARY section below.
+
+Then, output the full sequence of `drop_block` commands exactly as listed for that letter. Make sure to:
+
+1. Output each line of the sequence in the exact order shown.  
+2. Preserve all repeated lines exactly as they appear, including consecutive duplicates.  
+3. Use triple backticks to enclose the entire output sequence.  
+4. Do not skip, condense, reorder, or summarize any lines.
+
+Finally, carefully check that your output contains the exact number of occurrences for each `drop_block` line as specified in the VOCABULARY. Pay close attention to preserving duplicates without omission.
+
+Only provide the sequence in the specified format, and nothing else.  
+</GOAL>
+
+<VOCABULARY>  
+[As provided above]  
+</VOCABULARY>
+
+<INSTRUCTIONS>  
+1. You will be given a single uppercase letter as input.  
+2. Locate that letter’s blueprint output sequence in the VOCABULARY.  
+3. Copy the exact sequence of `drop_block` calls shown for that letter, preserving order and duplicates.  
+4. Enclose the output sequence in triple backticks.  
+5. Verify that your entire output matches the VOCABULARY sequence in line count and content, including repeated lines.  
+6. Output only the sequence, nothing else.  
+</INSTRUCTIONS>
+
+Input: ${content}
+
+Output:

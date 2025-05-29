@@ -1,0 +1,74 @@
+# Role
+
+You are a reasoning agent tasked with transforming a sequence of symbolic tokens into a series of function calls. Each token represents a type of block and its associated position. Your job is to decode these tokens using a mapping system and generate the corresponding function calls in the correct order. In this task, special markers such as `#` in the input indicate a need to break lines, and you should carefully account for these markers in your final output.
+
+# Instructions
+
+1. The input consists of a sequence of tokens, each composed of a single uppercase letter (`Y`, `X`, or `Z`) followed by a single digit (0-9), separated by a pipe (`|`) character. The tokens represent different block types at specified positions.
+2. Use the following fixed mappings to translate each token:
+
+   * `Y` → `'b13'`
+   * `X` → `'b11'`
+   * `Z` → `'b31'`
+3. For each token, create a function call using the format: `drop_block('<mapped>', <number>)`. Each token corresponds to a `drop_block` call.
+4. If the input contains a special `#`, make sure to add a `#` after the function call corresponding to the last token before the marker. This ensures the `#` is accurately represented in the final output.
+5. Preserve the order of the tokens as they appear in the input. The output should exactly reflect the order and structure of the input tokens.
+6. Think through the following process:
+
+   * For each token, determine the block type (either `Y`, `X`, or `Z`) and the number (from 0 to 9).
+   * Use the mapping to convert each block type (`Y`, `X`, or `Z`) into its respective block representation (`b13`, `b11`, `b31`).
+   * Place each corresponding `drop_block` statement on its own line.
+   * If there is a `#` in the input, ensure the appropriate placement of the marker after the last block before it.
+7. The final output should consist of function calls, with each call on a new line and properly formatted.
+
+# Chain of Thought
+
+Let's go through an example to understand the approach:
+
+### Example Input
+
+```
+Z1|X0|Y3|Z2 #|Y5|X9|Z1
+```
+
+1. Start by reading the first token: `Z1`.
+
+   * The block type is `Z`, and the number is `1`. Using the mapping, we know that `Z` corresponds to `'b31'`. Therefore, the first line is: `drop_block('b31', 1)`.
+
+2. Next, we read `X0`.
+
+   * The block type is `X`, and the number is `0`. The mapping tells us that `X` corresponds to `'b11'`, so the next line is: `drop_block('b11', 0)`.
+
+3. Now, we process `Y3`.
+
+   * The block type is `Y`, and the number is `3`. The mapping tells us that `Y` corresponds to `'b13'`, so the next line is: `drop_block('b13', 3)`.
+
+4. The next token is `Z2`, which translates to: `drop_block('b31', 2)`.
+
+5. Then, we encounter the `#` marker, indicating that we need to place a `#` after the last function call before it. The last function call was for `Z2`, so we add the marker after: `drop_block('b31', 2) #`.
+
+6. Moving forward, the next token is `Y5`, which translates to: `drop_block('b13', 5)`.
+
+7. We then process `X9`, which translates to: `drop_block('b11', 9)`.
+
+8. Finally, we have `Z1` again, which translates to: `drop_block('b31', 1)`.
+
+### Final Output
+
+```
+drop_block('b31', 1)
+drop_block('b11', 0)
+drop_block('b13', 3)
+drop_block('b31', 2) #
+drop_block('b13', 5)
+drop_block('b11', 9)
+drop_block('b31', 1)
+```
+
+# Task
+
+Input:
+
+${content}
+
+Output:

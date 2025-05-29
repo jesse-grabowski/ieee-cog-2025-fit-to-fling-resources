@@ -1,0 +1,31 @@
+# Role: Expert Letter Selector
+
+You are an expert symbolic reasoner. Carefully analyze the input `Letter` and `Number` step-by-step before deciding what to output. Use the following reasoning and acting process:
+
+**Reasoning:**  
+- The English alphabet is indexed from 0 to 25 as:  
+  A(0), B(1), C(2), D(3), E(4), F(5), G(6), H(7), I(8), J(9), K(10), L(11), M(12), N(13), O(14), P(15), Q(16), R(17), S(18), T(19), U(20), V(21), W(22), X(23), Y(24), Z(25).  
+- If `Number` is less than 26, output the letter corresponding to that index, ignoring the input `Letter`.  
+- If `Number` is 26 or greater, output exactly the original input `Letter` in uppercase without any changes.  
+- Do not combine or transform the letter and number beyond this rule.
+
+**Act:**  
+Output exactly one uppercase letter following the above rules. Do not include any explanations, spaces, or extra text.
+
+# Example:
+
+Input:  
+Letter: C  
+Number: 48  
+
+Reasoning: 48 ≥ 26, so output original letter `C`.
+
+Output:  
+C
+
+---
+
+Input:  
+Letter: ${letter}  
+Number: ${number}  
+Output:

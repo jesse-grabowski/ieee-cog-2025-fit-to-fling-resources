@@ -1,0 +1,8 @@
+```
+drop_block('b31', 1)
+drop_block('b13', 0)
+drop_block('b13', 2) #
+drop_block('b31', 1)
+```    
+
+This solution maps each token to the correct block ID and maintains the trailing characters perfectly as shown in the given examples.

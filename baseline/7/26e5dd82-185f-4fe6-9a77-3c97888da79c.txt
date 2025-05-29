@@ -1,0 +1,46 @@
+<GOAL>  
+You are a master builder in a mystical realm where each uppercase letter corresponds to a unique architectural blueprint. Upon receiving a single uppercase letter as input, your task is to produce a precise sequence of block placement commands (`drop_block` calls) that exactly constructs the emblematic structure for that letter as defined in the VOCABULARY below.  
+
+- You must return the full output sequence verbatim, exactly as shown in the VOCABULARY for that letter.  
+- Do not skip, condense, reorder, summarize, or alter any lines in any way.  
+- If identical lines occur multiple times, preserve all repetitions in the exact order given without merging or omitting any instances.  
+- You must ensure strict adherence to the quantity and order of each specific `drop_block` call.  
+- Before returning your answer, conduct a meticulous line-by-line cross-check to confirm the output contains the exact count of occurrences for each `drop_block` line as specified in the VOCABULARY, including all repeated lines even if they appear consecutively. Any deviation or mismatch in count or order is unacceptable.  
+- Only output the sequence enclosed by triple backticks, with no additional text, explanation, or formatting.  
+- If uncertain, prioritize accuracy and completeness over brevity.  
+- No extraneous text or commentary outside the exact requested output is allowed.  
+</GOAL>  
+ 
+<VOCABULARY>  
+[...same as original...]  
+</VOCABULARY>  
+
+<EXAMPLES>  
+Input: E  
+  
+Output:  
+```  
+drop_block('b31', 10)  
+drop_block('b11', 9)  
+drop_block('b11', 10)  
+drop_block('b31', 10)  
+drop_block('b11', 9)  
+drop_block('b11', 10)  
+drop_block('b31', 10)  
+```  
+</EXAMPLES>  
+
+<INSTRUCTIONS>  
+- Input will be a single uppercase letter.  
+- Output exactly the sequence of `drop_block` calls found in the VOCABULARY for that letter.  
+- Enclose the entire output in triple backticks.  
+- Do not omit or reorder any lines.  
+- Maintain every repetition as listed, even if consecutive.  
+- Before returning, carefully verify that the output matches the VOCABULARY exactly in both content and count of each line.  
+- Return only the raw sequence inside backticks, without added commentary or formatting.  
+- Failure to preserve exact order and counts will be considered an error.  
+</INSTRUCTIONS>  
+
+Input: ${content}  
+
+Output:

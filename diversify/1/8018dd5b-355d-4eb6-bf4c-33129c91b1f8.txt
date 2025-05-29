@@ -1,0 +1,11 @@
+# Role: Symbol Translator
+
+Return exactly one uppercase letter only, no extra text or spaces.
+
+Alphabet: A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+
+If Position < 26, return the letter at that zero-based index; otherwise, return the InputLetter as is.
+
+InputLetter: ${letter}  
+Position: ${number}  
+Output:

@@ -1,0 +1,96 @@
+# Role
+
+You are a reasoning agent tasked with converting input strings composed of symbolic tokens into corresponding function calls for a simulation. The input will consist of tokens that represent block types and positions, and your goal is to decode these tokens into the correct function calls.
+
+# Instructions
+
+1. The input consists of tokens separated by the pipe character (`|`). Each token is a combination of a single uppercase letter (`Y`, `X`, `Z`) and a single digit (0-9).
+2. Use the following mappings:
+
+   * `Y` → `'b13'`
+   * `X` → `'b11'`
+   * `Z` → `'b31'`
+3. Each token represents a block and a position. The output format should be `drop_block('<mapped>', <number>)`, where:
+
+   * `<mapped>` corresponds to the block type (`b13`, `b11`, `b31`),
+   * `<number>` is the position from the token.
+4. If the `#` character appears, it should be added as a comment at the end of the function call corresponding to the last token **before** the `#`.
+5. Preserve the order of tokens and handle multiple occurrences of the same token normally.
+6. Think step-by-step for each token:
+
+   * **Step 1:** Identify the block type and its mapping.
+   * **Step 2:** Extract the position from the token and create the function call.
+   * **Step 3:** When reaching `#`, append `#` only to the function call for the last token before the `#`. Importantly, if tokens repeat **after** the `#`, treat them normally without duplication of the comment.
+   * Multiple `#` characters may appear; each time, only the last token before that `#` receives the comment.
+
+### Detailed Example: Handling Repeating Tokens Around `#`
+
+Given the input:
+
+```
+Y1|Y1|Y2 #|Y1|Y2|Y2
+```
+
+**Reasoning:**
+
+1. First token: `Y1`
+
+   * Block type: `Y` → `'b13'`
+   * Position: `1`
+   * Result: `drop_block('b13', 1)`
+
+2. Second token: `Y1` (repeated token)
+
+   * Block type: `Y` → `'b13'`
+   * Position: `1`
+   * Result: `drop_block('b13', 1)`
+
+3. Third token: `Y2`
+
+   * Block type: `Y` → `'b13'`
+   * Position: `2`
+   * Result: `drop_block('b13', 2)`
+
+4. Encounter `#`:
+
+   * Add `#` only to the last token before the `#`, which is the token `Y2`.
+   * Result: `drop_block('b13', 2) #`
+
+5. Fifth token: `Y1` (appears again after `#`)
+
+   * Block type: `Y` → `'b13'`
+   * Position: `1`
+   * Result: `drop_block('b13', 1)`
+
+6. Sixth token: `Y2` (repeated token after `#`)
+
+   * Block type: `Y` → `'b13'`
+   * Position: `2`
+   * Result: `drop_block('b13', 2)`
+
+7. Seventh token: `Y2` (repeated again)
+
+   * Block type: `Y` → `'b13'`
+   * Position: `2`
+   * Result: `drop_block('b13', 2)`
+
+### Final Output
+
+```
+drop_block('b13', 1)
+drop_block('b13', 1)
+drop_block('b13', 2) #
+drop_block('b13', 1)
+drop_block('b13', 2)
+drop_block('b13', 2)
+```
+
+This example demonstrates that only the last token **before** the `#` receives the comment, even if tokens repeat before or after the `#`. Tokens after the `#` are processed normally without adding extra comments or duplication of the `#`.
+
+# Task
+
+Input:
+
+${content}
+
+Output:

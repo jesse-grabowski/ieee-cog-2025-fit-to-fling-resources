@@ -1,0 +1,155 @@
+# Task Description
+
+You are a master builder in a mystical realm where each uppercase letter corresponds to a unique architectural blueprint. Your mission is:  
+**Given a single uppercase letter as input, output the exact sequence of `drop_block` calls required to construct that letter’s emblematic structure.**
+
+---
+
+# Guidelines
+
+- **Precision is paramount:** Output the full sequence exactly as specified in the VOCABULARY below.  
+- **No omissions or alterations:** Do not skip, condense, reorder, or summarize lines.  
+- **Preserve repetitions:** If identical lines appear multiple times, all must be included exactly in order.  
+- **Verification:** After generating the sequence, carefully verify that the number of occurrences of each `drop_block` line matches the VOCABULARY for that letter. Pay special attention to consecutive duplicates to ensure none are missing.
+
+---
+
+# VOCABULARY
+
+### INPUT: A  
+```
+drop_block('b11', 8)
+drop_block('b11', 10)
+drop_block('b11', 8)
+drop_block('b11', 10)
+drop_block('b31', 9)
+drop_block('b11', 8)
+drop_block('b11', 10)
+drop_block('b31', 9)
+```
+
+### INPUT: B  
+```
+drop_block('b31', 9)
+drop_block('b11', 11)
+drop_block('b13', 8)
+drop_block('b13', 10)
+drop_block('b13', 11)
+drop_block('b31', 9)
+drop_block('b11', 11)
+drop_block('b11', 8)
+drop_block('b11', 10)
+drop_block('b31', 9)
+```
+
+### INPUT: C  
+```
+drop_block('b31', 10)
+drop_block('b13', 9)
+drop_block('b13', 10)
+drop_block('b13', 9)
+drop_block('b13', 10)
+drop_block('b31', 10)
+```
+
+### INPUT: D  
+```
+drop_block('b31', 10)
+drop_block('b13', 12)
+drop_block('b13', 12)
+drop_block('b13', 9)
+drop_block('b13', 10)
+drop_block('b13', 9)
+drop_block('b13', 10)
+drop_block('b11', 12)
+drop_block('b31', 10)
+```
+
+### INPUT: E  
+```
+drop_block('b31', 10)
+drop_block('b11', 9)
+drop_block('b11', 10)
+drop_block('b31', 10)
+drop_block('b11', 9)
+drop_block('b11', 10)
+drop_block('b31', 10)
+```
+
+### INPUT: F  
+```
+drop_block('b13', 10)
+drop_block('b13', 11)
+drop_block('b13', 10)
+drop_block('b13', 11)
+drop_block('b31', 11)
+drop_block('b11', 10)
+drop_block('b11', 11)
+drop_block('b31', 11)
+```
+
+[...and similarly for all letters G to Z with the same formatting...]
+
+---
+
+# Examples
+
+Input: E  
+Output:  
+```
+drop_block('b31', 10)
+drop_block('b11', 9)
+drop_block('b11', 10)
+drop_block('b31', 10)
+drop_block('b11', 9)
+drop_block('b11', 10)
+drop_block('b31', 10)
+```
+
+Input: G  
+Output:  
+```
+drop_block('b13', 6)
+drop_block('b13', 7)
+drop_block('b31', 9)
+drop_block('b31', 9)
+drop_block('b31', 12)
+drop_block('b31', 12)
+drop_block('b11', 12)
+drop_block('b11', 13)
+drop_block('b31', 12)
+drop_block('b13', 6)
+drop_block('b13', 7)
+drop_block('b11', 6)
+drop_block('b11', 7)
+drop_block('b31', 7)
+```
+
+Input: O  
+Output:  
+```
+drop_block('b31', 10)
+drop_block('b11', 9)
+drop_block('b11', 11)
+drop_block('b11', 9)
+drop_block('b11', 11)
+drop_block('b11', 9)
+drop_block('b11', 11)
+drop_block('b31', 10)
+```
+
+---
+
+# Instructions
+
+- Your input will be a single uppercase letter.  
+- Provide only the exact sequence of `drop_block()` calls for that input as detailed in the VOCABULARY.  
+- Enclose the entire output sequence with triple backticks.  
+- Do not include any extra text or explanation.  
+- Before returning, meticulously verify that the output matches the VOCABULARY for that letter, including all duplicates and order.
+
+---
+
+Input: ${content}
+
+Output:

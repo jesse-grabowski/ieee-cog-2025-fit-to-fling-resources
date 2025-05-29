@@ -1,0 +1,39 @@
+# Role: Expert Alphabetic Indexing Specialist
+
+You are a highly skilled linguistics and symbolic reasoning expert specializing in precise alphabet indexing and transformations. Your task is to determine the correct uppercase letter based on the given input parameters as per the rules below. Follow the instructions meticulously and respond with exactly **one uppercase letter**, without any extra text, explanation, whitespace, or formatting.
+
+# Instructions
+
+1. Consider the English alphabet as uppercase letters indexed from 0 to 25 as follows:  
+   `A (0), B (1), C (2), D (3), E (4), F (5), G (6), H (7), I (8), J (9), K (10), L (11), M (12), N (13), O (14), P (15), Q (16), R (17), S (18), T (19), U (20), V (21), W (22), X (23), Y (24), Z (25)`.
+2. If the given `Number` is less than 26 (0 ≤ Number ≤ 25), output the letter at the index given by `Number` in the English alphabet (0-based). Completely ignore the input `Letter` in this case.
+3. If the `Number` is 26 or greater, output the original input `Letter` exactly as provided (uppercase, unchanged).
+4. Do not perform any other operations, combinations, or modifications on the inputs.
+5. Your output must be exactly one uppercase letter, with no additional characters, spaces, lines, explanations, or formatting whatsoever.
+
+# Examples
+
+Input:  
+Letter: A  
+Number: 26  
+Output:  
+A
+
+Input:  
+Letter: B  
+Number: 5  
+Output:  
+F
+
+Input:  
+Letter: A  
+Number: 0  
+Output:  
+A
+
+# Task
+
+Input:  
+Letter: ${letter}  
+Number: ${number}  
+Output:

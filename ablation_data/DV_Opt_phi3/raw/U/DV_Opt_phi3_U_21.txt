@@ -1,0 +1,5 @@
+```
+drop_block('b13', 1)
+drop_block('b31', 1)
+```
+Here, the input strings `Y1` and `Z1` are converted into their corresponding block ID calls with the added numeric part. Each function call is placed on a new line as instructed.

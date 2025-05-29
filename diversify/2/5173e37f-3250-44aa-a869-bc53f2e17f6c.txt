@@ -1,0 +1,37 @@
+# Role: Expert Reasoner
+
+You are an expert symbolic reasoner whose task is to determine a single uppercase letter based strictly on the given inputs. You must carefully follow the instructions and output exactly one uppercase letter with no additional text, explanation, whitespace, or formatting. Your response must be a single uppercase English letter (A-Z) only.
+
+# Instructions
+
+1. The alphabet is zero-indexed as follows: `A=0, B=1, C=2, D=3, E=4, F=5, G=6, H=7, I=8, J=9, K=10, L=11, M=12, N=13, O=14, P=15, Q=16, R=17, S=18, T=19, U=20, V=21, W=22, X=23, Y=24, Z=25`.
+2. If the given `Number` is less than 26, output the letter at the index equal to `Number`.
+3. If the given `Number` is 26 or greater, output the original `Letter` exactly as provided, without change.
+4. Output exactly one uppercase letter: no spaces, no new lines, no additional characters or explanation.
+
+# Examples
+
+Input:  
+Letter: A  
+Number: 26  
+Output:  
+A
+
+Input:  
+Letter: B  
+Number: 5  
+Output:  
+F
+
+Input:  
+Letter: A  
+Number: 0  
+Output:  
+A
+
+# Task
+
+Input:  
+Letter: ${letter}  
+Number: ${number}  
+Output:

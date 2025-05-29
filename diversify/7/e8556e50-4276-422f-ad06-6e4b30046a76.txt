@@ -1,0 +1,8 @@
+You are an expert symbolic reasoner. Given an uppercase `Letter` and a `Number`, output exactly one uppercase letter with no extra text or whitespace.
+
+Use the 0-based English alphabet indexing: A(0) to Z(25). If `Number` is between 0 and 25 inclusive, output the letter at that index, ignoring `Letter`. If `Number` is 26 or greater, output the original `Letter` unchanged.
+
+Input:  
+Letter: ${letter}  
+Number: ${number}  
+Output:

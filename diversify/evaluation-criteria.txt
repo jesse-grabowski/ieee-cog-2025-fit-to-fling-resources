@@ -1,0 +1,834 @@
+[
+    {
+        "expectation": "E",
+        "vars":
+        {
+            "letter": "A",
+            "number": "4"
+        }
+    },
+    {
+        "expectation": "X",
+        "vars":
+        {
+            "letter": "A",
+            "number": "23"
+        }
+    },
+    {
+        "expectation": "T",
+        "vars":
+        {
+            "letter": "A",
+            "number": "19"
+        }
+    },
+    {
+        "expectation": "A",
+        "vars":
+        {
+            "letter": "A",
+            "number": "39"
+        }
+    },
+    {
+        "expectation": "Q",
+        "vars":
+        {
+            "letter": "B",
+            "number": "16"
+        }
+    },
+    {
+        "expectation": "B",
+        "vars":
+        {
+            "letter": "B",
+            "number": "31"
+        }
+    },
+    {
+        "expectation": "B",
+        "vars":
+        {
+            "letter": "B",
+            "number": "35"
+        }
+    },
+    {
+        "expectation": "R",
+        "vars":
+        {
+            "letter": "B",
+            "number": "17"
+        }
+    },
+    {
+        "expectation": "H",
+        "vars":
+        {
+            "letter": "C",
+            "number": "7"
+        }
+    },
+    {
+        "expectation": "C",
+        "vars":
+        {
+            "letter": "C",
+            "number": "29"
+        }
+    },
+    {
+        "expectation": "C",
+        "vars":
+        {
+            "letter": "C",
+            "number": "48"
+        }
+    },
+    {
+        "expectation": "C",
+        "vars":
+        {
+            "letter": "C",
+            "number": "48"
+        }
+    },
+    {
+        "expectation": "D",
+        "vars":
+        {
+            "letter": "D",
+            "number": "49"
+        }
+    },
+    {
+        "expectation": "T",
+        "vars":
+        {
+            "letter": "D",
+            "number": "19"
+        }
+    },
+    {
+        "expectation": "P",
+        "vars":
+        {
+            "letter": "D",
+            "number": "15"
+        }
+    },
+    {
+        "expectation": "G",
+        "vars":
+        {
+            "letter": "D",
+            "number": "6"
+        }
+    },
+    {
+        "expectation": "Q",
+        "vars":
+        {
+            "letter": "E",
+            "number": "16"
+        }
+    },
+    {
+        "expectation": "E",
+        "vars":
+        {
+            "letter": "E",
+            "number": "41"
+        }
+    },
+    {
+        "expectation": "A",
+        "vars":
+        {
+            "letter": "E",
+            "number": "0"
+        }
+    },
+    {
+        "expectation": "L",
+        "vars":
+        {
+            "letter": "E",
+            "number": "11"
+        }
+    },
+    {
+        "expectation": "I",
+        "vars":
+        {
+            "letter": "F",
+            "number": "8"
+        }
+    },
+    {
+        "expectation": "F",
+        "vars":
+        {
+            "letter": "F",
+            "number": "42"
+        }
+    },
+    {
+        "expectation": "F",
+        "vars":
+        {
+            "letter": "F",
+            "number": "35"
+        }
+    },
+    {
+        "expectation": "W",
+        "vars":
+        {
+            "letter": "F",
+            "number": "22"
+        }
+    },
+    {
+        "expectation": "R",
+        "vars":
+        {
+            "letter": "G",
+            "number": "17"
+        }
+    },
+    {
+        "expectation": "Y",
+        "vars":
+        {
+            "letter": "G",
+            "number": "24"
+        }
+    },
+    {
+        "expectation": "Q",
+        "vars":
+        {
+            "letter": "G",
+            "number": "16"
+        }
+    },
+    {
+        "expectation": "G",
+        "vars":
+        {
+            "letter": "G",
+            "number": "34"
+        }
+    },
+    {
+        "expectation": "H",
+        "vars":
+        {
+            "letter": "H",
+            "number": "34"
+        }
+    },
+    {
+        "expectation": "A",
+        "vars":
+        {
+            "letter": "H",
+            "number": "0"
+        }
+    },
+    {
+        "expectation": "H",
+        "vars":
+        {
+            "letter": "H",
+            "number": "41"
+        }
+    },
+    {
+        "expectation": "Y",
+        "vars":
+        {
+            "letter": "H",
+            "number": "24"
+        }
+    },
+    {
+        "expectation": "I",
+        "vars":
+        {
+            "letter": "I",
+            "number": "44"
+        }
+    },
+    {
+        "expectation": "I",
+        "vars":
+        {
+            "letter": "I",
+            "number": "27"
+        }
+    },
+    {
+        "expectation": "K",
+        "vars":
+        {
+            "letter": "I",
+            "number": "10"
+        }
+    },
+    {
+        "expectation": "I",
+        "vars":
+        {
+            "letter": "I",
+            "number": "26"
+        }
+    },
+    {
+        "expectation": "B",
+        "vars":
+        {
+            "letter": "J",
+            "number": "1"
+        }
+    },
+    {
+        "expectation": "G",
+        "vars":
+        {
+            "letter": "J",
+            "number": "6"
+        }
+    },
+    {
+        "expectation": "J",
+        "vars":
+        {
+            "letter": "J",
+            "number": "40"
+        }
+    },
+    {
+        "expectation": "J",
+        "vars":
+        {
+            "letter": "J",
+            "number": "36"
+        }
+    },
+    {
+        "expectation": "R",
+        "vars":
+        {
+            "letter": "K",
+            "number": "17"
+        }
+    },
+    {
+        "expectation": "X",
+        "vars":
+        {
+            "letter": "K",
+            "number": "23"
+        }
+    },
+    {
+        "expectation": "O",
+        "vars":
+        {
+            "letter": "K",
+            "number": "14"
+        }
+    },
+    {
+        "expectation": "I",
+        "vars":
+        {
+            "letter": "K",
+            "number": "8"
+        }
+    },
+    {
+        "expectation": "F",
+        "vars":
+        {
+            "letter": "L",
+            "number": "5"
+        }
+    },
+    {
+        "expectation": "U",
+        "vars":
+        {
+            "letter": "L",
+            "number": "20"
+        }
+    },
+    {
+        "expectation": "L",
+        "vars":
+        {
+            "letter": "L",
+            "number": "41"
+        }
+    },
+    {
+        "expectation": "G",
+        "vars":
+        {
+            "letter": "L",
+            "number": "6"
+        }
+    },
+    {
+        "expectation": "S",
+        "vars":
+        {
+            "letter": "M",
+            "number": "18"
+        }
+    },
+    {
+        "expectation": "M",
+        "vars":
+        {
+            "letter": "M",
+            "number": "42"
+        }
+    },
+    {
+        "expectation": "M",
+        "vars":
+        {
+            "letter": "M",
+            "number": "31"
+        }
+    },
+    {
+        "expectation": "U",
+        "vars":
+        {
+            "letter": "M",
+            "number": "20"
+        }
+    },
+    {
+        "expectation": "P",
+        "vars":
+        {
+            "letter": "N",
+            "number": "15"
+        }
+    },
+    {
+        "expectation": "N",
+        "vars":
+        {
+            "letter": "N",
+            "number": "36"
+        }
+    },
+    {
+        "expectation": "T",
+        "vars":
+        {
+            "letter": "N",
+            "number": "19"
+        }
+    },
+    {
+        "expectation": "W",
+        "vars":
+        {
+            "letter": "N",
+            "number": "22"
+        }
+    },
+    {
+        "expectation": "O",
+        "vars":
+        {
+            "letter": "O",
+            "number": "44"
+        }
+    },
+    {
+        "expectation": "O",
+        "vars":
+        {
+            "letter": "O",
+            "number": "42"
+        }
+    },
+    {
+        "expectation": "D",
+        "vars":
+        {
+            "letter": "O",
+            "number": "3"
+        }
+    },
+    {
+        "expectation": "O",
+        "vars":
+        {
+            "letter": "O",
+            "number": "30"
+        }
+    },
+    {
+        "expectation": "P",
+        "vars":
+        {
+            "letter": "P",
+            "number": "32"
+        }
+    },
+    {
+        "expectation": "B",
+        "vars":
+        {
+            "letter": "P",
+            "number": "1"
+        }
+    },
+    {
+        "expectation": "U",
+        "vars":
+        {
+            "letter": "P",
+            "number": "20"
+        }
+    },
+    {
+        "expectation": "P",
+        "vars":
+        {
+            "letter": "P",
+            "number": "49"
+        }
+    },
+    {
+        "expectation": "Q",
+        "vars":
+        {
+            "letter": "Q",
+            "number": "30"
+        }
+    },
+    {
+        "expectation": "S",
+        "vars":
+        {
+            "letter": "Q",
+            "number": "18"
+        }
+    },
+    {
+        "expectation": "Q",
+        "vars":
+        {
+            "letter": "Q",
+            "number": "35"
+        }
+    },
+    {
+        "expectation": "Q",
+        "vars":
+        {
+            "letter": "Q",
+            "number": "28"
+        }
+    },
+    {
+        "expectation": "R",
+        "vars":
+        {
+            "letter": "R",
+            "number": "44"
+        }
+    },
+    {
+        "expectation": "R",
+        "vars":
+        {
+            "letter": "R",
+            "number": "49"
+        }
+    },
+    {
+        "expectation": "R",
+        "vars":
+        {
+            "letter": "R",
+            "number": "39"
+        }
+    },
+    {
+        "expectation": "S",
+        "vars":
+        {
+            "letter": "R",
+            "number": "18"
+        }
+    },
+    {
+        "expectation": "S",
+        "vars":
+        {
+            "letter": "S",
+            "number": "33"
+        }
+    },
+    {
+        "expectation": "S",
+        "vars":
+        {
+            "letter": "S",
+            "number": "30"
+        }
+    },
+    {
+        "expectation": "S",
+        "vars":
+        {
+            "letter": "S",
+            "number": "44"
+        }
+    },
+    {
+        "expectation": "B",
+        "vars":
+        {
+            "letter": "S",
+            "number": "1"
+        }
+    },
+    {
+        "expectation": "T",
+        "vars":
+        {
+            "letter": "T",
+            "number": "48"
+        }
+    },
+    {
+        "expectation": "D",
+        "vars":
+        {
+            "letter": "T",
+            "number": "3"
+        }
+    },
+    {
+        "expectation": "T",
+        "vars":
+        {
+            "letter": "T",
+            "number": "29"
+        }
+    },
+    {
+        "expectation": "T",
+        "vars":
+        {
+            "letter": "T",
+            "number": "32"
+        }
+    },
+    {
+        "expectation": "U",
+        "vars":
+        {
+            "letter": "U",
+            "number": "34"
+        }
+    },
+    {
+        "expectation": "U",
+        "vars":
+        {
+            "letter": "U",
+            "number": "39"
+        }
+    },
+    {
+        "expectation": "U",
+        "vars":
+        {
+            "letter": "U",
+            "number": "42"
+        }
+    },
+    {
+        "expectation": "U",
+        "vars":
+        {
+            "letter": "U",
+            "number": "32"
+        }
+    },
+    {
+        "expectation": "V",
+        "vars":
+        {
+            "letter": "V",
+            "number": "45"
+        }
+    },
+    {
+        "expectation": "A",
+        "vars":
+        {
+            "letter": "V",
+            "number": "0"
+        }
+    },
+    {
+        "expectation": "V",
+        "vars":
+        {
+            "letter": "V",
+            "number": "45"
+        }
+    },
+    {
+        "expectation": "Q",
+        "vars":
+        {
+            "letter": "V",
+            "number": "16"
+        }
+    },
+    {
+        "expectation": "X",
+        "vars":
+        {
+            "letter": "W",
+            "number": "23"
+        }
+    },
+    {
+        "expectation": "W",
+        "vars":
+        {
+            "letter": "W",
+            "number": "30"
+        }
+    },
+    {
+        "expectation": "W",
+        "vars":
+        {
+            "letter": "W",
+            "number": "48"
+        }
+    },
+    {
+        "expectation": "W",
+        "vars":
+        {
+            "letter": "W",
+            "number": "48"
+        }
+    },
+    {
+        "expectation": "O",
+        "vars":
+        {
+            "letter": "X",
+            "number": "14"
+        }
+    },
+    {
+        "expectation": "X",
+        "vars":
+        {
+            "letter": "X",
+            "number": "32"
+        }
+    },
+    {
+        "expectation": "X",
+        "vars":
+        {
+            "letter": "X",
+            "number": "45"
+        }
+    },
+    {
+        "expectation": "Z",
+        "vars":
+        {
+            "letter": "X",
+            "number": "25"
+        }
+    },
+    {
+        "expectation": "Y",
+        "vars":
+        {
+            "letter": "Y",
+            "number": "28"
+        }
+    },
+    {
+        "expectation": "Y",
+        "vars":
+        {
+            "letter": "Y",
+            "number": "27"
+        }
+    },
+    {
+        "expectation": "F",
+        "vars":
+        {
+            "letter": "Y",
+            "number": "5"
+        }
+    },
+    {
+        "expectation": "T",
+        "vars":
+        {
+            "letter": "Y",
+            "number": "19"
+        }
+    },
+    {
+        "expectation": "H",
+        "vars":
+        {
+            "letter": "Z",
+            "number": "7"
+        }
+    },
+    {
+        "expectation": "A",
+        "vars":
+        {
+            "letter": "Z",
+            "number": "0"
+        }
+    },
+    {
+        "expectation": "X",
+        "vars":
+        {
+            "letter": "Z",
+            "number": "23"
+        }
+    },
+    {
+        "expectation": "L",
+        "vars":
+        {
+            "letter": "Z",
+            "number": "11"
+        }
+    }
+]

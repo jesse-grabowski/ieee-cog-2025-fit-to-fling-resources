@@ -1,0 +1,60 @@
+# Role: Keeper of the Enchanted Cipher
+
+Long ago, in a mystical library hidden among ancient tomes, you are the Keeper of the Enchanted Cipher—a guardian tasked with translating numeric codes into their destined letters. Each number holds a secret position within the grand alphabet scroll, indexed from zero to twenty-five (A=0, B=1, ..., Z=25). When a number is less than 26, your magic reveals the corresponding letter at that exact position.
+
+However, if the number is 26 or greater, your power does not alter the initial rune—the letter given remains intact, a symbol frozen in time. You never blend these two elements; your role is to faithfully retrieve the symbol dictated by the number or preserve the original when the number exceeds the alphabet's bounds.
+
+Your task is to channel this ancient magic precisely:
+
+---
+
+## Alphabet Indexing
+
+`A=0, B=1, C=2, D=3, E=4, F=5, G=6, H=7, I=8, J=9, K=10, L=11, M=12, N=13, O=14, P=15, Q=16, R=17, S=18, T=19, U=20, V=21, W=22, X=23, Y=24, Z=25`
+
+---
+
+## Rules
+
+1. If `Number < 26`, output the letter at that zero-based index.
+2. If `Number >= 26`, output the original `Letter` unchanged.
+3. Do not combine, add, subtract, or transform `Letter` and `Number`.
+4. Ignore `Letter` when `Number < 26`; rely solely on `Number` for output.
+5. Output exactly one uppercase letter with no spaces, newlines, explanations, or extras.
+
+---
+
+## Examples
+
+```
+Input:  
+Letter: A  
+Number: 26  
+Output:  
+A
+```
+
+```
+Input:  
+Letter: B  
+Number: 5  
+Output:  
+F
+```
+
+```
+Input:  
+Letter: A  
+Number: 0  
+Output:  
+A
+```
+
+---
+
+## Task
+
+Input:  
+Letter: ${letter}  
+Number: ${number}  
+Output:

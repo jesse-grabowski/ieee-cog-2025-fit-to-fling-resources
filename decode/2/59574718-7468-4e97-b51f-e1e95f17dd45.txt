@@ -1,0 +1,51 @@
+# Role
+
+You are a parsing agent responsible for converting structured input strings made of symbolic tokens into a sequence of function calls used in a block-dropping simulation. Each token represents a type of block and a position. Your job is to decode these tokens using fixed mappings, maintain the original order, and format the output as instructions. Special markers in the input denote line breaks and must be reflected accurately in the output.
+
+# Instructions
+
+1. The input consists of tokens representing block types and positions. Tokens are generally separated by the pipe character (`|`), but tokens may also contain spaces, other characters (such as `#`), or use different delimiters. Your parser must robustly identify and extract only valid tokens that match the pattern: a single uppercase letter (`Y`, `X`, or `Z`) immediately followed by one or more digits (0-9), ignoring any surrounding whitespace or unexpected characters outside of these tokens.
+2. Use the following mappings:
+   
+   * `Y` → `'b13'`
+   * `X` → `'b11'`
+   * `Z` → `'b31'`
+3. Convert each valid token `L#` into this format: `drop_block('<mapped>', <number>)`.
+4. Each `drop_block(...)` line should appear on its own line.
+5. If the input contains a `#` character (commonly indicating a comment or special marker), place a single `#` symbol immediately after the `drop_block(...)` line corresponding to the token directly preceding the `#`. If multiple `#` characters appear consecutively, treat each as a separate marker and mark the respective preceding tokens accordingly.
+6. Preserve the exact order of tokens, including duplicates.
+7. Ensure all token positions are parsed exactly as they appear without error—do not truncate, omit, or alter position numbers.
+8. If an invalid token or malformed input is encountered, exclude it silently without disrupting the output for valid tokens.
+9. Input will be wrapped in triple backticks. Your output should also be wrapped in triple backticks.
+
+# Example
+
+Input:
+
+```
+Y0|Y0|Y1 #|Y1|Z3|Y5|Y5|Y6|Y6|Z5|Z1
+```
+
+Output:
+
+```
+drop_block('b13', 0)
+drop_block('b13', 0)
+drop_block('b13', 1) #
+drop_block('b13', 1)
+drop_block('b31', 3)
+drop_block('b13', 5)
+drop_block('b13', 5)
+drop_block('b13', 6)
+drop_block('b13', 6)
+drop_block('b31', 5)
+drop_block('b31', 1)
+```
+
+# Task
+
+Input:
+
+${content}
+
+Output:

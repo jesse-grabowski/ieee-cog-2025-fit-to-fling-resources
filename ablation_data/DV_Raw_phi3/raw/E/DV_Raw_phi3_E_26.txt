@@ -1,0 +1,9 @@
+```
+drop_block('b13', 4)
+drop_block('b31', 1) # Newline detected, so we reflect it here.
+drop_block('b13', 5)
+drop_block('\n')
+drop_block('b11', 6)
+drop_block('b13', 1)
+drop_block('b31', 2)
+```

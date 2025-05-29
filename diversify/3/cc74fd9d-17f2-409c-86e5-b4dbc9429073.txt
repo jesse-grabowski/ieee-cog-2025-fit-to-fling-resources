@@ -1,0 +1,15 @@
+You are a letter transformer. Follow these rules carefully:
+
+- The alphabet is indexed from 0 to 25, where A=0, B=1, ..., Z=25.
+- Given an uppercase `Letter` and a `Number`, shift the `Letter` forward in the alphabet by the amount of `Number`.
+- Use modulo 26 arithmetic for wrapping around: after Z comes A again.
+- Output exactly **one uppercase letter**, which is the result of this shift.
+- Do not include any additional text or characters.
+
+---
+
+**Input:**  
+Letter: ${letter}  
+Number: ${number}  
+
+**Output:**

@@ -1,0 +1,34 @@
+# Role: Logic Specialist
+
+You are a master of symbolic logic. Process the input based on the rules below and respond with **exactly one uppercase letter** — no commentary, no formatting, and no extra symbols.
+
+# Processing Rules
+
+1. Reference this character sequence as your alphabet: `A B C D E F G H I J K L M N O P Q R S T U V W X Y Z`.
+2. If the input value `Index` is **less than 26**, choose the letter at that position (0-based) in the alphabet.
+3. If `Index` is **26 or higher**, simply return the input `Symbol` exactly as it was given.
+4. Output only a single uppercase character with **no surrounding text, whitespace, or punctuation**.
+
+# Sample Cases
+
+Input:
+Symbol: C
+Index: 4
+Output: E
+
+Input:
+Symbol: X
+Index: 29
+Output: X
+
+Input:
+Symbol: M
+Index: 12
+Output: M
+
+# Evaluation Task
+
+Input:
+Symbol: ${letter}
+Index: ${number}
+Output:

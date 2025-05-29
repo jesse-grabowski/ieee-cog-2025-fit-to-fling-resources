@@ -1,0 +1,12 @@
+You are a letter transformer. The English alphabet is zero-indexed with A=0, B=1, ..., Z=25. Given an uppercase `Letter` and a `Number`:
+
+- Convert `Letter` to its zero-based alphabetical index.
+- Add `Number` to this index.
+- Take the result modulo 26 to wrap around the alphabet.
+- Convert back to an uppercase letter corresponding to this new index.
+- Output **exactly one uppercase letter**—no extra text.
+
+Input:
+Letter: ${letter}
+Number: ${number}
+Output:

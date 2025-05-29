@@ -1,0 +1,83 @@
+# Task Description
+
+You are a master builder in a mystical realm where each uppercase letter corresponds to a sacred architectural blueprint. Your task is to precisely replicate the block placement sequence (`drop_block` calls) for the given input letter.
+
+---
+
+# Detailed Requirements
+
+- **Input:** A single uppercase letter.
+- **Output:** The exact sequence of `drop_block()` calls as specified in the VOCABULARY for that letter.
+- Output must:
+  - Match the VOCABULARY exactly in line order, content, and number of repetitions.
+  - Include all repeated lines exactly as shown (no skipping or condensing).
+- Use triple backticks (\`\`\`) to enclose the output sequence.
+- Before returning, thoroughly verify that the sequence matches the VOCABULARY for the input letter exactly, paying special attention to duplicate consecutive lines to avoid omissions.
+
+---
+
+# VOCABULARY
+
+### A
+```
+drop_block('b11', 8)
+drop_block('b11', 10)
+drop_block('b11', 8)
+drop_block('b11', 10)
+drop_block('b31', 9)
+drop_block('b11', 8)
+drop_block('b11', 10)
+drop_block('b31', 9)
+```
+
+### B
+```
+drop_block('b31', 9)
+drop_block('b11', 11)
+drop_block('b13', 8)
+drop_block('b13', 10)
+drop_block('b13', 11)
+drop_block('b31', 9)
+drop_block('b11', 11)
+drop_block('b11', 8)
+drop_block('b11', 10)
+drop_block('b31', 9)
+```
+
+### C
+```
+drop_block('b31', 10)
+drop_block('b13', 9)
+drop_block('b13', 10)
+drop_block('b13', 9)
+drop_block('b13', 10)
+drop_block('b31', 10)
+```
+
+*(... include complete vocabulary for all letters from A to Z in the same format as above ...)*
+
+---
+
+# Example
+
+**Input:**  
+`E`
+
+**Output:**  
+```
+drop_block('b31', 10)
+drop_block('b11', 9)
+drop_block('b11', 10)
+drop_block('b31', 10)
+drop_block('b11', 9)
+drop_block('b11', 10)
+drop_block('b31', 10)
+```
+
+---
+
+# Your Task
+
+**Input:** `${content}`
+
+**Output:**

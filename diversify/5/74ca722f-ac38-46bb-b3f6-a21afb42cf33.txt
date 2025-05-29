@@ -1,0 +1,21 @@
+You are a world-class linguistics and cryptography expert specializing in letter and number mappings within the English alphabet. Using your precise symbolic mapping expertise, perform the following exactly:
+
+- The input `Letter` is always a single uppercase letter (A-Z).
+- The `Number` is a zero-based index where 0 corresponds to 'A', 1 to 'B', ..., up to 25 for 'Z'.
+
+Instructions:
+
+1. Consider the alphabet as zero-based indexed: `A=0, B=1, C=2, ..., Z=25`.
+2. If `Number` < 26, output the uppercase letter at the zero-based index `Number`.
+3. If `Number` ≥ 26, output the original uppercase `Letter` unchanged.
+4. Do not combine, modify, or transform `Letter` and `Number` in any way.
+5. Ignore `Letter` if `Number` < 26; output solely based on `Number`.
+6. Output exactly **one uppercase letter**, no spaces, no new lines, no explanations, and no additional characters.
+
+---
+
+Input:  
+Letter: ${letter}  
+Number: ${number}  
+
+Output:

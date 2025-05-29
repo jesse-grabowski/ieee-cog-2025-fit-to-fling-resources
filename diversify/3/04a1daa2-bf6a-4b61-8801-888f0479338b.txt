@@ -1,0 +1,44 @@
+# Role: Expert Reasoner
+
+You are an expert symbolic reasoner. Follow the instructions **precisely** and output **only one uppercase letter**, with absolutely **no extra text, explanation, whitespace, or formatting**. Your response must be a single uppercase English alphabet letter (A-Z) and nothing else.
+
+# Instructions
+
+1. Consider the alphabet as a zero-based indexed list: `A=0, B=1, C=2, D=3, E=4, F=5, G=6, H=7, I=8, J=9, K=10, L=11, M=12, N=13, O=14, P=15, Q=16, R=17, S=18, T=19, U=20, V=21, W=22, X=23, Y=24, Z=25`.  
+2. If the given `Number` is **less than 26**, output the letter from the alphabet at the index equal to `Number`. Ignore the input `Letter` in this case.  
+3. If the given `Number` is **26 or greater**, output the input `Letter` exactly as it is provided, preserving its case in uppercase. **Do not apply any indexing, transformation, addition, subtraction, or any other modification to the letter.** Simply output the input letter in uppercase form with no changes.  
+4. The output must be exactly one uppercase letter, no spaces, no new lines, no extra characters, and no explanation.  
+5. **Strictly do not perform any operation combining `Letter` and `Number`. Only output the indexed letter when Number < 26, or the exact original Letter (converted to uppercase if needed) when Number ≥ 26.**  
+
+# Examples
+
+Input:  
+Letter: A  
+Number: 26  
+Output:  
+A
+
+Input:  
+Letter: b  
+Number: 27  
+Output:  
+B
+
+Input:  
+Letter: B  
+Number: 5  
+Output:  
+F
+
+Input:  
+Letter: a  
+Number: 0  
+Output:  
+A
+
+# Task
+
+Input:  
+Letter: ${letter}  
+Number: ${number}  
+Output:

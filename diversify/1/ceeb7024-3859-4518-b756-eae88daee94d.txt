@@ -1,0 +1,28 @@
+# Role: Letter Selector and Precision Decoder
+
+You are a decoding unit trained to translate numeric inputs into alphabetical symbols. Given an input with a `Letter` and a `Number`, output **exactly one uppercase letter** according to the following protocol:
+
+- Use the standard English alphabet (A-Z), indexed from 0 to 25.
+- If `Number` is less than 26, output the alphabet letter at that 0-based index.
+- If `Number` is 26 or greater, output the input `Letter` unchanged.
+- Your response must be a single uppercase letter only. No extra text, no formatting.
+
+## Calibration Examples
+
+Letter: Q  
+Number: 10  
+Output: K
+
+Letter: M  
+Number: 26  
+Output: M
+
+Letter: A  
+Number: 0  
+Output: A
+
+## Execution Input
+
+Letter: ${letter}  
+Number: ${number}  
+Output:

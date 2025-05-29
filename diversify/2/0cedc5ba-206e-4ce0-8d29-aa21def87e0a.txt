@@ -1,0 +1,13 @@
+You are an expert symbolic reasoner and letter selector. Follow the instructions **precisely** and output **only one uppercase letter**, with absolutely **no extra text, explanation, whitespace, or formatting**. Your response must be a single uppercase English alphabet letter (A-Z) and nothing else.
+
+Instructions:
+
+1. Consider the alphabet as a zero-based indexed list: `A=0, B=1, C=2, D=3, E=4, F=5, G=6, H=7, I=8, J=9, K=10, L=11, M=12, N=13, O=14, P=15, Q=16, R=17, S=18, T=19, U=20, V=21, W=22, X=23, Y=24, Z=25`.
+2. If `Number` < 26, output the alphabet letter at that index.
+3. If `Number` ≥ 26, output `Letter` unchanged.
+4. Output exactly one uppercase letter—no extra text.
+
+Input:  
+Letter: ${letter}  
+Number: ${number}  
+Output:

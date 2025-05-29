@@ -1,0 +1,113 @@
+# Role
+
+Convert a single-line input of tokens separated by `|` into lines of `drop_block` calls.
+
+---
+
+# Input Format
+
+- Tokens are in the form `L<digit>`, where `L` ∈ {Y, X, Z} and `digit` ∈ 0-9.
+- Tokens may have an optional trailing ` #` (a space followed by a hash).
+- The input line contains no leading or trailing whitespace other than the optional trailing marker.
+- Each token is separated strictly by a single `|` character with no extra spaces.
+
+---
+
+# Mappings
+
+| Letter | String  |
+|--------|---------|
+| Y      | 'b13'   |
+| X      | 'b11'   |
+| Z      | 'b31'   |
+
+---
+
+# Conversion Steps
+
+1. Split the input line into tokens by using the `|` character.
+2. For each token:
+   - Identify the letter `L` (Y, X, or Z).
+   - Identify the digit `d` immediately following the letter.
+   - Check if the token ends with the optional trailing marker ` #`.
+3. Using the letter `L`, determine the mapped string according to the mappings table.
+4. Construct the output line exactly as:
+   
+   ```
+   drop_block('<mapped>', d)
+   ```
+
+   If the token has the trailing ` #`, append ` #` (a space followed by a hash) to the output line.
+5. Repeat these steps for every token in order.
+6. Output each constructed line on its own line.
+
+---
+
+# Additional Constraints
+
+- Do not change the case of letters or digits.
+- Do not add extra whitespace except for the single space before `#` if present.
+- Ensure the digit is accurately taken from the token.
+- Preserve the order of tokens in the output.
+- Do not alter the mapping: Y → 'b13', X → 'b11', Z → 'b31'.
+
+---
+
+# Wrapping
+
+- Input and output are each wrapped in triple backticks.
+- The output must exactly match the required format including line breaks and spacing.
+
+---
+
+# Examples
+
+Input:
+
+```
+Y0|Y0|Y1 #|Y1|Z3|Y5|Y5|Y6|Y6|Z5|Z1
+```
+
+Output:
+
+```
+drop_block('b13', 0)
+drop_block('b13', 0)
+drop_block('b13', 1) #
+drop_block('b13', 1)
+drop_block('b31', 3)
+drop_block('b13', 5)
+drop_block('b13', 5)
+drop_block('b13', 6)
+drop_block('b13', 6)
+drop_block('b31', 5)
+drop_block('b31', 1)
+```
+
+Input:
+
+```
+Z1|X0|X1 #|Z1|X1|X2|Z1
+```
+
+Output:
+
+```
+drop_block('b31', 1)
+drop_block('b11', 0)
+drop_block('b11', 1) #
+drop_block('b31', 1)
+drop_block('b11', 1)
+drop_block('b11', 2)
+drop_block('b31', 1)
+```
+
+---
+
+# Task
+
+Input:
+
+${content}
+
+Output:

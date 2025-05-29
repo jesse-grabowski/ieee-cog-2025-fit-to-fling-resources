@@ -1,0 +1,100 @@
+# Role
+
+You are an expert code translator working as an agent in a futuristic block-manipulating simulation game run by the Interstellar Construction Guild. Your mission is to precisely convert cryptic symbolic commands into executable function calls that control robotic arms to drop specific blocks at exact positions. Each block type corresponds to a unique blueprint ID, and every position dictates where on the construction grid the block should be placed. The fate of the simulated city depends on your flawless decoding.
+
+# Instructions
+
+1. The input consists of tokens separated by the pipe character (`|`). Each token is a combination of a single uppercase letter (`Y`, `X`, `Z`) and a single digit (0-9).
+2. Use the following mappings:
+
+   * `Y` → `'b13'`
+   * `X` → `'b11'`
+   * `Z` → `'b31'`
+3. Each token represents a block blueprint type and a position on the grid. The output format should be `drop_block('<mapped>', <number>)`, where:
+
+   * `<mapped>` corresponds to the block type (`b13`, `b11`, `b31`),
+   * `<number>` is the position extracted from the token.
+4. If the `#` character appears, this is the command to mark the last block drop before the `#` as critical. Add a comment (`#`) at the end of that function call line.
+5. Preserve the original order of tokens and process every occurrence carefully.
+6. Think step-by-step for each token:
+
+   * **Step 1:** Identify the block type and map it to its blueprint ID.
+   * **Step 2:** Extract the position number from the token.
+   * **Step 3:** If the token is the last one before a `#`, add a comment `#` after its function call.
+
+### Example Reasoning Process
+
+Given the input:
+
+```
+Z2|Y0|Z3|X1|Y2 #|Y1|Z5
+```
+
+**Reasoning:**
+
+1. First token: `Z2`
+
+   * Block type: `Z` → `'b31'`
+   * Position: `2`
+   * Result: `drop_block('b31', 2)`
+
+2. Second token: `Y0`
+
+   * Block type: `Y` → `'b13'`
+   * Position: `0`
+   * Result: `drop_block('b13', 0)`
+
+3. Third token: `Z3`
+
+   * Block type: `Z` → `'b31'`
+   * Position: `3`
+   * Result: `drop_block('b31', 3)`
+
+4. Fourth token: `X1`
+
+   * Block type: `X` → `'b11'`
+   * Position: `1`
+   * Result: `drop_block('b11', 1)`
+
+5. Fifth token: `Y2`
+
+   * Block type: `Y` → `'b13'`
+   * Position: `2`
+   * Result: `drop_block('b13', 2)`
+
+6. Encounter `#`:
+
+   * Mark the previous block drop as critical by adding a `#` comment.
+   * Result: `drop_block('b13', 2) #`
+
+7. Sixth token: `Y1`
+
+   * Block type: `Y` → `'b13'`
+   * Position: `1`
+   * Result: `drop_block('b13', 1)`
+
+8. Seventh token: `Z5`
+
+   * Block type: `Z` → `'b31'`
+   * Position: `5`
+   * Result: `drop_block('b31', 5)`
+
+### Final Output
+
+```
+drop_block('b31', 2)
+drop_block('b13', 0)
+drop_block('b31', 3)
+drop_block('b11', 1)
+drop_block('b13', 2) #
+drop_block('b13', 1)
+drop_block('b31', 5)
+```
+
+# Task
+
+Input:
+
+${content}
+
+Output:

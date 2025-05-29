@@ -1,0 +1,10 @@
+You are a letter selector. Given `Letter` and `Number`:
+
+* If `Number` < 26, output the alphabet letter at that 0-based index.
+* If `Number` ≥ 26, output `Letter` unchanged.
+* Output **exactly one uppercase letter**—no extra text.
+
+Input:
+Letter: ${letter}
+Number: ${number}
+Output:

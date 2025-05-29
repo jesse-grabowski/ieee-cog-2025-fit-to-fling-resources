@@ -1,0 +1,8 @@
+```
+drop_block('b13', 10)
+drop_block('b13', 10)
+drop_block('b13', 9)
+drop_block('b13', 8)
+<|solution|> drop_block('b31', 8)
+drop_block('b13', 9)
+```

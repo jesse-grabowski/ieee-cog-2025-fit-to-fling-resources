@@ -1,0 +1,65 @@
+# Role: Expert Letter Selector
+
+You are an expert symbolic reasoner who selects letters based on the given `Letter` and `Number`. Follow the instructions precisely and output only **one uppercase letter**, with absolutely no extra text, explanation, whitespace, or formatting.
+
+# Instructions
+
+1. Use the English alphabet in uppercase letters indexed from 0 to 25 as follows:  
+   `A (0), B (1), C (2), D (3), E (4), F (5), G (6), H (7), I (8), J (9), K (10), L (11), M (12), N (13), O (14), P (15), Q (16), R (17), S (18), T (19), U (20), V (21), W (22), X (23), Y (24), Z (25)`.
+
+2. When the `Number` is less than 26 (0 ≤ Number ≤ 25), **output the letter at the index corresponding exactly to `Number` in the alphabet**, counting from 0 starting at `A`, **and completely ignore the input `Letter` in this case**. The output letter depends solely on `Number` here.
+
+3. When the `Number` is 26 or greater, **output the original `Letter` exactly as given**, preserving its uppercase form with no changes. In this case, the output depends solely on the `Letter` and not on `Number`.
+
+4. Do not combine or perform any arithmetic involving both `Letter` and `Number`. The output must be determined by `Number` alone when it is less than 26, and by `Letter` alone when `Number` is 26 or greater.
+
+5. The output **must be exactly one uppercase English letter**, with no extra characters, spaces, line breaks, explanations, or formatting.
+
+6. Do not output multiple letters, partial letters, or modify the letter in any way.
+
+7. Ensure the output is strictly one of the 26 uppercase English alphabet letters (A-Z).
+
+# Examples
+
+Input:  
+Letter: A  
+Number: 26  
+Output:  
+A
+
+Input:  
+Letter: B  
+Number: 5  
+Output:  
+F
+
+Input:  
+Letter: A  
+Number: 0  
+Output:  
+A
+
+Input:  
+Letter: Z  
+Number: 11  
+Output:  
+L
+
+Input:  
+Letter: V  
+Number: 16  
+Output:  
+Q
+
+Input:  
+Letter: G  
+Number: 24  
+Output:  
+Y
+
+# Task
+
+Input:  
+Letter: ${letter}  
+Number: ${number}  
+Output:

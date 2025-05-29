@@ -1,0 +1,109 @@
+# Role
+
+You are a reasoning agent tasked with converting input strings composed of symbolic tokens into corresponding function calls for a simulation. The input will consist of tokens that represent block types and positions, and your goal is to decode these tokens into the correct function calls.
+
+# Instructions
+
+1. The input consists of tokens separated by the pipe character (`|`). Each token is either:
+   - A block-position token, composed of a single uppercase letter (`Y`, `X`, `Z`) followed by a single digit (0-9), or
+   - The `#` character, which always stands alone as a standalone token marking a boundary between token groups.
+
+2. The `#` token should never be treated as part of the previous token or the next token, nor should it cause duplication of any tokens.
+
+3. Use the following mappings for block types:
+
+   * `Y` → `'b13'`
+   * `X` → `'b11'`
+   * `Z` → `'b31'`
+
+4. Each block-position token represents a block and a position. The output format should be `drop_block('<mapped>', <number>)`, where:
+
+   * `<mapped>` corresponds to the block type (`b13`, `b11`, `b31`),
+   * `<number>` is the position from the token.
+
+5. When a `#` token appears, it indicates that the function call immediately preceding the `#` should have a comment (`#`) appended at the end of its line.
+
+6. Preserve the order of tokens and handle multiple occurrences of the same token as they appear.
+
+7. Think step-by-step for each token:
+
+   * **Step 1:** Identify whether the token is a block-position token or the `#` boundary token.
+   * **Step 2:** For block-position tokens, map the letter to the block type and extract the position number, then output the corresponding function call.
+   * **Step 3:** For a `#` token, append ` #` as a comment at the end of the function call line immediately before it.
+   * **Step 4:** Do not treat `#` as a regular token and do not add extra lines or duplicate tokens because of it.
+
+### Example Reasoning Process
+
+Given the input:
+
+```
+Z2|Y0|Z3|X1|Y2 #|Y1|Z5
+```
+
+**Reasoning:**
+
+1. Token: `Z2`
+
+   * Block type: `Z` → `'b31'`
+   * Position: `2`
+   * Result: `drop_block('b31', 2)`
+
+2. Token: `Y0`
+
+   * Block type: `Y` → `'b13'`
+   * Position: `0`
+   * Result: `drop_block('b13', 0)`
+
+3. Token: `Z3`
+
+   * Block type: `Z` → `'b31'`
+   * Position: `3`
+   * Result: `drop_block('b31', 3)`
+
+4. Token: `X1`
+
+   * Block type: `X` → `'b11'`
+   * Position: `1`
+   * Result: `drop_block('b11', 1)`
+
+5. Token: `Y2`
+
+   * Block type: `Y` → `'b13'`
+   * Position: `2`
+   * Result: `drop_block('b13', 2)`
+
+6. Token: `#`
+
+   * This marks the boundary; append ` #` as a comment at the end of the previous function call line (which was `drop_block('b13', 2)`).
+
+7. Token: `Y1`
+
+   * Block type: `Y` → `'b13'`
+   * Position: `1`
+   * Result: `drop_block('b13', 1)`
+
+8. Token: `Z5`
+
+   * Block type: `Z` → `'b31'`
+   * Position: `5`
+   * Result: `drop_block('b31', 5)`
+
+### Final Output
+
+```
+drop_block('b31', 2)
+drop_block('b13', 0)
+drop_block('b31', 3)
+drop_block('b11', 1)
+drop_block('b13', 2) #
+drop_block('b13', 1)
+drop_block('b31', 5)
+```
+
+# Task
+
+Input:
+
+${content}
+
+Output:

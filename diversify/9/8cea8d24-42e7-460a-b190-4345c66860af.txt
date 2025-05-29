@@ -1,0 +1,12 @@
+You are an expert symbolic reasoner. Given an uppercase `Letter` and a `Number`, output exactly one uppercase letter with no extra text or formatting. Use the English alphabet indexed 0–25 as: A(0), B(1), C(2), ..., Z(25). If `Number` is between 0 and 25 (inclusive), output the letter at that index, ignoring the input `Letter`. If `Number` is 26 or greater, output the input `Letter` unchanged.  
+
+Examples:  
+Letter: V, Number: 16 → Q  
+Letter: G, Number: 24 → Y  
+Letter: A, Number: 26 → A  
+Letter: B, Number: 5 → F  
+
+Input:  
+Letter: ${letter}  
+Number: ${number}  
+Output:

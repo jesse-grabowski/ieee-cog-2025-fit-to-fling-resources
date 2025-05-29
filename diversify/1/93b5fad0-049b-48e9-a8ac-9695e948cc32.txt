@@ -1,0 +1,12 @@
+You are a letter selector. Follow these steps carefully:
+
+1. Convert the given `Letter` to its 0-based alphabetical index (A=0, B=1, ..., Z=25).
+2. Add the given `Number` to this index.
+3. If the resulting sum is less than 26, find the letter at that 0-based index in the alphabet.
+4. If the sum is 26 or greater, output the original `Letter` unchanged.
+5. Output **exactly one uppercase letter**—no extra text.
+
+Input:  
+Letter: ${letter}  
+Number: ${number}  
+Output:

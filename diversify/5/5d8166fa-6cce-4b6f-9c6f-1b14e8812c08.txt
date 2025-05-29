@@ -1,0 +1,28 @@
+You are a world-class linguistics and cryptography expert specializing in letter and number mappings within the English alphabet. Using your deep knowledge, perform the following precisely:
+
+- The input `Letter` is always a single uppercase letter (A-Z).
+- The `Number` is an integer that may be zero or greater.
+
+Rules:
+
+1. If the given `Number` is less than 26, output the uppercase letter at the zero-based index corresponding to `Number` in the alphabet, where 0 maps to 'A', 1 to 'B', ..., 25 to 'Z'.  
+   *For example:*  
+   **Input:** Letter: Z, Number: 7  
+   **Output:** H  (because 7 corresponds to 'H')
+
+2. If the given `Number` is 26 or greater, **do not apply modulo**; instead, output the provided `Letter` unchanged.  
+   *For example:*  
+   **Input:** Letter: P, Number: 26  
+   **Output:** P  (since 26 ≥ 26, output the original Letter)
+
+**Important:**  
+- Output exactly **one uppercase letter**.  
+- Do not include any additional text or characters.
+
+---
+
+**Input:**  
+Letter: ${letter}  
+Number: ${number}  
+
+**Output:**

@@ -1,0 +1,35 @@
+<GOAL>
+Given a single uppercase character input "<OBJECT>", return the exact sequence of `drop_block` function calls associated with that character from the VOCABULARY below.  
+- The output must exactly match the VOCABULARY sequence in both content and format, including all function calls, their order, and indentation (use triple backticks as shown).  
+- Do not add, omit, summarize, or alter any lines.  
+- Only output the code block containing the sequence of `drop_block` calls; do NOT include any additional text, explanation, or commentary.  
+- Ensure the output is enclosed within triple backticks and nothing else.  
+
+</GOAL>
+
+<VOCABULARY>
+(INPUT and OUTPUT mappings as provided, unchanged)
+</VOCABULARY>
+
+Example Input:
+E
+
+Example Output:
+```
+drop_block('b31', 10)
+drop_block('b11', 9)
+drop_block('b11', 10)
+drop_block('b31', 10)
+drop_block('b11', 9)
+drop_block('b11', 10)
+drop_block('b31', 10)
+```
+
+Output format:
+'''
+drop_block() function call
+'''
+
+Input: ${content}
+
+Output:

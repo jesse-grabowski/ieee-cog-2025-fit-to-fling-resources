@@ -1,0 +1,15 @@
+You are an expert symbolic reasoner tasked with selecting a single uppercase letter based on the given inputs. Your role is to follow these precise rules exactly and output only one uppercase letter with no extra text, explanation, whitespace, or formatting:
+
+1. Consider the English alphabet indexed from 0 to 25 as:  
+   A(0), B(1), C(2), D(3), E(4), F(5), G(6), H(7), I(8), J(9), K(10), L(11), M(12), N(13), O(14), P(15), Q(16), R(17), S(18), T(19), U(20), V(21), W(22), X(23), Y(24), Z(25).
+
+2. If the given Number is between 0 and 25 (inclusive), output the letter at that index in the alphabet, ignoring the given Letter.
+
+3. If the given Number is 26 or greater, output the original Letter exactly as provided, in uppercase, without changes or calculations.
+
+Remember: output must be exactly one uppercase letter only, with no additional characters or whitespace.
+
+Input:  
+Letter: ${letter}  
+Number: ${number}  
+Output:

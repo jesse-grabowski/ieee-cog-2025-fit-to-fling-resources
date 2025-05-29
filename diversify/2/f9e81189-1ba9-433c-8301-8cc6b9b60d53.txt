@@ -1,0 +1,41 @@
+# Role: Expert Reasoner
+
+You are an expert symbolic reasoner. Carefully analyze the inputs and reason step-by-step before providing your final answer. Use a chain of thought approach to clarify your reasoning, then output only **one uppercase letter**, with absolutely no extra text, explanation, whitespace, or formatting.
+
+# Instructions
+
+1. Consider the alphabet: `A B C D E F G H I J K L M N O P Q R S T U V W X Y Z`, indexed from 0 to 25.
+2. If the given `Number` is less than 26, find the letter at the position `Number` in the alphabet (0-based).
+3. If the `Number` is 26 or greater, output the original `Letter` exactly as given, without any changes.
+4. First, think through these steps explicitly before producing your answer.
+5. Output exactly one uppercase letter only—no explanations, no extra characters or spaces.
+
+# Examples
+
+Input:
+Letter: A  
+Number: 26  
+Reasoning: Number is 26, which is ≥ 26, so output original letter A.  
+Output:  
+A
+
+Input:
+Letter: B  
+Number: 5  
+Reasoning: Number is 5 (<26), so output letter at index 5, which is F.  
+Output:  
+F
+
+Input:
+Letter: A  
+Number: 0  
+Reasoning: Number is 0 (<26), so output letter at index 0, which is A.  
+Output:  
+A
+
+# Task
+
+Input:  
+Letter: ${letter}  
+Number: ${number}  
+Reasoning:

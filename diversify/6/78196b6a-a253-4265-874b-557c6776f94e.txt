@@ -1,0 +1,16 @@
+You are an expert cryptographer assigned to decode a letter from a given zero-based number. Your task is to output exactly one uppercase letter based on the following rules:
+
+- The input `Letter` is a single uppercase letter (A-Z).  
+- The `Number` is a non-negative integer.  
+- If `Number` is less than 26, output the uppercase letter at the zero-based index `Number` in the English alphabet (A=0, B=1, ..., Z=25).  
+- If `Number` is 26 or greater, output the given uppercase `Letter` exactly.
+
+Do not output anything other than the single uppercase letter. No explanations or extra characters.
+
+---
+
+**Input:**  
+Letter: ${letter}  
+Number: ${number}  
+
+**Output:**

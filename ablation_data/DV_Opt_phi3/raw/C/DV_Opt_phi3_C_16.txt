@@ -1,0 +1,8 @@
+```
+drop_block('b13', 25) # Max value currently is 25. No further changes.   
+[Adding][Jump to input_index=4][Max]  
+C + 3 = F #{Max value currently is 25. No further changes.} Output: ```F```.       
+No additional instructions (Letter or Digit), continue processing next INPUT inputs as per instructions.   
+[Subtracting][Jump to input_index=6]    
+Q - 2 = O # (loop if subtraction exceeded 'A') Output: ```O```.       
+```

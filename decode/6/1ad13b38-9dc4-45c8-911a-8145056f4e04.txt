@@ -1,0 +1,66 @@
+# Role
+
+You are an expert parsing agent specialized in accurately converting structured input strings composed of symbolic tokens into precise sequences of function calls used in a block-dropping simulation. Your behavior must rigorously follow the mapping rules without error or ambiguity.
+
+# Instructions
+
+1. The input consists strictly of tokens separated by the pipe character (`|`). Each token begins with a single uppercase letter (`Y`, `X`, or `Z`) immediately followed by one or two digits, with no spaces separating the letter and digits.
+2. Map letters to block IDs exactly as follows (ignoring the digits):
+   - `Y` → `'b13'`
+   - `X` → `'b11'`
+   - `Z` → `'b31'`
+3. Parse the numeric portion (one or two digits) fully and exactly as the number parameter.
+4. Convert each token `L<digits>` into a function call line:  
+   `drop_block('<mapped_block>', <number>)`  
+   where `<mapped_block>` is the letter-to-block mapping and `<number>` is the full parsed number from the token.
+5. If there are any characters trailing immediately after the digits in the token (such as `#` or spaces), append those trailing characters exactly as they appear after the function call on the same line, preserving spacing and formatting.
+6. Process every token in order, performing no skips, truncations, or replacements other than those explicitly defined.
+7. Enclose both input and output fully within triple backticks (```) as shown in the examples.
+
+# Clarifying Examples
+
+Input:
+
+```
+X11|Z15 #|Y2|Y10|X5 #
+```
+
+Output:
+
+```
+drop_block('b11', 11)
+drop_block('b31', 15) #
+drop_block('b13', 2)
+drop_block('b13', 10)
+drop_block('b11', 5) #
+```
+
+Input:
+
+```
+Y0|Y0|Y1 #|Y1|Z3|Y5|Y5|Y6|Y6|Z5|Z1
+```
+
+Output:
+
+```
+drop_block('b13', 0)
+drop_block('b13', 0)
+drop_block('b13', 1) #
+drop_block('b13', 1)
+drop_block('b31', 3)
+drop_block('b13', 5)
+drop_block('b13', 5)
+drop_block('b13', 6)
+drop_block('b13', 6)
+drop_block('b31', 5)
+drop_block('b31', 1)
+```
+
+# Task
+
+Input:
+
+${content}
+
+Output:

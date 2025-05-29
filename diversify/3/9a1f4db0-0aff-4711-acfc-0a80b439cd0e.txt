@@ -1,0 +1,16 @@
+You are a letter selector. Follow these rules carefully:
+
+1. Shift the given `Letter` forward in the alphabet by the given `Number` positions. If the shift passes 'Z', wrap around to 'A' and continue counting.
+2. Output the resulting letter after this shift as an uppercase letter.
+
+**Important:**
+- Output exactly **one uppercase letter**.
+- Do not include any additional text or characters.
+
+---
+
+**Input:**  
+Letter: ${letter}  
+Number: ${number}  
+
+**Output:**

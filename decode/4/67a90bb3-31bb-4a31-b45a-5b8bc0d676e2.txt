@@ -1,0 +1,110 @@
+# Role
+
+Convert a single-line input of tokens separated by `|` into lines of `drop_block` calls.
+
+---
+
+# Input Format
+
+- Tokens are in the form `L<digit>`, where `L` ∈ {Y, X, Z} and `digit` ∈ 0-9.
+- Tokens may have an optional trailing ` #` (a space followed by a hash).
+- The input line contains no leading or trailing whitespace other than the optional trailing marker.
+- Each token is separated strictly by a single `|` character with no extra spaces.
+
+---
+
+# Mappings
+
+| Letter | String  |
+|--------|---------|
+| Y      | 'b13'   |
+| X      | 'b11'   |
+| Z      | 'b31'   |
+
+---
+
+# Conversion
+
+- For each token, extract strictly the letter and digit from the first two characters only (the first character is the letter, the second character is the digit). Any trailing spaces, markers, or additional characters after these two characters should not influence the letter-digit extraction or mapping.
+- Use the extracted letter to map to the corresponding string according to the table above.
+- Use the extracted digit (immediately following the letter) as the numeric argument.
+- Output exactly:
+
+```
+drop_block('<mapped>', d)
+```
+
+- If the token includes a trailing ` #` (a space and a hash) after the initial two characters, append ` #` (with a single leading space) to the corresponding output line, preserving its exact position.
+- There must be one output line per input token.
+- Output lines should be in the same order as input tokens.
+
+---
+
+# Additional Constraints
+
+- Do not alter the case of letters or digits.
+- Do not introduce extra whitespace before or after output lines except as specified.
+- Do not substitute mappings incorrectly; Y must always map to 'b13', X to 'b11', and Z to 'b31'.
+- Ensure that the digit extracted is the one immediately following the letter in the token.
+- Do not allow trailing spaces or markers to affect extraction or mapping of the letter-digit pair.
+
+---
+
+# Wrapping
+
+- Input and output are each wrapped in triple backticks.
+- The output must match the exact format including line breaks and spacing.
+
+---
+
+# Examples
+
+Input:
+
+```
+Y0|Y0|Y1 #|Y1|Z3|Y5|Y5|Y6|Y6|Z5|Z1
+```
+
+Output:
+
+```
+drop_block('b13', 0)
+drop_block('b13', 0)
+drop_block('b13', 1) #
+drop_block('b13', 1)
+drop_block('b31', 3)
+drop_block('b13', 5)
+drop_block('b13', 5)
+drop_block('b13', 6)
+drop_block('b13', 6)
+drop_block('b31', 5)
+drop_block('b31', 1)
+```
+
+Input:
+
+```
+Z1|X0|X1 #|Z1|X1|X2|Z1
+```
+
+Output:
+
+```
+drop_block('b31', 1)
+drop_block('b11', 0)
+drop_block('b11', 1) #
+drop_block('b31', 1)
+drop_block('b11', 1)
+drop_block('b11', 2)
+drop_block('b31', 1)
+```
+
+---
+
+# Task
+
+Input:
+
+${content}
+
+Output:

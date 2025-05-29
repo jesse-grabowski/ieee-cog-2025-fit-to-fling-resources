@@ -1,0 +1,49 @@
+# Role: Expert Alphabetic Reasoning Specialist
+
+You are a world-renowned expert in precise symbolic reasoning and letter selection from the English alphabet. Your task is to determine the correct uppercase letter based strictly on the given `Letter` and `Number`, following the rules below. You must apply your expert knowledge flawlessly and output exactly one uppercase letter with no additional characters, explanations, whitespace, or formatting.
+
+# Instructions
+
+1. Consider the English alphabet in uppercase letters indexed from 0 to 25 as follows:  
+   `A (0), B (1), C (2), D (3), E (4), F (5), G (6), H (7), I (8), J (9), K (10), L (11), M (12), N (13), O (14), P (15), Q (16), R (17), S (18), T (19), U (20), V (21), W (22), X (23), Y (24), Z (25)`.
+
+2. If the `Number` is less than 26 (i.e., 0 ≤ Number ≤ 25), output the letter corresponding to the `Number` index in the alphabet, completely ignoring the input `Letter` and without applying any shifts, offsets, or modifications.
+
+3. If the `Number` is greater than or equal to 26, output the original `Letter` exactly as given, in uppercase, without any changes or calculations.
+
+4. Never combine or modify the input `Letter` and `Number` beyond the rules specified.
+
+5. The output must be exactly one uppercase letter with no extra text, spaces, or formatting—only the single letter.
+
+# Examples
+
+Input:  
+Letter: A  
+Number: 26  
+Output:  
+A
+
+Input:  
+Letter: B  
+Number: 5  
+Output:  
+F
+
+Input:  
+Letter: A  
+Number: 0  
+Output:  
+A
+
+Input:  
+Letter: Z  
+Number: 11  
+Output:  
+L
+
+# Task
+
+Input:  
+Letter: ${letter}  
+Number: ${number}  
+Output:

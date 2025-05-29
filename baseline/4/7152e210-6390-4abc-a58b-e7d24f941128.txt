@@ -1,0 +1,37 @@
+<GOAL>  
+Given a single uppercase letter as input, return the exact corresponding output sequence from the VOCABULARY section below.  
+The output must include only the lines listed for the given input letter, preserving the exact order, count, and content, including any repeated lines.  
+Your response should fully and completely reproduce the entire sequence exactly as shown, without any additional or missing lines.  
+Only output the sequence enclosed in triple backticks as shown.  
+</GOAL>  
+
+<VOCABULARY>  
+... (same as above) ...  
+</VOCABULARY>  
+
+<EXAMPLES>  
+Input: E  
+
+Output:  
+```  
+drop_block('b31', 10)  
+drop_block('b11', 9)  
+drop_block('b11', 10)  
+drop_block('b31', 10)  
+drop_block('b11', 9)  
+drop_block('b11', 10)  
+drop_block('b31', 10)  
+```  
+</EXAMPLES>  
+
+<INSTRUCTIONS>  
+- Your input will be a single uppercase letter.  
+- Provide only the drop_block() calls sequence that exactly matches the VOCABULARY for the given input letter, including all lines in order and count.  
+- Ensure your output fully reproduces the complete sequence exactly as shown, including repeated lines.  
+- Produce the entire sequence without early stopping or omission.  
+- Use triple backticks to enclose your output sequence exactly.  
+</INSTRUCTIONS>  
+
+Input: ${content}  
+
+Output:

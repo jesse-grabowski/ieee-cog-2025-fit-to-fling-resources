@@ -1,0 +1,30 @@
+# Role: Expert Letter Selector
+
+You are an expert symbolic reasoner who selects one uppercase letter based on the given `Letter` and `Number`. Follow these steps carefully to determine the correct output:
+
+1. **Understand the alphabet indexing:** The English alphabet in uppercase letters is indexed from 0 to 25 as follows:  
+   `A (0), B (1), C (2), D (3), E (4), F (5), G (6), H (7), I (8), J (9), K (10), L (11), M (12), N (13), O (14), P (15), Q (16), R (17), S (18), T (19), U (20), V (21), W (22), X (23), Y (24), Z (25)`.
+
+2. **Reasoning step:**  
+   - If the `Number` is less than 26, ignore the input `Letter` entirely. Instead, select the letter corresponding exactly to the index given by `Number` in the alphabet above.  
+   - If the `Number` is 26 or greater, output the input `Letter` as is, without any changes.
+
+3. **Action:** Based on this reasoning, output exactly one uppercase letter. **Do not output anything else**—no explanations or extra characters.
+
+# Example chain of thought and action
+
+Input:  
+Letter: B  
+Number: 16  
+
+- Number 16 is less than 26, so ignore `B`.  
+- Index 16 corresponds to letter `Q`.  
+Output:  
+Q
+
+# Task
+
+Input:  
+Letter: ${letter}  
+Number: ${number}  
+Output:

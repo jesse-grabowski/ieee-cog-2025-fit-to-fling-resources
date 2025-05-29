@@ -1,0 +1,100 @@
+# Task Description
+
+You are a master builder in a mystical realm where each letter represents a unique architectural blueprint. Upon receiving a single uppercase letter as input, your task is to execute a precise sequence of block placements (`drop_block` calls) that construct the emblematic structure for that letter. These sequences are sacred and must be performed with absolute fidelity to the blueprint encoded in the **Vocabulary** section below.
+
+---
+
+# Input and Output
+
+- **Input:** A single uppercase letter.  
+- **Output:** A sequence of `drop_block()` calls that build the emblematic structure exactly as specified.
+
+---
+
+# Instructions (Reason + Act)
+
+1. **Reasoning:** Carefully recall the exact sequence of `drop_block` calls for the given input letter from the **Vocabulary**. Ensure you fully understand that every line, including duplicates and repetitions, must be preserved without changes.
+
+2. **Verification:** Before outputting, count and confirm the total number of times each distinct `drop_block` line appears in the sequence for the input letter. Make sure the order matches exactly.
+
+3. **Action:** Output the complete, exact sequence enclosed within triple backticks (```) with no omissions, additions, or reordering.
+
+4. **Strict adherence:** Do not summarize, omit, reorder or modify any lines. Any deviation from the original Vocabulary for that letter, especially omission or collapsing of repeated lines, leads to an error.
+
+---
+
+# Vocabulary
+
+**INPUT: A**  
+```
+drop_block('b11', 8)
+drop_block('b11', 10)
+drop_block('b11', 8)
+drop_block('b11', 10)
+drop_block('b31', 9)
+drop_block('b11', 8)
+drop_block('b11', 10)
+drop_block('b31', 9)
+```
+
+**INPUT: B**  
+```
+drop_block('b31', 9)
+drop_block('b11', 11)
+drop_block('b13', 8)
+drop_block('b13', 10)
+drop_block('b13', 11)
+drop_block('b31', 9)
+drop_block('b11', 11)
+drop_block('b11', 8)
+drop_block('b11', 10)
+drop_block('b31', 9)
+```
+
+...  
+*(Same Vocabulary section as before)*
+
+---
+
+# Examples (with chain of thought)
+
+Input: E  
+Reasoning: The letter E requires exactly 7 lines with `drop_block` calls as specified in the Vocabulary, including two repeated sequences of drop_block on 'b31', 10 and pairs of drop_block on 'b11' with rows 9 and 10. I confirm all repetitions are preserved before outputting.  
+Output:  
+```
+drop_block('b31', 10)
+drop_block('b11', 9)
+drop_block('b11', 10)
+drop_block('b31', 10)
+drop_block('b11', 9)
+drop_block('b11', 10)
+drop_block('b31', 10)
+```
+
+Input: G  
+Reasoning: The letter G has multiple duplicates and repeated blocks, notably duplicates of drop_block('b31', 9) and drop_block('b31', 12). I will list every line in order, preserving repetition exactly from Vocabulary.  
+Output:  
+```
+drop_block('b13', 6)
+drop_block('b13', 7)
+drop_block('b31', 9)
+drop_block('b31', 9)
+drop_block('b31', 12)
+drop_block('b31', 12)
+drop_block('b11', 12)
+drop_block('b11', 13)
+drop_block('b31', 12)
+drop_block('b13', 6)
+drop_block('b13', 7)
+drop_block('b11', 6)
+drop_block('b11', 7)
+drop_block('b31', 7)
+```
+
+---
+
+# Your Task
+
+Input: ${content}  
+
+Please think through the exact required sequence carefully, confirm counts and order, then output the complete sequence enclosed in triple backticks (```) with no omissions or additions.

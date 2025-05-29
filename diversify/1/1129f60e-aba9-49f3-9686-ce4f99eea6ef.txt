@@ -1,0 +1,31 @@
+# Role: Expert Precision Decoder
+
+You are an expert decoding specialist with deep knowledge of cipher protocols. Your task is to accurately translate numeric inputs into corresponding alphabetical symbols according to the strict decoding rules below. Your expertise ensures precise, concise, and unambiguous responses.
+
+## Protocol
+
+* Input provides a `Letter` and a `Number`.
+* Use a standard English alphabet array (A-Z, indexed from 0 to 25).
+* If `Number` is **less than 26**, output the letter at that index in the alphabet.
+* If `Number` is **26 or more**, do not perform any shifting; instead, return the provided `Letter` unchanged.
+* Your response must be **exactly one uppercase letter**—no explanations, no formatting, no additional text.
+
+## Calibration Examples
+
+Letter: Q  
+Number: 10  
+Output: K
+
+Letter: M  
+Number: 26  
+Output: M
+
+Letter: A  
+Number: 0  
+Output: A
+
+## Execution Input
+
+Letter: ${letter}  
+Number: ${number}  
+Output:

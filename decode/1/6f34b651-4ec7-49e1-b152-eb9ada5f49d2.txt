@@ -1,0 +1,121 @@
+# Role
+
+You are a reasoning agent tasked with converting input strings composed of symbolic tokens into corresponding function calls for a simulation. The input will consist of tokens that represent block types and positions, and your goal is to decode these tokens into the correct function calls following the detailed formatting rules below.
+
+# Instructions
+
+1. The input consists of tokens separated by the pipe character (`|`). Each token comprises:
+
+   - A single uppercase letter representing the block type: `Y`, `X`, or `Z`.
+   - A single digit (0-9) representing the position.
+   - Optionally, a `#` character which acts as a marker indicating where to place a comment.
+
+2. Use the following mappings for block types:
+
+   * `Y` → `'b13'`
+   * `X` → `'b11'`
+   * `Z` → `'b31'`
+
+3. For each token, generate a function call in the exact format:
+
+   ```
+   drop_block('<mapped_block>', <position>)
+   ```
+
+   where:
+
+   - `<mapped_block>` is the mapped block string corresponding to the token's letter.
+   - `<position>` is the digit extracted from the token.
+
+4. The `#` character acts as a comment marker and is **not** part of any token but occurs between tokens (possibly directly after a token):
+
+   - Add a `#` comment (a literal space followed by `#`) **immediately after** the function call corresponding to the **last token before the `#` marker**.
+   - If multiple `#` markers appear, apply this rule for each separately.
+   - The `#` should appear only once after the identified function call; do **not** add comments to any other lines unless they precede another `#`.
+   - Tokens appearing **after** a `#` marker do **not** receive comments unless followed by another `#` marker.
+
+5. Preserve the original order of tokens when generating output lines.
+
+6. When processing, follow this detailed step-by-step approach for each token:
+
+   * **Step 1:** Identify the block type from the token letter and convert it to its corresponding mapped block string.
+   * **Step 2:** Extract the position digit from the token.
+   * **Step 3:** Determine if this token is the last one before a `#` marker. If yes, append a `#` comment to its output line as specified.
+   * **Step 4:** Output the function call line accordingly.
+   
+7. Ignore any whitespace surrounding tokens or delimiters.
+
+8. Do **not** add additional comments beyond what is requested by the `#` markers.
+
+### Example Reasoning Process
+
+Given the input:
+
+```
+Z2|Y0|Z3|X1|Y2 #|Y1|Z5
+```
+
+**Reasoning:**
+
+1. First token: `Z2`
+
+   * Block type: `Z` → `'b31'`
+   * Position: `2`
+   * Result: `drop_block('b31', 2)`
+
+2. Second token: `Y0`
+
+   * Block type: `Y` → `'b13'`
+   * Position: `0`
+   * Result: `drop_block('b13', 0)`
+
+3. Third token: `Z3`
+
+   * Block type: `Z` → `'b31'`
+   * Position: `3`
+   * Result: `drop_block('b31', 3)`
+
+4. Fourth token: `X1`
+
+   * Block type: `X` → `'b11'`
+   * Position: `1`
+   * Result: `drop_block('b11', 1)`
+
+5. Fifth token: `Y2`
+
+   * Block type: `Y` → `'b13'`
+   * Position: `2`
+   * This token is the **last before the `#` marker**, so append ` #` comment.
+   * Result: `drop_block('b13', 2) #`
+
+6. Sixth token: `Y1`
+
+   * Block type: `Y` → `'b13'`
+   * Position: `1`
+   * Result: `drop_block('b13', 1)`
+
+7. Seventh token: `Z5`
+
+   * Block type: `Z` → `'b31'`
+   * Position: `5`
+   * Result: `drop_block('b31', 5)`
+
+### Final Output
+
+```
+drop_block('b31', 2)
+drop_block('b13', 0)
+drop_block('b31', 3)
+drop_block('b11', 1)
+drop_block('b13', 2) #
+drop_block('b13', 1)
+drop_block('b31', 5)
+```
+
+# Task
+
+Input:
+
+${content}
+
+Output:

@@ -1,0 +1,20 @@
+You are a world-class linguistics and cryptography expert specializing in letter and number mappings within the English alphabet. Follow these steps carefully:
+
+1. Check the value of the given `Number`.  
+2. If `Number` is less than 26:  
+   a. Find the uppercase letter at the zero-based index `Number` in the English alphabet (A=0, B=1, ..., Z=25).  
+   b. Output this letter.  
+3. If `Number` is 26 or greater:  
+   a. Output the given uppercase `Letter` unchanged.
+
+**Important:**  
+- Output exactly one uppercase letter.  
+- Do not include any additional text or characters.
+
+---
+
+**Input:**  
+Letter: ${letter}  
+Number: ${number}  
+
+**Output:**

@@ -1,0 +1,76 @@
+# Role: Expert Letter Selector
+
+You are an expert symbolic reasoner who selects letters based on the given `Letter` and `Number`. Follow the instructions precisely and output only **one uppercase letter**, with absolutely no extra text, explanation, whitespace, or formatting.
+
+# Instructions
+
+1. Use the English alphabet in uppercase letters indexed from 0 to 25 as follows:  
+   `A (0), B (1), C (2), D (3), E (4), F (5), G (6), H (7), I (8), J (9), K (10), L (11), M (12), N (13), O (14), P (15), Q (16), R (17), S (18), T (19), U (20), V (21), W (22), X (23), Y (24), Z (25)`.
+
+2. Follow this decision rule:  
+   - If `Number` is less than 26 (0 ≤ Number ≤ 25), **ignore the input `Letter` completely** and output the letter at index `Number` in the alphabet (0-based indexing).  
+   - If `Number` is 26 or greater, output the given input `Letter` exactly as is (uppercase, no change).
+
+3. Do **not** perform any shifting, addition, or transformation involving the input `Letter` and `Number`. The output letter must be strictly determined as above, not by combining or altering the `Letter` based on the `Number`.
+
+4. Explicitly avoid the following incorrect behavior:  
+   - Do **not** output a letter obtained by shifting the input `Letter` forward by `Number` positions in the alphabet.  
+   - For example, given Letter `C` and Number `48`, outputting `H` (which would result from shifting `C` by 48 mod 26) is incorrect. Instead, since 48 ≥ 26, the output must be exactly `C` (the input Letter).  
+   - Similarly, for Letter `S` and Number `1`, outputting `T` is wrong; the correct output is `B` because Number 1 corresponds to index 1 in the alphabet, which is `B`.
+
+5. Output must be exactly one uppercase letter, with **no** additional characters, spaces, newlines, or explanations.
+
+# Decision Tree
+
+- If Number < 26:  
+  Output alphabet letter at index = Number (ignore Letter)
+
+- Else (Number ≥ 26):  
+  Output the input Letter unchanged
+
+# Examples
+
+Input:  
+Letter: Q  
+Number: 28  
+Output:  
+Q
+
+Input:  
+Letter: Y  
+Number: 27  
+Output:  
+Y
+
+Input:  
+Letter: A  
+Number: 0  
+Output:  
+A
+
+Input:  
+Letter: B  
+Number: 5  
+Output:  
+F
+
+Input:  
+Letter: C  
+Number: 48  
+Incorrect Output (WRONG): H  
+Correct Output:  
+C
+
+Input:  
+Letter: S  
+Number: 1  
+Incorrect Output (WRONG): T  
+Correct Output:  
+B
+
+# Task
+
+Input:  
+Letter: ${letter}  
+Number: ${number}  
+Output:

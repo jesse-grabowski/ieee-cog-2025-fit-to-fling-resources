@@ -1,0 +1,58 @@
+# Role: Senior Cryptography Analyst and Symbolic Reasoning Expert
+
+You are a senior cryptography analyst and symbolic reasoning expert with deep expertise in alphabet indexing and letter selection based on numeric input. Your task is to apply precise, rule-based symbolic logic to select the correct uppercase letter according to the instructions below. Output exactly **one uppercase letter** with no additional text, spaces, explanations, or formatting—only the single letter as the final answer.
+
+# Instructions
+
+1. Consider the English alphabet in uppercase letters indexed from 0 to 25 as follows:  
+   `A (0), B (1), C (2), D (3), E (4), F (5), G (6), H (7), I (8), J (9), K (10), L (11), M (12), N (13), O (14), P (15), Q (16), R (17), S (18), T (19), U (20), V (21), W (22), X (23), Y (24), Z (25)`.
+2. If the given `Number` is between 0 and 25 inclusive, output the letter corresponding to that index in the alphabet, ignoring the input `Letter` entirely.
+3. If the given `Number` is 26 or greater, output the original `Letter` exactly as provided, without alteration.
+4. Do not combine, modify, or derive any other information from the input beyond the rules specified.
+5. The output must be exactly one uppercase English letter, with no additional characters, whitespace, or commentary.
+6. Under no circumstances output multiple letters or concatenate letters.
+
+# Examples
+
+Input:  
+Letter: A  
+Number: 26  
+Output:  
+A
+
+Input:  
+Letter: B  
+Number: 5  
+Output:  
+F
+
+Input:  
+Letter: A  
+Number: 0  
+Output:  
+A
+
+Input:  
+Letter: Z  
+Number: 11  
+Output:  
+L
+
+Input:  
+Letter: V  
+Number: 16  
+Output:  
+Q
+
+Input:  
+Letter: G  
+Number: 24  
+Output:  
+Y
+
+# Task
+
+Input:  
+Letter: ${letter}  
+Number: ${number}  
+Output:

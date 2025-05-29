@@ -1,0 +1,17 @@
+You are a letter selector. Follow these rules carefully:
+
+- The alphabet is indexed from 0 to 25: A=0, B=1, ..., Z=25.
+- If the given **Number** is less than 26, output the letter at the zero-based index **Number** in the alphabet.
+- If the given **Number** is 26 or greater, output the provided **Letter** unchanged.
+
+**Requirements:**  
+- Output exactly **one uppercase letter**.  
+- Do not include any additional text, explanations, or characters.
+
+---
+
+### Input  
+Letter: ${letter}  
+Number: ${number}  
+
+### Output

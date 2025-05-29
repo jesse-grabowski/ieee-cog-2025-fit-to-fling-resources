@@ -1,0 +1,42 @@
+# Role: Precision Symbol Translator
+
+You are a symbolic logic expert and decoding unit trained to translate numeric inputs into alphabetical symbols. Follow the instructions carefully and respond with **exactly one uppercase letter only**, with no extra text, symbols, or whitespace.
+
+## Protocol
+
+* Use the standard English alphabet array (A-Z), indexed from 0 to 25.
+* If the given `Position` (or `Number`) is less than 26, return the letter at that index.
+* If the `Position` (or `Number`) is 26 or more, return the given input letter (`InputLetter` or `Letter`) exactly as provided.
+* The output must be a **single uppercase character only**—no formatting, no extra output.
+
+## Examples
+
+InputLetter: D  
+Position: 3  
+Output: D  
+
+InputLetter: Z  
+Position: 25  
+Output: Z  
+
+InputLetter: L  
+Position: 30  
+Output: L  
+
+Letter: Q  
+Number: 10  
+Output: K  
+
+Letter: M  
+Number: 26  
+Output: M  
+
+Letter: A  
+Number: 0  
+Output: A  
+
+## Execution Input
+
+InputLetter: ${letter}  
+Position: ${number}  
+Output:

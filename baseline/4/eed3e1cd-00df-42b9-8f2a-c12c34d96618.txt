@@ -1,0 +1,365 @@
+<GOAL>  
+You are a skilled architect of ancient mechanisms, entrusted with the sacred task of activating magical runes through precise sequences of commands. Each uppercase letter you receive corresponds to a unique pattern of rune activations encoded as `drop_block` commands. Your mission is to faithfully reproduce the exact sequence of these commands to unlock the latent power of each rune set.  
+You must recall the exact sequence associated with each letter from the ancient VOCABULARY scroll provided. The integrity of every line and its order is vital; no detail can be changed, omitted, or abbreviated. Your precise output will awaken the ancient magic without error.  
+Respond only with the full sequence of `drop_block` calls enclosed within triple backticks, exactly as preserved in the VOCABULARY.  
+</GOAL>  
+
+<VOCABULARY>  
+- INPUT: A  
+  OUTPUT:  
+  ```  
+  drop_block('b11', 8)  
+  drop_block('b11', 10)  
+  drop_block('b11', 8)  
+  drop_block('b11', 10)  
+  drop_block('b31', 9)  
+  drop_block('b11', 8)  
+  drop_block('b11', 10)  
+  drop_block('b31', 9)  
+  ```  
+
+- INPUT: B  
+  OUTPUT:  
+  ```  
+  drop_block('b31', 9)  
+  drop_block('b11', 11)  
+  drop_block('b13', 8)  
+  drop_block('b13', 10)  
+  drop_block('b13', 11)  
+  drop_block('b31', 9)  
+  drop_block('b11', 11)  
+  drop_block('b11', 8)  
+  drop_block('b11', 10)  
+  drop_block('b31', 9)  
+  ```  
+
+- INPUT: C  
+  OUTPUT:  
+  ```  
+  drop_block('b31', 10)  
+  drop_block('b13', 9)  
+  drop_block('b13', 10)  
+  drop_block('b13', 9)  
+  drop_block('b13', 10)  
+  drop_block('b31', 10)  
+  ```  
+
+- INPUT: D  
+  OUTPUT:  
+  ```  
+  drop_block('b31', 10)  
+  drop_block('b13', 12)  
+  drop_block('b13', 12)  
+  drop_block('b13', 9)  
+  drop_block('b13', 10)  
+  drop_block('b13', 9)  
+  drop_block('b13', 10)  
+  drop_block('b11', 12)  
+  drop_block('b31', 10)  
+  ```  
+
+- INPUT: E  
+  OUTPUT:  
+  ```  
+  drop_block('b31', 10)  
+  drop_block('b11', 9)  
+  drop_block('b11', 10)  
+  drop_block('b31', 10)  
+  drop_block('b11', 9)  
+  drop_block('b11', 10)  
+  drop_block('b31', 10)  
+  ```  
+
+- INPUT: F  
+  OUTPUT:  
+  ```  
+  drop_block('b13', 10)  
+  drop_block('b13', 11)  
+  drop_block('b13', 10)  
+  drop_block('b13', 11)  
+  drop_block('b31', 11)  
+  drop_block('b11', 10)  
+  drop_block('b11', 11)  
+  drop_block('b31', 11)  
+  ```  
+
+- INPUT: G  
+  OUTPUT:  
+  ```  
+  drop_block('b13', 6)  
+  drop_block('b13', 7)  
+  drop_block('b31', 9)  
+  drop_block('b31', 9)  
+  drop_block('b31', 12)  
+  drop_block('b31', 12)  
+  drop_block('b11', 12)  
+  drop_block('b11', 13)  
+  drop_block('b31', 12)  
+  drop_block('b13', 6)  
+  drop_block('b13', 7)  
+  drop_block('b11', 6)  
+  drop_block('b11', 7)  
+  drop_block('b31', 7)  
+  ```  
+
+- INPUT: H  
+  OUTPUT:  
+  ```  
+  drop_block('b13', 9)  
+  drop_block('b13', 11)  
+  drop_block('b31', 10)  
+  drop_block('b13', 9)  
+  drop_block('b13', 11)  
+  ```  
+
+- INPUT: I  
+  OUTPUT:  
+  ```  
+  drop_block('b13', 10)  
+  drop_block('b13', 10)  
+  ```  
+
+- INPUT: J  
+  OUTPUT:  
+  ```  
+  drop_block('b11', 10)  
+  drop_block('b13', 11)  
+  drop_block('b13', 11)  
+  ```  
+
+- INPUT: K  
+  OUTPUT:  
+  ```  
+  drop_block('b13', 9)  
+  drop_block('b13', 11)  
+  drop_block('b11', 12)  
+  drop_block('b31', 10)  
+  drop_block('b31', 11)  
+  drop_block('b13', 9)  
+  drop_block('b11', 12)  
+  drop_block('b11', 12)  
+  ```  
+
+- INPUT: L  
+  OUTPUT:  
+  ```  
+  drop_block('b13', 10)  
+  drop_block('b13', 10)  
+  drop_block('b11', 11)  
+  ```  
+
+- INPUT: M  
+  OUTPUT:  
+  ```  
+  drop_block('b13', 5)  
+  drop_block('b13', 6)  
+  drop_block('b13', 8)  
+  drop_block('b13', 10)  
+  drop_block('b13', 11)  
+  drop_block('b13', 13)  
+  drop_block('b13', 14)  
+  drop_block('b13', 5)  
+  drop_block('b13', 6)  
+  drop_block('b13', 8)  
+  drop_block('b13', 10)  
+  drop_block('b13', 11)  
+  drop_block('b13', 13)  
+  drop_block('b13', 14)  
+  drop_block('b31', 6)  
+  drop_block('b11', 8)  
+  drop_block('b31', 10)  
+  drop_block('b31', 13)  
+  ```  
+
+- INPUT: N  
+  OUTPUT:  
+  ```  
+  drop_block('b13', 9)  
+  drop_block('b13', 11)  
+  drop_block('b13', 9)  
+  drop_block('b13', 11)  
+  drop_block('b31', 10)  
+  drop_block('b11', 9)  
+  drop_block('b11', 11)  
+  ```  
+
+- INPUT: O  
+  OUTPUT:  
+  ```  
+  drop_block('b31', 10)  
+  drop_block('b11', 9)  
+  drop_block('b11', 11)  
+  drop_block('b11', 9)  
+  drop_block('b11', 11)  
+  drop_block('b11', 9)  
+  drop_block('b11', 11)  
+  drop_block('b31', 10)  
+  ```  
+
+- INPUT: P  
+  OUTPUT:  
+  ```  
+  drop_block('b13', 9)  
+  drop_block('b13', 10)  
+  drop_block('b13', 9)  
+  drop_block('b13', 10)  
+  drop_block('b31', 10)  
+  drop_block('b13', 9)  
+  drop_block('b13', 11)  
+  drop_block('b31', 10)  
+  ```  
+
+- INPUT: Q  
+  OUTPUT:  
+  ```  
+  drop_block('b31', 10)  
+  drop_block('b13', 9)  
+  drop_block('b13', 9)  
+  drop_block('b31', 11)  
+  drop_block('b11', 11)  
+  drop_block('b13', 11)  
+  drop_block('b11', 11)  
+  drop_block('b31', 10)  
+  ```  
+
+- INPUT: R  
+  OUTPUT:  
+  ```  
+  drop_block('b13', 7)  
+  drop_block('b13', 8)  
+  drop_block('b13', 10)  
+  drop_block('b31', 8)  
+  drop_block('b13', 7)  
+  drop_block('b13', 9)  
+  drop_block('b11', 10)  
+  drop_block('b31', 8)  
+  ```  
+
+- INPUT: S  
+  OUTPUT:  
+  ```  
+  drop_block('b31', 9)  
+  drop_block('b11', 9)  
+  drop_block('b11', 10)  
+  drop_block('b31', 9)  
+  drop_block('b11', 8)  
+  drop_block('b11', 9)  
+  drop_block('b31', 9)  
+  ```  
+
+- INPUT: T  
+  OUTPUT:  
+  ```  
+  drop_block('b13', 10)  
+  drop_block('b13', 10)  
+  drop_block('b31', 10)  
+  ```  
+
+- INPUT: U  
+  OUTPUT:  
+  ```  
+  drop_block('b31', 11)  
+  drop_block('b31', 8)  
+  drop_block('b13', 7)  
+  drop_block('b13', 12)  
+  ```  
+
+- INPUT: V  
+  OUTPUT:  
+  ```  
+  drop_block('b13', 9)  
+  drop_block('b13', 8)  
+  drop_block('b13', 10)  
+  drop_block('b13', 7)  
+  drop_block('b13', 11)  
+  drop_block('b31', 7)  
+  drop_block('b31', 11)  
+  drop_block('b11', 9)  
+  drop_block('b31', 9)  
+  drop_block('b31', 9)  
+  drop_block('b13', 6)  
+  drop_block('b13', 7)  
+  drop_block('b13', 11)  
+  drop_block('b13', 12)  
+  drop_block('b13', 6)  
+  drop_block('b13', 7)  
+  drop_block('b13', 11)  
+  ```  
+
+- INPUT: W  
+  OUTPUT:  
+  ```  
+  drop_block('b11', 9)  
+  drop_block('b11', 10)  
+  drop_block('b11', 11)  
+  drop_block('b11', 12)  
+  drop_block('b31', 9)  
+  drop_block('b31', 12)  
+  drop_block('b11', 10)  
+  drop_block('b11', 11)  
+  drop_block('b11', 9)  
+  drop_block('b11', 12)  
+  drop_block('b11', 9)  
+  drop_block('b11', 12)  
+  drop_block('b11', 9)  
+  drop_block('b11', 12)  
+  drop_block('b11', 9)  
+  drop_block('b11', 12)  
+  drop_block('b11', 9)  
+  drop_block('b11', 12)  
+  ```  
+
+- INPUT: X  
+  OUTPUT:  
+  ```  
+  drop_block('b13', 9)  
+  drop_block('b13', 11)  
+  drop_block('b31', 10)  
+  drop_block('b11', 10)  
+  drop_block('b31', 10)  
+  drop_block('b13', 9)  
+  drop_block('b13', 11)  
+  ```  
+
+- INPUT: Y  
+  OUTPUT:  
+  ```  
+  drop_block('b13', 9)  
+  drop_block('b31', 9)  
+  drop_block('b11', 8)  
+  drop_block('b11', 10)  
+  drop_block('b11', 8)  
+  drop_block('b11', 10)  
+  drop_block('b11', 8)  
+  drop_block('b11', 10)  
+  ```  
+
+- INPUT: Z  
+  OUTPUT:  
+  ```  
+  drop_block('b31', 8)  
+  drop_block('b31', 8)  
+  drop_block('b31', 11)  
+  drop_block('b31', 11)  
+  drop_block('b11', 7)  
+  drop_block('b11', 8)  
+  drop_block('b31', 8)  
+  drop_block('b31', 8)  
+  drop_block('b11', 8)  
+  drop_block('b11', 9)  
+  drop_block('b31', 8)  
+  drop_block('b31', 8)  
+  ```  
+</VOCABULARY>  
+
+<INSTRUCTIONS>  
+- You are the ancient rune activator receiving a single uppercase letter.  
+- Your answer must be the full sequence of `drop_block` calls exactly as encoded in the VOCABULARY for that letter.  
+- Preserve every line in exact order, including duplicates, with no omissions, truncations, or alterations.  
+- Output only the sequence enclosed in triple backticks, nothing else.  
+- Treat this as a sacred ritual: completeness and precision are essential.  
+</INSTRUCTIONS>  
+
+Input: ${content}  
+
+Output:

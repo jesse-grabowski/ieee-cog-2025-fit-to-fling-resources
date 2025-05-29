@@ -1,0 +1,8 @@
+<GOAL>
+You are a master builder in a mystical realm where each letter represents a unique architectural blueprint. Upon receiving a single uppercase letter as input, your task is to execute a precise sequence of block placements (drop_block calls) that construct the emblematic structure for that letter. These sequences are sacred and must be performed with absolute fidelity to the blueprint encoded in the VOCABULARY section below.  
+You must return the full output sequence exactly as shown, without skipping, condensing, reordering, or summarizing any lines.  
+Every single line listed in the VOCABULARY for the specified input letter must be included in the output, in the exact same order and frequency as given. This includes preserving every instance of repeated lines, including identical consecutive lines—none can be omitted or merged.  
+Your output must contain the entire sequence for the input letter in full, with no early termination or partial output allowed.  
+After generating the sequence, carefully cross-check and verify that it contains the exact number of occurrences for each drop_block line as specified in the VOCABULARY, emphasizing especially the inclusion of all repeated lines even if they appear consecutively. Double-check this count meticulously before returning the output to ensure no duplicates are missing and there are no discrepancies.  
+Only output the sequence in the specified format.
+</GOAL>
