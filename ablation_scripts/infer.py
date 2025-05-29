@@ -46,7 +46,8 @@ def run_diversity_trial(name, model, seed, prompts):
         for i in range(64):
             run_diversity_inference(name, model, seed, diversify, recall, decode, c, i)
 
-_inference_cache = {}
+# since we're on a fixed seed, we can cache any calls that would be identical to save time
+_inference_cache = {} 
 def run_diversity_inference(trial_name, ollama_model, seed, diversify, recall, decode, letter, number):
     if (0, letter, number) in _inference_cache:
         diversify_out = _inference_cache[(0, letter, number)]

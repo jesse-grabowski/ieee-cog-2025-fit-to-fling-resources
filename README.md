@@ -10,6 +10,10 @@ As our full dataset is 12GB, it won't fit in Anonymous GitHub. This repository i
 
 This data is in the LLMs4PCG competition script format, so any tooling that works there should work on it as well.
 
+## ablation_scripts
+
+Our final prompts and the script to repeat our ablation trial. Includes the seeds and prompts used to collect our data.
+
 ## baseline / decode / diversify / recall
 
 The results of automatic prompt optimization for the four tasks described in our paper. Each directory follows the format:
