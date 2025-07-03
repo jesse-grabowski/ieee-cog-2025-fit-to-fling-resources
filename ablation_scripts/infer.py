@@ -4,6 +4,7 @@ from openai import OpenAI
 from string import Template
 import os
 
+_inference_cache = {}
 ollama_client = OpenAI(
     api_key="ollama",  # dummy key
     base_url="http://localhost:11434/v1"
@@ -15,6 +16,44 @@ def load_prompt(path):
 
 def make_dirs(trial_name, letter):
     os.makedirs(f'../ablation_data/{trial_name}/raw/{letter}', exist_ok=True)
+
+def run_hybrid_trial(name, model, seed, prompts):
+    diversify = load_prompt(prompts[0])
+    recall = load_prompt(prompts[1])
+    for c in string.ascii_uppercase:
+        make_dirs(name, c)
+        for i in range(64):
+            run_hybrid_inference(name, model, seed, diversify, recall, c, i)
+
+def run_hybrid_inference(trial_name, ollama_model, seed, diversify, recall, letter, number):
+    if (0, letter, number) in _inference_cache:
+        diversify_out = _inference_cache[(0, letter, number)]
+    else:
+        chat_completion = ollama_client.chat.completions.create(
+            messages=[{"role": "user", "content": Template(diversify).substitute(letter=letter, number=number)}],
+            model=ollama_model,
+            temperature=1,
+            seed=seed,
+            n=1,
+        )
+        diversify_out = chat_completion.choices[0].message.content
+        _inference_cache[(0, letter, number)] = diversify_out
+
+    if (1, diversify_out) in _inference_cache:
+        recall_out = _inference_cache[(1, diversify_out)]
+    else:
+        chat_completion = ollama_client.chat.completions.create(
+            messages=[{"role": "user", "content": Template(recall).substitute(content=diversify_out)}],
+            model=ollama_model,
+            temperature=1,
+            seed=seed,
+            n=1,
+        )
+        recall_out = chat_completion.choices[0].message.content
+        _inference_cache[(1, diversify_out)] = recall_out
+
+    with open(f'../ablation_data/{trial_name}/raw/{letter}/{trial_name}_{letter}_{number + 1}.txt', 'w') as file:
+        file.write(recall_out)
 
 def run_baseline_trial(name, model, seed, prompts):
     loaded_prompts = [load_prompt(p) for p in prompts]
@@ -46,8 +85,6 @@ def run_diversity_trial(name, model, seed, prompts):
         for i in range(64):
             run_diversity_inference(name, model, seed, diversify, recall, decode, c, i)
 
-# since we're on a fixed seed, we can cache any calls that would be identical to save time
-_inference_cache = {} 
 def run_diversity_inference(trial_name, ollama_model, seed, diversify, recall, decode, letter, number):
     if (0, letter, number) in _inference_cache:
         diversify_out = _inference_cache[(0, letter, number)]
@@ -93,6 +130,36 @@ def run_diversity_inference(trial_name, ollama_model, seed, diversify, recall, d
         file.write(decode_out)
 
 trials = [
+    ('HY_Raw_phi3', 'phi3:14b-medium-128k-instruct-fp16-8k', 24, ['diversify_raw.txt', 'baseline_raw_1.txt'], run_hybrid_trial),
+    ('HY_Raw_qwen2_5', 'qwen2.5:32b-instruct-q4_0-8k', 24, ['diversify_raw.txt', 'baseline_raw_1.txt'], run_hybrid_trial),
+    ('HY_Raw_gemma2', 'gemma2:27b-instruct-q4_0-8k', 24, ['diversify_raw.txt', 'baseline_raw_1.txt'], run_hybrid_trial),
+    ('25_HY_Raw_phi3', 'phi3:14b-medium-128k-instruct-fp16-8k', 25, ['diversify_raw.txt', 'baseline_raw_1.txt'], run_hybrid_trial),
+    ('25_HY_Raw_qwen2_5', 'qwen2.5:32b-instruct-q4_0-8k', 25, ['diversify_raw.txt', 'baseline_raw_1.txt'], run_hybrid_trial),
+    ('25_HY_Raw_gemma2', 'gemma2:27b-instruct-q4_0-8k', 25, ['diversify_raw.txt', 'baseline_raw_1.txt'], run_hybrid_trial),
+    ('26_HY_Raw_phi3', 'phi3:14b-medium-128k-instruct-fp16-8k', 26, ['diversify_raw.txt', 'baseline_raw_1.txt'], run_hybrid_trial),
+    ('26_HY_Raw_qwen2_5', 'qwen2.5:32b-instruct-q4_0-8k', 26, ['diversify_raw.txt', 'baseline_raw_1.txt'], run_hybrid_trial),
+    ('26_HY_Raw_gemma2', 'gemma2:27b-instruct-q4_0-8k', 26, ['diversify_raw.txt', 'baseline_raw_1.txt'], run_hybrid_trial),
+    ('27_HY_Raw_phi3', 'phi3:14b-medium-128k-instruct-fp16-8k', 27, ['diversify_raw.txt', 'baseline_raw_1.txt'], run_hybrid_trial),
+    ('27_HY_Raw_qwen2_5', 'qwen2.5:32b-instruct-q4_0-8k', 27, ['diversify_raw.txt', 'baseline_raw_1.txt'], run_hybrid_trial),
+    ('27_HY_Raw_gemma2', 'gemma2:27b-instruct-q4_0-8k', 27, ['diversify_raw.txt', 'baseline_raw_1.txt'], run_hybrid_trial),
+    ('28_HY_Raw_phi3', 'phi3:14b-medium-128k-instruct-fp16-8k', 28, ['diversify_raw.txt', 'baseline_raw_1.txt'], run_hybrid_trial),
+    ('28_HY_Raw_qwen2_5', 'qwen2.5:32b-instruct-q4_0-8k', 28, ['diversify_raw.txt', 'baseline_raw_1.txt'], run_hybrid_trial),
+    ('28_HY_Raw_gemma2', 'gemma2:27b-instruct-q4_0-8k', 28, ['diversify_raw.txt', 'baseline_raw_1.txt'], run_hybrid_trial),
+    ('HY_Opt_phi3', 'phi3:14b-medium-128k-instruct-fp16-8k', 24, ['diversify_opt.txt', 'baseline_opt_1.txt'], run_hybrid_trial),
+    ('HY_Opt_qwen2_5', 'qwen2.5:32b-instruct-q4_0-8k', 24, ['diversify_opt.txt', 'baseline_opt_1.txt'], run_hybrid_trial),
+    ('HY_Opt_gemma2', 'gemma2:27b-instruct-q4_0-8k', 24, ['diversify_opt.txt', 'baseline_opt_1.txt'], run_hybrid_trial),
+    ('25_HY_Opt_phi3', 'phi3:14b-medium-128k-instruct-fp16-8k', 25, ['diversify_opt.txt', 'baseline_opt_1.txt'], run_hybrid_trial),
+    ('25_HY_Opt_qwen2_5', 'qwen2.5:32b-instruct-q4_0-8k', 25, ['diversify_opt.txt', 'baseline_opt_1.txt'], run_hybrid_trial),
+    ('25_HY_Opt_gemma2', 'gemma2:27b-instruct-q4_0-8k', 25, ['diversify_opt.txt', 'baseline_opt_1.txt'], run_hybrid_trial),
+    ('26_HY_Opt_phi3', 'phi3:14b-medium-128k-instruct-fp16-8k', 26, ['diversify_opt.txt', 'baseline_opt_1.txt'], run_hybrid_trial),
+    ('26_HY_Opt_qwen2_5', 'qwen2.5:32b-instruct-q4_0-8k', 26, ['diversify_opt.txt', 'baseline_opt_1.txt'], run_hybrid_trial),
+    ('26_HY_Opt_gemma2', 'gemma2:27b-instruct-q4_0-8k', 26, ['diversify_opt.txt', 'baseline_opt_1.txt'], run_hybrid_trial),
+    ('27_HY_Opt_phi3', 'phi3:14b-medium-128k-instruct-fp16-8k', 27, ['diversify_opt.txt', 'baseline_opt_1.txt'], run_hybrid_trial),
+    ('27_HY_Opt_qwen2_5', 'qwen2.5:32b-instruct-q4_0-8k', 27, ['diversify_opt.txt', 'baseline_opt_1.txt'], run_hybrid_trial),
+    ('27_HY_Opt_gemma2', 'gemma2:27b-instruct-q4_0-8k', 27, ['diversify_opt.txt', 'baseline_opt_1.txt'], run_hybrid_trial),
+    ('28_HY_Opt_phi3', 'phi3:14b-medium-128k-instruct-fp16-8k', 28, ['diversify_opt.txt', 'baseline_opt_1.txt'], run_hybrid_trial),
+    ('28_HY_Opt_qwen2_5', 'qwen2.5:32b-instruct-q4_0-8k', 28, ['diversify_opt.txt', 'baseline_opt_1.txt'], run_hybrid_trial),
+    ('28_HY_Opt_gemma2', 'gemma2:27b-instruct-q4_0-8k', 28, ['diversify_opt.txt', 'baseline_opt_1.txt'], run_hybrid_trial),
     ('BL_Opt_qwen2_5', 'qwen2.5:32b-instruct-q4_0-8k', 24, ['baseline_opt_1.txt', 'baseline_opt_2.txt', 'baseline_opt_3.txt', 'baseline_opt_4.txt'], run_baseline_trial),
     ('BL_Opt_gemma2', 'gemma2:27b-instruct-q4_0-8k', 24, ['baseline_opt_1.txt', 'baseline_opt_2.txt', 'baseline_opt_3.txt', 'baseline_opt_4.txt'], run_baseline_trial),
     ('BL_Opt_phi3', 'phi3:14b-medium-128k-instruct-fp16-8k', 24, ['baseline_opt_1.txt', 'baseline_opt_2.txt', 'baseline_opt_3.txt', 'baseline_opt_4.txt'], run_baseline_trial),

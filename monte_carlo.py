@@ -7,6 +7,7 @@ import string
 import scienceplots
 import numpy as np
 from matplotlib import pyplot as plt
+from matplotlib.ticker import NullLocator
 from sklearn.metrics.pairwise import cosine_distances
 
 plt.style.use(['science', 'ieee'])
@@ -26,6 +27,12 @@ EXPERIMENTS = [
     ('DV_Raw_gemma2', ['DV_Raw_gemma2', '25_DV_Raw_gemma2', '26_DV_Raw_gemma2', '27_DV_Raw_gemma2', '28_DV_Raw_gemma2']),
     ('DV_Raw_phi3', ['DV_Raw_phi3', '25_DV_Raw_phi3', '26_DV_Raw_phi3', '27_DV_Raw_phi3', '28_DV_Raw_phi3']),
     ('DV_Raw_qwen2_5', ['DV_Raw_qwen2_5', '25_DV_Raw_qwen2_5', '26_DV_Raw_qwen2_5', '27_DV_Raw_qwen2_5', '28_DV_Raw_qwen2_5']),
+    ('HY_Raw_gemma2', ['HY_Raw_gemma2', '25_HY_Raw_gemma2', '26_HY_Raw_gemma2', '27_HY_Raw_gemma2', '28_HY_Raw_gemma2']),
+    ('HY_Raw_phi3', ['HY_Raw_phi3', '25_HY_Raw_phi3', '26_HY_Raw_phi3', '27_HY_Raw_phi3', '28_HY_Raw_phi3']),
+    ('HY_Raw_qwen2_5', ['HY_Raw_qwen2_5', '25_HY_Raw_qwen2_5', '26_HY_Raw_qwen2_5', '27_HY_Raw_qwen2_5', '28_HY_Raw_qwen2_5']),
+    ('HY_Opt_gemma2', ['HY_Opt_gemma2', '25_HY_Opt_gemma2', '26_HY_Opt_gemma2', '27_HY_Opt_gemma2', '28_HY_Opt_gemma2']),
+    ('HY_Opt_phi3', ['HY_Opt_phi3', '25_HY_Opt_phi3', '26_HY_Opt_phi3', '27_HY_Opt_phi3', '28_HY_Opt_phi3']),
+    ('HY_Opt_qwen2_5', ['HY_Opt_qwen2_5', '25_HY_Opt_qwen2_5', '26_HY_Opt_qwen2_5', '27_HY_Opt_qwen2_5', '28_HY_Opt_qwen2_5']),
 ]
 
 def count_expected(experiment, letter):
@@ -137,11 +144,14 @@ def plot_results(scores, baseline, title, file):
     for fly in bp['fliers']:
         fdata = fly.get_data()
         fly.set_data([fdata[0][0], fdata[0][-1]], [fdata[1][0], fdata[1][-1]])
-    plt.yticks(ticks=range(1, len(indices) + 1), labels=[EXPERIMENTS[i][0] for i in indices])
+    tick_pos = range(1, len(indices) + 1)
+    labels = [EXPERIMENTS[i][0] for i in indices]
+    ax.set_yticks(tick_pos)
+    ax.set_yticklabels([f"$\\bf{{{label.replace('_', '\\_')}}}$" if 'phi3' in label.lower() else label for label in labels])
+    ax.yaxis.set_minor_locator(NullLocator())
     plt.axvline(x=baseline, color='r', linestyle='--', linewidth=1, label='2024 Winner')
     plt.xlabel('Prompt Score')
     plt.legend()
-    plt.title(title)
     plt.tight_layout()
     plt.savefig(file)
     plt.show()
@@ -152,13 +162,12 @@ def plot_similarity_vs_diversity(summary_similarities, summary_diversities):
     diversities = [summary_diversities[x] for x in indexes]
     colors = [similarities[i] * diversities[i] for i in range(len(similarities))]
 
-    plt.figure(figsize=(3.5, 2))
+    plt.figure(figsize=(3.5, 1.6))
     scatter = plt.scatter(similarities, diversities, c=colors, cmap='viridis')
     plt.colorbar(scatter, label='Score')
 
     plt.xlabel('Similarity')
     plt.ylabel('Diversity')
-    plt.title('Individual Character Similarity vs Diversity')
 
     plt.tight_layout()
     plt.savefig('similarity_vs_diversity.png')
@@ -180,7 +189,7 @@ if __name__ == '__main__':
         print('\t', np.std(sid), '--', np.var(sid))
         print('Invalid', invalid_count)
 
-    plot_results(scores_including_diversity, 0.09459, 'Prompt Performance Including Diversity', 'results_including_diversity.eps')
+    plot_results(scores_including_diversity, 0.09459, 'Prompt Performance', 'results_including_diversity.eps')
     plot_results(scores_excluding_diversity, 0.42891, 'Prompt Performance Excluding Diversity', 'results_excluding_diversity.eps')
     plot_similarity_vs_diversity(summary_similarities, summary_diversities)
 
