@@ -1,0 +1,30 @@
+{
+    "dataCount": 4,
+    "rate": 0.9833333492279053,
+    "raws": [
+        {
+            "tag": "competition/BL_Raw_gemma2/levels/F/BL_Raw_gemma2_F_1.xml",
+            "score": 1.0,
+            "startingObjects": 8,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/BL_Raw_gemma2/levels/F/BL_Raw_gemma2_F_2.xml",
+            "score": 1.0,
+            "startingObjects": 12,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/BL_Raw_gemma2/levels/F/BL_Raw_gemma2_F_3.xml",
+            "score": 1.0,
+            "startingObjects": 13,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/BL_Raw_gemma2/levels/F/BL_Raw_gemma2_F_4.xml",
+            "score": 0.9333333373069763,
+            "startingObjects": 15,
+            "movingObjects": 1
+        }
+    ]
+}
