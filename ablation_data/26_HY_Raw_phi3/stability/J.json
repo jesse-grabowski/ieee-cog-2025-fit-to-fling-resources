@@ -1,0 +1,78 @@
+{
+    "dataCount": 12,
+    "rate": 1.0,
+    "raws": [
+        {
+            "tag": "competition/26_HY_Raw_phi3/levels/J/26_HY_Raw_phi3_J_11.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Raw_phi3/levels/J/26_HY_Raw_phi3_J_18.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Raw_phi3/levels/J/26_HY_Raw_phi3_J_28.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Raw_phi3/levels/J/26_HY_Raw_phi3_J_29.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Raw_phi3/levels/J/26_HY_Raw_phi3_J_54.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Raw_phi3/levels/J/26_HY_Raw_phi3_J_55.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Raw_phi3/levels/J/26_HY_Raw_phi3_J_56.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Raw_phi3/levels/J/26_HY_Raw_phi3_J_58.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Raw_phi3/levels/J/26_HY_Raw_phi3_J_59.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Raw_phi3/levels/J/26_HY_Raw_phi3_J_61.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Raw_phi3/levels/J/26_HY_Raw_phi3_J_62.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Raw_phi3/levels/J/26_HY_Raw_phi3_J_64.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        }
+    ]
+}

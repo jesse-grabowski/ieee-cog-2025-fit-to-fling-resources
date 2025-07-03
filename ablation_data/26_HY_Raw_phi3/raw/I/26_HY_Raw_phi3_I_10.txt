@@ -1,0 +1,4 @@
+drop_block('b13', 10)
+drop_block('b13', 10)
+
+Explanation: For input "I", based on the provided VOCABULARY, we can observe that it always returns 'b13' and the number increases by one in sequence. Hence, both calls will return 'b13' with a value of 10.

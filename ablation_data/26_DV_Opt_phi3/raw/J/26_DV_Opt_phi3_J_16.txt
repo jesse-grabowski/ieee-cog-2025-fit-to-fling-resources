@@ -1,0 +1,8 @@
+```
+drop_block('b98', 0)
+drop_block('b46', 0)
+drop_block('b21', 3)
+drop_block('b75', 6)
+drop_block('b14', 6)
+drop_block('b52', 5)
+```

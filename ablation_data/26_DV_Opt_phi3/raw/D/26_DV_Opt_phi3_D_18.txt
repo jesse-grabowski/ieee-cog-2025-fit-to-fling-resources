@@ -1,0 +1,7 @@
+```
+drop_block('b31', '0')
+drop_block('b11', 'UV')
+drop_block('b31', 'A2CDGH#')
+```
+
+This solution follows the string parsing rule to convert each block of text into the required function call `drop_block` with proper arguments, preserving the trailing characters and maintaining correct alignment as per instruction. The `#` at the end is included after `'0'` in the third line because it was appended to the token `DBA2CDGH`.

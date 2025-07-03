@@ -1,0 +1,5 @@
+```
+drop_block('b13', 0)
+drop_block('b11', 0) #
+drop_block('b13', 450 + Y%3 == 1 ? 0 : (sum of all previous primes excluding 'Y' if it doesn’t align with prime sum logic)/2)
+```

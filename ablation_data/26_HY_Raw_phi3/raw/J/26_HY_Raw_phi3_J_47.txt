@@ -1,0 +1,12 @@
+drop_block('b11', 10)
+drop_block('b13', 11)
+drop_block('b13', 11)
+
+In this task, the user is asked to return a corresponding output based on an input character from a given VOCABULARY. Each letter in the alphabet (A-Z) has its own sequence of "drop_block" function calls with specific arguments passed as parameters. For example: 
+
+INPUT = A -> OUTPUT sequence consists of 'b11' and 'b31', with both having incrementing numeric values from 8 to 10, followed by repeating the whole cycle again ending in a second call with `drop_block('b11', 10)`.
+
+For INPUT = J, according to the VOCABULARY:
+```
+INPUT = J -> OUTPUT sequence consists of 'b11' and 'b13', both incremented from 8 to 10 (with `drop_block('b11', 10`) followed by another call with `drop_block('b13', 11)` twice.
+```

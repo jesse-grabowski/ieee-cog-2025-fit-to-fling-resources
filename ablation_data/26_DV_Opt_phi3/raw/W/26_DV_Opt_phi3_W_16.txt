@@ -1,0 +1,4 @@
+Since the input does not contain any of the specified letters (`Y`, `X`, or `Z`), no block-dropping calls will be generated. Here's your output inside triple backticks as per the instructions.
+
+```
+```

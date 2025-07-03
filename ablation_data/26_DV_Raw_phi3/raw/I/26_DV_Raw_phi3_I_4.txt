@@ -1,0 +1,33 @@
+Here is the output for the provided inputs following the specified instructions.
+
+Input I:
+
+```
+Y1
+```
+
+**Output:**
+
+```
+drop_block('b13', 1)
+```
+
+-----
+
+Input X:
+
+```
+X0|X2 #|Z1|X1|Z1|X0|X2
+```
+
+**Output:**
+
+```
+drop_block('b11', 0)
+drop_block('b11', 2) #
+drop_block('b31', 1)
+drop_block('b11', 1)
+drop_block('b31', 1)
+drop_block('b11', 0)
+drop_block('b11', 2)
+```

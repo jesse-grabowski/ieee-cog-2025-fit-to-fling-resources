@@ -1,0 +1,390 @@
+{
+    "dataCount": 64,
+    "rate": 1.0,
+    "raws": [
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_1.xml",
+            "score": 1.0,
+            "startingObjects": 8,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_10.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_11.xml",
+            "score": 1.0,
+            "startingObjects": 8,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_12.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_13.xml",
+            "score": 1.0,
+            "startingObjects": 18,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_14.xml",
+            "score": 1.0,
+            "startingObjects": 7,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_15.xml",
+            "score": 1.0,
+            "startingObjects": 8,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_16.xml",
+            "score": 1.0,
+            "startingObjects": 8,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_17.xml",
+            "score": 1.0,
+            "startingObjects": 8,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_18.xml",
+            "score": 1.0,
+            "startingObjects": 8,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_19.xml",
+            "score": 1.0,
+            "startingObjects": 7,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_2.xml",
+            "score": 1.0,
+            "startingObjects": 10,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_20.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_21.xml",
+            "score": 1.0,
+            "startingObjects": 4,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_22.xml",
+            "score": 1.0,
+            "startingObjects": 18,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_23.xml",
+            "score": 1.0,
+            "startingObjects": 18,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_24.xml",
+            "score": 1.0,
+            "startingObjects": 7,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_25.xml",
+            "score": 1.0,
+            "startingObjects": 8,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_26.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_27.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_28.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_29.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_3.xml",
+            "score": 1.0,
+            "startingObjects": 6,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_30.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_31.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_32.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_33.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_34.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_35.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_36.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_37.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_38.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_39.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_4.xml",
+            "score": 1.0,
+            "startingObjects": 9,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_40.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_41.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_42.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_43.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_44.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_45.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_46.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_47.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_48.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_49.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_5.xml",
+            "score": 1.0,
+            "startingObjects": 7,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_50.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_51.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_52.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_53.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_54.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_55.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_56.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_57.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_58.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_59.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_6.xml",
+            "score": 1.0,
+            "startingObjects": 8,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_60.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_61.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_62.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_63.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_64.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_7.xml",
+            "score": 1.0,
+            "startingObjects": 14,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_8.xml",
+            "score": 1.0,
+            "startingObjects": 5,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/26_HY_Opt_gemma2/levels/L/26_HY_Opt_gemma2_L_9.xml",
+            "score": 1.0,
+            "startingObjects": 2,
+            "movingObjects": 0
+        }
+    ]
+}

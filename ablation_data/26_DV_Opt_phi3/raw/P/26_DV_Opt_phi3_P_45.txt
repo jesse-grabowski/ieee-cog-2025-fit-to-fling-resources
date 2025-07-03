@@ -1,0 +1,7 @@
+```
+drop_block('b13', 0)
+drop_block('b11', 0) #
+drop_block('b13', 2)
+drop_block('b11', 4)
+```
+(Note: The example provided seems to deviate from the previous examples. It contains an additional operation, `EI`, which is not defined within the mapping rules provided earlier but has been treated following a new rule described in the instructions.)

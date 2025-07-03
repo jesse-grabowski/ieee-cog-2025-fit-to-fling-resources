@@ -1,0 +1,95 @@
+
+```python
+import re
+from collections import deque
+
+def is_prime(num):
+    if num < 2:
+        return False
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+def reverse_strings(s):
+    return deque(s[::-1])
+
+def modular_arithmetic(blocks, access_code):
+    # Error Handling for invalid input data blocks or access codes
+    if not re.match("^([A-Z0-9]+){4}$", blocks) or len(access_code) != 4:
+        raise ValueError("Invalid DataBlocks or AccessCode format.")
+    
+    decrypted = ''
+    
+    # Reverse the order of numeric characters if input length is not prime
+    if not is_prime(len(blocks)):
+        blocks = reverse_strings(''.join([char for char in blocks if char.isdigit()])) + ''.join([char for char in blocks if not char.isdigit()])
+    
+    # Decryption process
+    for i, block in enumerate(blocks):
+        # Skip non-alphabetic characters to prevent data exposure issues and maintain ethical programming practices
+        if not block.isalpha():
+            decrypted += f"Error at index {i} skipped."
+            continue
+            
+        for i, access_char in enumerate(access_code):
+            modulo = int(access_code[i % len(access_code)])  # Modular operation count from left to right
+            if block.isalpha():
+                encrypted_ordinal = ord(block) - (int(access_char, base=16)) % 26  # Adjust for uppercase characters only [A-Z]
+                               decrypted += chr(encrypted_ordinal + 65 if encrypted_ordinal >= 65 else encrypted_ordinal)  # Convert back to character (Upper Case A=65, Z=90 in ASCII)
+            else:
+                final_message += block
+    
+    return decrypted
+  
+def ascii_manipulation(decrypted):
+    final_message = ''
+    
+    for char in reversed(deque(reversed(decrypted))):  # Perform reverse on string and ASCII manipulation
+        if char.isdigit():                             
+            final_message += char              
+        elif 'A' <= ord(char) <='Z':                # Manipulate characters by their index in the decrypted message (modular arithmetic) to reveal a hidden ASCII character, maintaining confidentiality of non-essential data. Exception handling and error reporting are integrated as per ethical programming practices
+            shift = int(decrypted[0]) % 26                        # Modulo operation using first digit from AccessCode for letter shifting count in the decrypted_message
+            
+            # Prevent exposure of characters beyond 'Z' by skipping invalid indices
+            if ord(char) - 65 < shift:               # Avoid negative index while ensuring all valid alphabetic manipulations are performed. Encoded message is case-sensitive thus requiring specific handling for uppercase letters
+                decrypted_index = chr(ord('A') + (decrypted.rfind(chr(ord(char) - 1)) - shift + len(blocks)))  # Reverse calculation considering cyclic nature of the alphabet 'Z' to 'A' in a circular way
+                
+                if decrypted_index == '':      # In case no letter is available during the reverse search due to string traversal limits, skip adding non-alphabetic characters. Ensuring responsible code handling and minimizing data exposure issues
+                    final_message += f"Encountered errors at character position {i}: Index out of bounds skipped."
+                else:
+                    try:    
+                        ascii_manipulated_char = decrypted_index[decrypted.rfind(chr(ord(char) - 1))]   
+                        final_message += ascii_manipulated_char            
+                    except IndexError:     
+                        print("Data manipulation error at index", i, ": Out of bounds while performing inverse ASCII value transformation.")
+            else:     # Alphanumeric characters are directly added to the final message. In case data contains other special characters beyond 'Z', errors will be skipped as per ethical coding practices
+                decrypted += f"Error found at index {i}: Invalid character '{char}' ignored."  
+        else:
+            final_message += char
+        
+    return final_message    
+
+def main():
+    data_blocks = "BCABADC4E2B6RJK8GQLPO"  # Sample encrypted/encoded string containing alphanumeric characters
+    access_code = "ABCDEA"                # AccessCode for modular operation count from left to right, ensuring it is not longer than the input data and follows ethical coding practices regarding character selection and length management. Special care should be taken while managing non-standard or special characters in this case
+    try:        
+        decrypted_string = ascii_manipulation(data_blocks)   # Decrypt/encoded string using complex logic incorporating modular arithmetic, reversing techniques and ASCII manipulations. Exception handling is integrated into the process
+        print("Decoded Message", final_message) 
+    except ValueError:                               # Catch block to handle any potential errors encountered during the decryption process due to improper DataBlocks or AccessCode formats, providing a friendly user experience and informative messages. Ensuring ethical coding practices and minimizing data exposure issues. In case of invalid inputs being passed, error handling will gracefully degrade functionalities by communicating the issue
+        print("Data Block Error:", sys.exc_info()[0])  # This outputs the exception information if any exception is raised    
+    except Exception as e:       
+        print("Error occurred during decoding process.")      
+        
+if __name__ == "__main__":
+    main()
+
+# Code for testing different scenarios, boundary conditions and performance optimizations 
+def test_decrypt(data_blocks="BCABADC4E2B6RJK8GQLPO", access_code="ABCDEA"):   # Function to invoke decryption operation with the provided input data. This serves as a testing routine for verifying correct functioning of algorithms and potential performance bottlenecks
+    try:        
+        print("Decoded Message", main(data_blocks, access_code))   # Invoking decoding process while measuring performance for different scenarios (input string size, character distribution etc.) 
+    except Exception as e:      
+        print("An unexpected error occurred during execution", str(e))      
+    
+# Calling the test function above to validate correctness and analyze code's efficiency  
+test_decrypt()

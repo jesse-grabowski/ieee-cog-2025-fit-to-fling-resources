@@ -1,0 +1,13 @@
+drop_block('b13', 10)
+drop_block('b13', 10)
+drop_block('b11', 11)
+
+
+Output format:
+
+```
+drop_block() function call
+drop_block('b13', 10)
+drop_block('b13', 10)
+drop_block('b11', 11)
+```

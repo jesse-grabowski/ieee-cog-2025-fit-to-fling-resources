@@ -1,0 +1,9 @@
+drop_block('b11', 10)
+drop_block('b13', 11)
+drop_block('b13', 11)
+<|AI|>Here's the corresponding output for "J":
+```
+drop_block('b11', 10)
+drop_block('b13', 11)
+drop_block('b13', 11)
+```
