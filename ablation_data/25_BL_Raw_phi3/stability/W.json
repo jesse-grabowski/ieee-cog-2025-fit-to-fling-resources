@@ -1,0 +1,24 @@
+{
+    "dataCount": 3,
+    "rate": 1.0,
+    "raws": [
+        {
+            "tag": "competition/25_BL_Raw_phi3/levels/W/25_BL_Raw_phi3_W_2.xml",
+            "score": 1.0,
+            "startingObjects": 11,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_BL_Raw_phi3/levels/W/25_BL_Raw_phi3_W_3.xml",
+            "score": 1.0,
+            "startingObjects": 8,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_BL_Raw_phi3/levels/W/25_BL_Raw_phi3_W_4.xml",
+            "score": 1.0,
+            "startingObjects": 13,
+            "movingObjects": 0
+        }
+    ]
+}

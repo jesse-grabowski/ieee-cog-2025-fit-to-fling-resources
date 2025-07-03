@@ -1,0 +1,12 @@
+{
+    "dataCount": 1,
+    "rate": 1.0,
+    "raws": [
+        {
+            "tag": "competition/25_HY_Raw_phi3/levels/O/25_HY_Raw_phi3_O_19.xml",
+            "score": 1.0,
+            "startingObjects": 6,
+            "movingObjects": 0
+        }
+    ]
+}

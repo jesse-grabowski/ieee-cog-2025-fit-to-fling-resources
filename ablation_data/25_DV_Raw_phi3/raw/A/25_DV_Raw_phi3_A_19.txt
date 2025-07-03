@@ -1,0 +1,6 @@
+```
+drop_block('Y0', 4)
+drop_block('X6', 15)
+drop_block('Z2', 89) #
+```
+(Note: This assumes the mappings you provided do not include any characters beyond 'Y', 'X', and 'Z' for uppercase letters following a single digit.)

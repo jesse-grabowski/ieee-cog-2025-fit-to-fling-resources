@@ -1,0 +1,5 @@
+drop_block('b11', 10)
+drop_block('b13', 11)
+drop_block('b13', 11)
+
+The answer for the character "J" would be two consecutive calls to `drop_block` with parameters 'b11' and '10,' followed by another pair of identical function calls.

@@ -1,0 +1,15 @@
+```
+drop_block('b13', 7)
+drop_block('b11', 8)
+drop_block('b11', 10)
+drop_block('b11', 9)
+drop_block('b11', 10)
+drop_block('b31', 9)
+drop_block('b11', 8)
+drop_block('b11', 10)
+drop_block('b11', 9)
+drop_block('b11', 11)
+drop_block('b13', 6)
+drop_block('b13', 7)
+drop_block('b31', 9)
+```

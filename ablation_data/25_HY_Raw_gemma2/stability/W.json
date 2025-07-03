@@ -1,0 +1,390 @@
+{
+    "dataCount": 64,
+    "rate": 1.0,
+    "raws": [
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_1.xml",
+            "score": 1.0,
+            "startingObjects": 8,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_10.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_11.xml",
+            "score": 1.0,
+            "startingObjects": 8,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_12.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_13.xml",
+            "score": 1.0,
+            "startingObjects": 18,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_14.xml",
+            "score": 1.0,
+            "startingObjects": 7,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_15.xml",
+            "score": 1.0,
+            "startingObjects": 8,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_16.xml",
+            "score": 1.0,
+            "startingObjects": 8,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_17.xml",
+            "score": 1.0,
+            "startingObjects": 8,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_18.xml",
+            "score": 1.0,
+            "startingObjects": 8,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_19.xml",
+            "score": 1.0,
+            "startingObjects": 7,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_2.xml",
+            "score": 1.0,
+            "startingObjects": 8,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_20.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_21.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_22.xml",
+            "score": 1.0,
+            "startingObjects": 4,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_23.xml",
+            "score": 1.0,
+            "startingObjects": 17,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_24.xml",
+            "score": 1.0,
+            "startingObjects": 18,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_25.xml",
+            "score": 1.0,
+            "startingObjects": 7,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_26.xml",
+            "score": 1.0,
+            "startingObjects": 8,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_27.xml",
+            "score": 1.0,
+            "startingObjects": 18,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_28.xml",
+            "score": 1.0,
+            "startingObjects": 18,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_29.xml",
+            "score": 1.0,
+            "startingObjects": 18,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_3.xml",
+            "score": 1.0,
+            "startingObjects": 6,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_30.xml",
+            "score": 1.0,
+            "startingObjects": 18,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_31.xml",
+            "score": 1.0,
+            "startingObjects": 18,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_32.xml",
+            "score": 1.0,
+            "startingObjects": 18,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_33.xml",
+            "score": 1.0,
+            "startingObjects": 18,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_34.xml",
+            "score": 1.0,
+            "startingObjects": 18,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_35.xml",
+            "score": 1.0,
+            "startingObjects": 18,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_36.xml",
+            "score": 1.0,
+            "startingObjects": 18,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_37.xml",
+            "score": 1.0,
+            "startingObjects": 18,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_38.xml",
+            "score": 1.0,
+            "startingObjects": 18,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_39.xml",
+            "score": 1.0,
+            "startingObjects": 18,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_4.xml",
+            "score": 1.0,
+            "startingObjects": 9,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_40.xml",
+            "score": 1.0,
+            "startingObjects": 18,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_41.xml",
+            "score": 1.0,
+            "startingObjects": 18,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_42.xml",
+            "score": 1.0,
+            "startingObjects": 18,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_43.xml",
+            "score": 1.0,
+            "startingObjects": 18,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_44.xml",
+            "score": 1.0,
+            "startingObjects": 18,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_45.xml",
+            "score": 1.0,
+            "startingObjects": 18,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_46.xml",
+            "score": 1.0,
+            "startingObjects": 18,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_47.xml",
+            "score": 1.0,
+            "startingObjects": 18,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_48.xml",
+            "score": 1.0,
+            "startingObjects": 18,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_49.xml",
+            "score": 1.0,
+            "startingObjects": 18,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_5.xml",
+            "score": 1.0,
+            "startingObjects": 7,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_50.xml",
+            "score": 1.0,
+            "startingObjects": 18,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_51.xml",
+            "score": 1.0,
+            "startingObjects": 18,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_52.xml",
+            "score": 1.0,
+            "startingObjects": 18,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_53.xml",
+            "score": 1.0,
+            "startingObjects": 18,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_54.xml",
+            "score": 1.0,
+            "startingObjects": 18,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_55.xml",
+            "score": 1.0,
+            "startingObjects": 18,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_56.xml",
+            "score": 1.0,
+            "startingObjects": 18,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_57.xml",
+            "score": 1.0,
+            "startingObjects": 18,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_58.xml",
+            "score": 1.0,
+            "startingObjects": 18,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_59.xml",
+            "score": 1.0,
+            "startingObjects": 18,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_6.xml",
+            "score": 1.0,
+            "startingObjects": 8,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_60.xml",
+            "score": 1.0,
+            "startingObjects": 18,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_61.xml",
+            "score": 1.0,
+            "startingObjects": 18,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_62.xml",
+            "score": 1.0,
+            "startingObjects": 18,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_63.xml",
+            "score": 1.0,
+            "startingObjects": 18,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_64.xml",
+            "score": 1.0,
+            "startingObjects": 18,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_7.xml",
+            "score": 1.0,
+            "startingObjects": 8,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_8.xml",
+            "score": 1.0,
+            "startingObjects": 5,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/25_HY_Raw_gemma2/levels/W/25_HY_Raw_gemma2_W_9.xml",
+            "score": 1.0,
+            "startingObjects": 2,
+            "movingObjects": 0
+        }
+    ]
+}

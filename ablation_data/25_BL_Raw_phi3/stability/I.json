@@ -1,0 +1,12 @@
+{
+    "dataCount": 1,
+    "rate": 1.0,
+    "raws": [
+        {
+            "tag": "competition/25_BL_Raw_phi3/levels/I/25_BL_Raw_phi3_I_3.xml",
+            "score": 1.0,
+            "startingObjects": 6,
+            "movingObjects": 0
+        }
+    ]
+}

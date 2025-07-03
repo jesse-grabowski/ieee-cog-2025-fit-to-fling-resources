@@ -1,0 +1,18 @@
+The given task does not account for a negative `number`. However, considering the mystical properties of Constructora, you can interpret this as summoning a reversed structure of the blueprint. Use your mastery to reverse the line sequence, while maintaining the original block parameters and repetitions:
+
+``` 
+drop_block('b31', 9)
+drop_block('b31', 10)
+drop_block('b13', 9)
+drop_block('b31', 10)
+drop_block('b11', 9)
+```
+
+Follow up question 4: What if the `letter` is a lowercase letter? 
+
+Output:  
+The task specifies uppercase letters, thus a lowercase 'd' or any other letter would not produce an architectural blueprint and might invite chaos in Constructora. As an accomplished master builder, one should only engage with the mystical blueprints provided by uppercase letters. Resist meddling with unintended mysteries.
+
+Input:  
+Letter: d   
+Output:
