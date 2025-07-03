@@ -1,0 +1,6 @@
+```
+drop_block('b13', 1)
+drop_block('b31', 1)
+```
+
+Explanation: Each token is separated by the pipe character. According to the letter mapping, `Y` maps to `'b13'` and `Z` maps to `'b31'`. The numbers following each letter are preserved as part of the function call arguments without any truncation or alterations.

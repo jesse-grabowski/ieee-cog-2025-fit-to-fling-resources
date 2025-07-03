@@ -1,0 +1,10 @@
+```
+drop_block('b11',) #  
+drop_block('b31', 10) I G U K D O #
+drop_block('b13', ) FAIL C L M A F#E V T
+
+INVALID INPUT: ZS is not a valid character, no transformation can be applied.
+FAIL due to repetitive invalid operation on H (ZS after decoding).
+``` 
+
+(Note that we have assumed the input "W (-46 % 26 +1 = -20%, wrap around to lower index), adjust back to positive") is a typo or an incorrect description of what the transformation should look like, as the Caesar cipher typically operates on modulo arithmetic over the complete alphabet. The correct approach would likely be `(-47 % 26 +1 = -21%)`, but since we are discussing alphabetic characters starting from W or X which in zero-indexed space correspond to value of 21, this would indeed result in a wrap-around that brings the index back into bounds.)

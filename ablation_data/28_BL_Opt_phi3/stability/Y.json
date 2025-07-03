@@ -1,0 +1,30 @@
+{
+    "dataCount": 4,
+    "rate": 0.7708333730697632,
+    "raws": [
+        {
+            "tag": "competition/28_BL_Opt_phi3/levels/Y/28_BL_Opt_phi3_Y_1.xml",
+            "score": 1.0,
+            "startingObjects": 6,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/28_BL_Opt_phi3/levels/Y/28_BL_Opt_phi3_Y_2.xml",
+            "score": 0.0833333358168602,
+            "startingObjects": 12,
+            "movingObjects": 11
+        },
+        {
+            "tag": "competition/28_BL_Opt_phi3/levels/Y/28_BL_Opt_phi3_Y_3.xml",
+            "score": 1.0,
+            "startingObjects": 6,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/28_BL_Opt_phi3/levels/Y/28_BL_Opt_phi3_Y_4.xml",
+            "score": 1.0,
+            "startingObjects": 5,
+            "movingObjects": 0
+        }
+    ]
+}

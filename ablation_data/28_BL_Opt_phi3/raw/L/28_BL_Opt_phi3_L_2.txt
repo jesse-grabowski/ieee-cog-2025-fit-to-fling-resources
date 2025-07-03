@@ -1,0 +1,11 @@
+```
+drop_block('b31', 10)
+drop_block('b13', 9)
+drop_block('b11', 11)
+```
+In accordance with the sacred blueprints of Constructora for letter L, this sequence will construct the grand monument.
+output: ```
+drop_block('b31', 10)
+drop_block('b13', 9)
+drop_block('b11', 11)
+```

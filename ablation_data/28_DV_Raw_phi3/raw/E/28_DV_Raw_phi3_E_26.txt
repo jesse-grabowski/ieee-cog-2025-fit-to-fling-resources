@@ -1,0 +1,3 @@
+```python
+print('```drop_block("b13", 0)\ndrop_block("b13", 1) \ndrop_block("b31", 3)\ndrop_block("b11", 2) \n#\ndrop_block("b13", 3)')
+```

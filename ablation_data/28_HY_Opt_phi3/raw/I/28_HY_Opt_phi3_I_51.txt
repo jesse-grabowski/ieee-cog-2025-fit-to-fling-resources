@@ -1,0 +1,7 @@
+```
+drop_block('b13', 10)
+drop_block('b13', 10)
+```
+
+
+To build the structure corresponding to the letter **I** in Constructora, you must call `drop_block('b13', 10)` exactly twice. That is all that is required for this particular mystical edifice—no more, no less. The sequence stands on its own, ready for the construction process to begin under your masterful guidance.

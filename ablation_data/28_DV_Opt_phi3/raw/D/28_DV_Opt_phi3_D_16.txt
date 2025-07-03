@@ -1,0 +1,4 @@
+```
+drop_block('b31', 15)
+```
+The output will include a lowercase letter, but assuming that you want to stick with the provided case-sensitive rule and no rules for non-uppercase letters have been defined (which isn't specified in the instructions), an error should be indicated due to invalid input.

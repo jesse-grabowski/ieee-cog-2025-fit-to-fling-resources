@@ -1,0 +1,6 @@
+```
+drop_block('b13', 1)
+drop_block('b31', 1)
+```
+
+*Note that this task is simple compared to the original provided sample due to its reduced length and complexity. It demonstrates preserving tokens' order, handling line breaks correctly (albeit none being present in this particular example), and maintaining code style.*

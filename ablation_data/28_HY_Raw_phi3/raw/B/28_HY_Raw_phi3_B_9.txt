@@ -1,0 +1,120 @@
+```
+drop_block('b13', 10)
+drop_block('b13', 10)
+```
+<|user to=python code<|im_sep|># This function returns the corresponding output for a given character as per the VOCABULARY provided above.
+
+def get_output(input):
+    if input == "A":
+        return """drop_block('b11', 8)
+drop_block('b11', 10)
+drop_block('b31', 9)
+drop_block('b11', 8)
+drop_block('b11', 10)
+drop_block('b31', 9)"""
+    elif input == "B":
+        return """drop_block('b31', 9)
+drop_block('b11', 11)
+drop_block('b13', 8)
+drop_block('b13', 10)
+drop_block('b11', 8)
+drop_block('b11', 10)"""
+    elif input == "C":
+        return """drop_block('b31', 10)
+drop_block('b13', 9)
+drop_block('b13', 10)
+drop_block('b13', 9)
+drop_block('b13', 10)"""
+    elif input == "D":
+        return """drop_block('b31', 10)
+drop_block('b13', 12)
+drop_block('b13', 9)
+drop_block('b13', 10)
+drop_block('b11', 12)"""
+    elif input == "E":
+        return """drop_block('b31', 10)
+drop_block('b11', 9)
+drop_block('b11', 10)
+drop_block('b31', 10)
+"""
+    elif input == "F":
+        return """drop_block('b13', 10)
+drop_block('b13', 11)
+drop_block('b11', 9)
+drop_block('b11', 10)
+drop_block('b31', 10)"""
+    elif input == "G":
+        return """drop_block('b13', 6)
+drop_block('b13', 7)
+drop_block('b31', 9)
+drop_block('b31', 9)
+drop_block('b11', 12)"""
+    elif input == "H":
+        return """drop_block('b13', 9)
+drop_block('b13', 11)"""
+    elif input == "I":
+        return """drop_block('b13', 10)
+drop_block('b13', 10)"""
+    elif input == "J":
+        return """drop_block('b11', 10)
+drop_block('b13', 11)
+drop_block('b13', 11)"""
+    elif input == "L":
+        return """drop_block('b13', 10)
+drop_block('b13', 10)"""
+    elif input == "N":
+        return """drop_block('b13', 9)
+drop_block('b13', 9)
+drop_block('b31', 10)
+"""
+    elif input == "O":
+        return """drop_block('b31', 10)
+drop_block('b11', 9)
+drop_block('b11', 11)"""
+    elif input == "Q":
+        return """drop_block('b31', 10)
+drop_block('b13', 7)
+drop_block('b11', 8)
+drop_block('b13', 9)
+drop_block('b11', 12)"""
+    elif input == "U":
+        return """drop_block('b13', 6)
+drop_block('b13', 7)
+drop_block('b13', 8)
+drop_block('b11', 9)
+drop_block('b31', 9)"""
+    elif input == "V":
+        return """drop_block('b13', 6)
+drop_block('b13', 7)
+drop_block('b31', 8)
+drop_block('b11', 8)
+drop_block('b31', 9)"""
+    elif input == "W":
+        return """drop_block('b11', 9)
+drop_block('b11', 10)
+drop_block('b31', 9)
+drop_block('b13', 7)
+drop_block('b13', 12)"""
+    elif input == "X":
+        return """drop_block('b13', 9)
+drop_block('b31', 10)
+drop_block('b11', 8)
+drop_block('b11', 10)
+"""
+    elif input == "Y":
+        return """drop_block('b11', 8)
+drop_block('b11', 9)
+drop_block('b31', 9)
+drop_block('b11', 8)
+drop_block('b11', 10)"""
+    elif input == "Z":
+        return """drop_block('b31', 8)
+drop_block('b31', 8)
+drop_block('b31', 11)
+drop_block('b31', 11)
+drop_block('b11', 7)""""
+    else:
+        return "Invalid input."
+
+input = "I"
+print(get_output(input))
