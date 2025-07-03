@@ -1,0 +1,9 @@
+```output
+G
+```
+---
+The given inputs are `Letter: 'C'`, and `Number: '140'`. Let us decode the task step by step.  
+
+Firstly, we check if `Letter` corresponds to an uppercase A-Z letter; all checks are valid. For input `Letter: 'c'` it will be converted to its corresponding index in reverse alphabetical order as per constraint 5 and #10 (uppercase). In this case, `C` is the third letter from Z so it corresponds to position 24 (`Z`=0, Y=1 ... , C=23), which satisfies our range constraint.  
+The number given does not match any of the specific exceptions or additional requirements in constraints #6-9; therefore, we check the input `Number`. According to restriction #7 if an output exceeds 'Y'(which would be 24+1=25 after reverse indexing), then apply modulo rule with '3'. But as our calculated index (`Letter: 'C'`) is C which translates into `A` in reverse alphabetical order, and because the input number, when divided by 3 leaves a remainder (40%3 =1), we add 5(as per constraint #9) so now `Number:` becomes -> `7`.
+Now applying constraint#2, for `Z`=26 down to A: 'A'->0, the letter corresponding to `7` is H. So our final output will be `H`, which we convert back into original casing as per input instruction giving - **Output** – `G`.

@@ -1,0 +1,25 @@
+# Solution for Y
+
+To parse the given input `Y1|Z1|Y0|Y2 #`, convert each token according to the provided mappings and follow the instructions regarding line breaks. The solution is as follows:
+
+```
+drop_block('b13', 1)
+drop_block('b31', 1)
+drop_block('b13', 0)
+drop_block('b13', 2) #
+```
+
+# Solution for Z
+
+To parse the given input `Z6|Z6|Z9|Z9|X5|X6|Z6 #|Z6|X6|X7|Z6|Z6`, convert each token according to the provided mappings and follow the instructions regarding line breaks. The solution for Z's part is as follows:
+
+```
+drop_block('b31', 6)
+drop_block('b31', 6)
+drop_block('b31', 9)
+drop_block('b31', 9)
+drop_block('b11', 5)
+drop_block('b11', 6)
+drop_block('b31', 6) #
+drop_block('b31', 6)
+```

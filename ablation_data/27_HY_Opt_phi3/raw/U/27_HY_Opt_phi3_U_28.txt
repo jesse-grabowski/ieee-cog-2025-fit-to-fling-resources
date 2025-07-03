@@ -1,0 +1,8 @@
+```
+drop_block('b31', 11)
+drop_block('b31', 8)
+drop_block('b13', 7)
+drop_block('b13', 12)
+```
+
+Explanation for the output: The block blueprints `b31` and `b13` are used to construct the letter "U".

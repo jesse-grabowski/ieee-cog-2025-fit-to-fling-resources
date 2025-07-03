@@ -1,0 +1,7 @@
+```python
+def mystical_blueprint(letter):
+    if letter >= 0 and letter <= 25:
+        return chr(ord('A') + letter).upper()
+    else:
+        return letter
+```

@@ -1,0 +1,5 @@
+```plaintext
+drop_block('b31', 3)
+checksum(str("LC" + "{}".format(2)))
+#2
+```

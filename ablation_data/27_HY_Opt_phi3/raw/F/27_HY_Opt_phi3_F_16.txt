@@ -1,0 +1,7 @@
+```markdown
+Month Temp Ave | Outliers Found
+Jan: -inf --Data Missing-- | No Outlier Found  
+Feb: -Inf --No Data Available--  
+Mar: 7.00 | Data Expired Error  
+Apr: 12.00 | No Outlier Found
+```

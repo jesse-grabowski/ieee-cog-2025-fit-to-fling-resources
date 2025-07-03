@@ -1,0 +1,29 @@
+```python
+def parse_tokens(input_str):
+    tokens = input_str.split('|')  # Split the string into tokens
+    
+    output_lines = []  # Initialize a list to store formatted lines of code
+  
+    for token in tokens:
+        leading, trailing = '', ''
+        
+        if '#' in token or ' ' in token:
+            leading, last_token = token.split('#', maxsplit=1) if '#' in token else (token[:-1], token[-1])
+            output_lines += [f"drop_block('{mapping[c]}', {last_token})#{trailing}" for c, trailing in map(lambda x: ('X' if 'Z' not in x else 'Y' if 'I' == x.replace('X').upper() and 
+                                                mapping[x[:1]][0] != token[-2:] else 'Z', x), leading[len(-trailing):].split(' ', maxsplit=1))]
+        else:        
+            output_lines += [f"drop_block('{mapping[c]}', {token})#{token}" for c, num in map(lambda cn: (cn[:2], cn[3:]), token)]
+
+    print('\n'.join(output_lines))  # Print each formatted line on a new line
+    
+# Dictionary to map letters to block IDs
+mapping = {
+    'Y': 'b13',
+    'X': 'b11',
+    'Z': ('b31<I>', ''),  # Placeholder for special case of Z token with I following it.
+}
+
+# Input string wrapped in triple backticks
+input_str = '''|X0|X2 #|Z1|X1|Z1|X0|X2'''
+parse_tokens(input_str)
+```

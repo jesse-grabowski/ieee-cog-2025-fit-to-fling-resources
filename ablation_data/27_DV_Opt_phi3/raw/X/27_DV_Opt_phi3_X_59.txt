@@ -1,0 +1,7 @@
+```python
+drop_block('b11', 0)
+drop_block('b11', 2) #
+drop_block('b31', 1)
+drop_block('b11', 1)
+```
+This output correctly transforms each symbolic token by applying the mapping defined for letters `X` and `Z`, keeping their numeric parts intact, and preserving any trailing characters as per the instruction guidelines.

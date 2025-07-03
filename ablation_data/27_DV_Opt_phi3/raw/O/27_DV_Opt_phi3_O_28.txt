@@ -1,0 +1,8 @@
+```Y0|X1 |Z2 #| Y4| Z6|Y7|| X8|Y9 Z1
+drop_block('b13', 0)
+drop_block('b11', 1 )#
+drop_block('b31', 2  )#
+drop_block('b13', 4)
+drop_block('b31', 6)#
+drop_block('b7 ','')|X8|Y9 #
+drop_block('b31', 1 )Z1'''

@@ -1,0 +1,5 @@
+```
+drop_block('Y7', 0)
+drop_block('Z98', 5)
+'''
+Please note that the letter "Y" and number "13", "X" and number "11", "Z" and number "31" have no direct mapping so I just assumed corresponding positions as per your input example. It is a requirement to maintain order, including duplicates. So if same block position appears more than once, then it should be represented accordingly in the output.

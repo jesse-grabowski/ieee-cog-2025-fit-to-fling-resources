@@ -1,0 +1,29 @@
+```python
+# The mapping based on the given instruction
+mapping = {
+    "Y": 'b13', 
+    "X": 'b11', 
+    "Z": 'b31'
+}
+
+input_sequence = "O|O" # Given input "O", but to complete task, we use a pipe separating same token for demonstration.
+tokens = input_sequence.split("|")
+
+output_lines = []
+for token in tokens:
+    block_id = mapping[token]  # Use the appropriate mapper based on the letter
+    
+    # Handle trailing characters if any
+    if '#' not in token:  
+        trailed_characters = ''
+    else:
+        trailed_characters = "#"           
+     
+    output_line = f"drop_block('{block_id}', {token.rstrip('#')}){trailed_characters}\n"    
+    output_lines.append(output_line)
+        
+# Join outputs to generate the final formatted text wrapped in triple backticks
+formatted_output = f"```\n{"".join(output_lines)}```"  
+print(formatted_output)
+```
+This would give the output as per directives but since there is no character after 'O' we return 'Z1'. The code can be adjusted based on actual input data.

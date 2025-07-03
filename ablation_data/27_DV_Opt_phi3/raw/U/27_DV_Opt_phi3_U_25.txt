@@ -1,0 +1,7 @@
+```python
+drop_block('b13', 1)
+drop_block('b31', 1) #
+drop_block('b11', 0)
+drop_block('b31', 2)
+```
+This output strictly adheres to the given criteria. It processes every token in order without skipping, truncation or transformation of letter codes based on digit values and preserving any optional trailing characters that come after the digits exactly as they appear.

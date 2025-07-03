@@ -1,0 +1,4 @@
+```python
+drop_block('b31', 'B') #
+```
+This is because `B` corresponds with `Z`, so it becomes `'b31'`. There are no trailing characters to preserve in this case, so nothing else follows after the function call.

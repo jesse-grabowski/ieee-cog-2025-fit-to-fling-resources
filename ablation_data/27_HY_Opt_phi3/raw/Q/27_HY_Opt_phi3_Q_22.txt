@@ -1,0 +1,5 @@
+Input Letter: P (index 15)
+Number: 27 (prime within the range [26]-[29])
+Expert Letter Selector Constraint Application: Rule No. 1 applies since the number is between 26 and 29, inclusively, but also it is a prime number. According to standard rules 'P' would correspond to an index of (15 + 27) = 42 modulo 26, which gives us P again as there are only 26 letters in the English alphabet. Following Constraint #1, we now look for the next letter in ascending order, but since 'Z' is not within A-Z range and no other character is allowed (due to Rule No. 7), I am constrained, leading to an exception case which falls onto Rule No. * as no applicable character exists with these specific conditions.
+
+Output: *

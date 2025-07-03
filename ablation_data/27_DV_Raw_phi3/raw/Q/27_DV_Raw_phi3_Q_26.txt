@@ -1,0 +1,47 @@
+```python
+def parse_drops(input_string):
+    # Define mapping of characters to block functions.
+    mappings = {
+        'T': 'b12',   # Assuming 'T' maps to a placeholder as no specific directive was given for 'T'.
+        'N': 'b25',   # Same assumption made as above for the character 'N'.
+        'R': 'b78',   # As before, this is an assumed mapping.
+        'H': 'b19',   # Assumed placeholder mappings for simplicity since no specific details were provided.
+        'W': 'b23',
+        'J': 'b60'    # Same assumption made as above for the character 'J'.
+    }
+    
+    output_lst = []  # Initialize a list that will hold formatted tokens.
+    order_maintenance = []  # List to keep track of the original token sequence including special markers.
+
+    current_block = None
+    inside_comment = False
+
+    for item in input_string:  # Iterate over each character in the provided string.
+        if item == '#' and not inside_comment:  # If this is a comment marker outside comments...
+            inside_comment = True   # Toggle variable to represent we are now within comments section.
+        elif inside_comment or current_block is None:  # For new tokens after the initial one...
+            if item in mappings and not (inside_comment and order_maintenance[len(order_maintenance)-1] == '\n'):
+                block = mappings[item] + ','  # Use mapping to convert character to a function call.
+                current_block = block   # Update our reference for current block with this new value.
+            elif item == '#' and order_maintenance[-2:] != ['\n', '#']:   # Special treatment for the comment marker inside comments.
+                continue  # Skip over it since we are directly after a number line within the comments section already.
+            else:
+                current_block += item + ','  # Otherwise, append to our current block value.
+        elif item == '\n':   # If character is a newline...
+            if inside_comment and order_maintenance[-2:] != ['\n', '#']:
+                output_lst.append("\ndrop_block({})".format(current_block[:-1]))  # Add the current block drop command to our output list.
+                output_lst.append('\n')   # Also add a newline character to keep track of comments' locations visually similar as in input sequence.
+            inside_comment = False  # We are no longer within the comments section after seeing a newline outside of it.
+            current_block = None    # Since a block function is typically followed by a comma, we initialize this again for any potential new command line.
+        order_maintenance.append(item)   # Add this character to our tracking list to help with preserving order during output construction.
+    
+    if current_block and not inside_comment:  # Ensure that if there's an unfinished block at the end, we add it as well.
+        output_lst.append("\ndrop_block({})".format(current_block[:-1]))  # We use -1 to ignore trailing comma from `map` function call format string.
+    
+    return ''.join(output_lst)  # Return the joined list as a single formatted output string.
+
+# Test it with given input.
+input_string = "T1|N9 |R7 |H8 |W4 |J5 \n"
+print("Formatted Instructions:\n")
+print(parse_drops(input_string))   # Display the formatted set of instructions as a string output wrapped in triple backticks.
+```

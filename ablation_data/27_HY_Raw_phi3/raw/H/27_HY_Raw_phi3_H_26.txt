@@ -1,0 +1,15 @@
+```python
+def drop_block(code, number):
+    return f"{code},{number}"
+
+inputs = "YOUR"
+vocabulary = {
+ 'A': ["drop_block('b11', 8)", "drop_block('b11', 10)","drop_block('b11', 8)", "drop_block('b11', 10)",
+        "drop_block('b31', 9)", "drop_block('b11', 8)", "drop_block('b11', 10)"],
+ 'B': ["drop_block('b31', 9)","drop_block('b11', 11)","drop_block('b13', 8)","drop_block('b13', 10)", "drop_block('b13', 11)"],
+ 'C': ["drop_block('b31', 10)","drop_block('b13', 9)"],
+ 'D':["drop_block('b31', 10)","drop_block('b13', 6)","drop_block('b13', 7)", "drop_block('b31', 5)"]}
+
+output = [vocabulary['Y'][ord(c)-ord('A')] for c in inputs.lower() if c != ' ']
+print('\n'.join(output))
+```

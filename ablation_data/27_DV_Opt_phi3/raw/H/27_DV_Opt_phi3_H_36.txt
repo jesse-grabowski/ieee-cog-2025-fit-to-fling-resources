@@ -1,0 +1,4 @@
+```
+drop_block('b13', 0)
+drop_block('b13', 4)
+```

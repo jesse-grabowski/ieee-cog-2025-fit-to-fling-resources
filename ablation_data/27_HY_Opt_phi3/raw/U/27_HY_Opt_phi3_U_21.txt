@@ -1,0 +1,18 @@
+```python
+def expert_letter_selector(letter):
+    # Ensure input is within the range of English uppercase letters (A-Z) in ASCII values
+    if letter.isalpha() and len(letter) == 1 and letter.isupper():
+        number = ord(chr(ord('a') + letter.lower()) - ord('a')
+        # Return corresponding blueprint based on position of the input letter in English alphabet, using `number` to find index
+        if number < 26:
+            return {
+                'A': "\ndrop_block('b13', 8)\ndrop_block('b11', 8)\ndrop_block('b11', 8)",
+                # ... (rest of the blueprints for B..Y),
+                'U': "...",  # Assume that U's correct multi-line sequence is included here.
+            }[letter]
+    else:
+        raise ValueError("Invalid input. Please provide a single uppercase letter from A to Z.")  # Use the dictionary provided as per example for actual blueprint sequences
+  
+# Example Usage:
+blueprint = expert_letter_selector('U')  # Returns the full multi-line sequence for 'U' exactly matching your Vocabulary list.
+```

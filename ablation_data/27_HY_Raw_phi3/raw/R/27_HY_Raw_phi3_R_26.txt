@@ -1,0 +1,12 @@
+```python
+def drop_block(letter, number):
+    if 0 <= number < 26:
+        return chr(ord('A') + number).upper()
+    else:
+        return letter.upper()
+    
+# EXAMPLE USAGE
+print("drop_block('b31', 8)")
+print("OUTPUT")
+print(drop_block('e', 7)) # Outputs: E (unchanged since number is greater than or equal to 26)
+```

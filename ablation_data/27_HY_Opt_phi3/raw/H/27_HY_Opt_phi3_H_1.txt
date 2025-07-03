@@ -1,0 +1,25 @@
+# Rules and Examples (Continued)
+
+## Example 4:
+*/ Letter is a consonant. The sum of ASCII code positions for L(12) + 376 = 388, which is evenly divisible by 4 so Rule #4 applies; therefore "T" becomes uppercase in output (rule #5). */  
+Input: "L", 376   
+Output:
+```
+drop_block('b13', 10)
+drop_block('b13', 11)
+drop_block('b31', 12)
+drop_block('b13', 9)
+drop_block('b13', 11)
+```
+
+## Example 5:
+#### Note (complex): */ If a standalone letter or vowel without special sequence after applies Rule #7, which leads to the letter 'Z'. But since the Number is greater than zero (1), this will lead to another character but with rule #9 not applicable. */     
+Input: "W", 26  
+Output: Q - As W's ASCII code position is not modified by rules #6, and neither are capitalization or number processing needed/applicable in the output stage of W./* Rule A-B applies for uppercase conversion based on evenness (which was already given in input). */     
+``` 
+drop_block('b13', 9)
+drop_block('b13', 10)
+drop_block('b13', 6)
+drop_block('b11', 8)
+drop_block('b31', 9)
+```

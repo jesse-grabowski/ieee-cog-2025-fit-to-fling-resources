@@ -1,0 +1,15 @@
+Input: P
+
+Letter is 'P' and Number is 16 which corresponds to index position 15
+
+The current Letter (Index position) is 15, considering English alphabet from A(0) to Z(25)
+
+Applying rule #8, the sequence should begin with letter `A` for number `1`
+Number `16` falls into even-numbered situation. Apply rule #9; least frequently used vowel between "A" and "U" is 'E' but since we need a consonant directly after current index position due to the rule that Number should be a consonant, our choice will be `G`, which comes at 6 next in alphabetical order
+Since letter `P` has not been used previously, rule #7 doesn´t have any impact. 
+Taking into consideration every other condition and maintaining frequency precedence (rule #1), we arrive at the sequence of 'GC' for input P+2(Rule#3)
+Applying additional constraints:
+
+- Rule #4 with index wraparound not directly relevant as it is an even numbered follower to a previous output. 
+So, no wrap around rules will be necessary in this case
+The output letter after 'P' for `Number` = `16`, starting from a vowel and following by next consonant: `'GC'`

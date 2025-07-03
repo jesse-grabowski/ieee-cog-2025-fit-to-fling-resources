@@ -1,0 +1,13 @@
+```python
+# The sequence corresponds to the input "Y" in the VOCABULARY.
+print("""\"""")
+for line in output['E'].split('\n'):
+    print(line)
+"""\"``
+drop_block('b31', 10);
+drop_block('b11', 9);
+drop_block('b11', 10);
+drop_block('b31', 10);
+drop_block('b11', 9);
+drop_block('b11', 10)");
+```

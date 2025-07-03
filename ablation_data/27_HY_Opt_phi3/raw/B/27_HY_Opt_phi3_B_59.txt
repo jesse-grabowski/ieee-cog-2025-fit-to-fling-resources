@@ -1,0 +1,10 @@
+drop_block('b13', 10)
+drop_block('b13', 6)
+```
+
+Input: B
+number=28
+output=B
+Reasoning: Since the number (28) is larger than 26, we don't loop through again but directly use the input letter "B". There are no changes to be made as per instruction #4. 
+
+---

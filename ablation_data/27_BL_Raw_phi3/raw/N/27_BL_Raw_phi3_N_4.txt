@@ -1,0 +1,7 @@
+```python
+# Output sequence for the input 'N' from the given VOCABULARY
+drop_block('b13', 9)
+drop_block('b13', 11)
+drop_block('b31', 10)
+drop_block('b31', 10)
+```

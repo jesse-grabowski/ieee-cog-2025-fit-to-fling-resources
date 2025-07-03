@@ -1,0 +1,25 @@
+```python
+input_string = "Z1|X0|X2 #|Z1|X2|X0|Z1"
+tokens = input_string.split("|")
+mapped_outputs = []
+
+for token in tokens:
+    if 'H' >= 16:  # Check for the specific case given in instructions (not applicable here)
+        mapped_output = "Y0"  # Assuming a placeholder since H is not present
+    else:
+        letter, number = token[0], int(token[1])  # Extracting letter and its numeric value
+        if letter == 'Z':
+            block = 'b31'
+        elif letter == 'X':
+            block = 'b11'
+        elif letter == 'Y':
+            block = 'b13'
+        
+        number_string = str(number)  # Converting numeric value to string to maintain trailing characters
+        
+        mapped_outputs.append(f"drop_block('{block}', {number_string})")
+    
+# Joining the output array into a single line with newlines between items and preserving the 'newline-presence' as per input formatting requirements
+final_output = "\n".join(mapped_outputs)
+print(f"```\n{final_output}\n```")
+```

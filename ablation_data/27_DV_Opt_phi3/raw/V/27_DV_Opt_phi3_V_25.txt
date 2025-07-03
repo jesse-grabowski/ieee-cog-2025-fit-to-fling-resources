@@ -1,0 +1,10 @@
+```python
+drop_block('b13', 1)
+drop_block('b31', 0 #)
+drop_block('b11', 3)
+drop_block('b13', 4)
+drop_block('b13', 5) 
+drop_block('b11', 6)
+# drop_block('b27', 8, 'I6')
+# The lines with letters Q, T, D, S, K, R, L are not mapped to any block ID. So they were left out in this output.
+```

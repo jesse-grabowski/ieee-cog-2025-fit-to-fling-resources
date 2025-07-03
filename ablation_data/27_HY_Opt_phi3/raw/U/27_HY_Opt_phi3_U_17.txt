@@ -1,0 +1,18 @@
+```python
+def drop_block(blueprint, num):
+    if blueprint == "b13":
+        print("drop_block('{}, {}'.format(blueprint, num))")
+    elif blueprint == "b11":
+        if num % 2 !=0: # even number blocks
+            print("drop_block('{}, {}'.format(blueprint, num+5))")
+        else:
+            print("drop_block('{}, {}'.format(blueprint, num-5)))" )
+    elif blueprint == "b13":
+        if num % 2 !=0: # even number blocks
+            print("drop_block('b31', {})")
+        else:
+            print("drop_block('{}, {}: :format(blueprint, math.ceil((num+6)/5) # rounding up to next block if odd numbers")))
+    elif blueprint == "b29":
+        if num % 3!=0: # only when the number isnt a multiple of three do nothing
+            print("drop_block('{}'.format(blueprint, num))
+```

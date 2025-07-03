@@ -1,0 +1,30 @@
+{
+    "dataCount": 4,
+    "rate": 1.0,
+    "raws": [
+        {
+            "tag": "competition/27_BL_Opt_qwen2_5/levels/T/27_BL_Opt_qwen2_5_T_1.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/27_BL_Opt_qwen2_5/levels/T/27_BL_Opt_qwen2_5_T_2.xml",
+            "score": 1.0,
+            "startingObjects": 10,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/27_BL_Opt_qwen2_5/levels/T/27_BL_Opt_qwen2_5_T_3.xml",
+            "score": 1.0,
+            "startingObjects": 14,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/27_BL_Opt_qwen2_5/levels/T/27_BL_Opt_qwen2_5_T_4.xml",
+            "score": 1.0,
+            "startingObjects": 16,
+            "movingObjects": 0
+        }
+    ]
+}

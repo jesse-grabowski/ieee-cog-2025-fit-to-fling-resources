@@ -1,0 +1,20 @@
+Given the instructions and input `X0|X2 #|Z1|X1|Z1|X0|X2`, we can generate an appropriate output as follows:
+
+We have six tokens from the input string. The parsing rules dictate that each token's letter (Y, X, Z) will be replaced with a corresponding block ID, and this mapping is followed by the number attached to it in original form without any truncation or transformation due to digits value. Preserving trailing characters as per instruction #5:
+
+1. `X0` → `drop_block('b11', 0)`
+2. `X2` (followed by `#`) → `drop_block('b11', 2)#`
+3. `Z1` → `drop_block('b31', 1)` #
+4. `X1` (also marked with a `#`) → `drop_block('b11', 1)#` #
+5. Another instance of `Z1`, following the same logic as token 3→ `drop_block('b31', 1)#`  
+6. Closing off with another 'X0' followed by no special symbol → `drop_block('b11', 0)`
+
+These tokens produce:    
+
+```
+drop_block('b11', 0) drop_block('b11', 2)# drop_block('b31', 1)# drop_block('b11', 1)# drop_block('b31', 1)# X0 → `drop_block('b11', 0)`
+```
+Combining these tokens as per the order they appear in the input, while keeping track of which tokens are consecutive and should be grouped together:
+
+**Output:**    
+```

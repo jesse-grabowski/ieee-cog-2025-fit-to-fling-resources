@@ -1,0 +1,5 @@
+```python
+# Output
+"drop_block('b13', 10)\n" + \
+"   drop_block('b13', 10)\n"
+```

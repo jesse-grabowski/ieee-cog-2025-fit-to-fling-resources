@@ -1,0 +1,8 @@
+```python
+# Given INPUT 'Ss' (which corresponds to input 'I') based on the VOCABULARY provided, here is the OUTPUT sequence.
+
+OUTPUT = """
+drop_block('b13', 10)
+drop_block('b13', 10)
+"""
+```

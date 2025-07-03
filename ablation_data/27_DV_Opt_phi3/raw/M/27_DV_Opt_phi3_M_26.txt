@@ -1,0 +1,7 @@
+```
+drop_block('b13', 0)
+drop_block('b31', 1) #
+drop_block('b11', 1)
+drop_block('b31', 1) #
+```
+This output shows each token is translated into a correctly formatted drop_block call with the appropriate block ID and preserved trailing character if present.

@@ -1,0 +1,5 @@
+T  
+
+Input:    
+Letter: _, Number: 28 -> ASCII X + 9 = 201 // 'Number' does not apply due to non-alphabetical character; reverse ASCII value within the extended table is F following Rule Set C, but no alphabetical letter above Z for non-alpha input.  
+Output should be N based on default condition D as per original instruction and rule ordering.

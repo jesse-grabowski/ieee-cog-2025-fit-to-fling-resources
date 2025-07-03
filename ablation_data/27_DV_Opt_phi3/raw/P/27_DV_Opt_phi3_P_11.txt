@@ -1,0 +1,5 @@
+```python
+drop_block('i1', 'rule2') # Rule 2 applies; Number is within range, select letter directly from array. 
+drop_block('q3', '')          # Rule 3a maintains the vowel in uppercase form as per constraint number 3b due to high Number but Letter being a vowel itself.
+Error Code for rule violation: drop_block('T4', 'rule4') # Rule 4 applies; T is not allowed, so replace with its reverse.
+```

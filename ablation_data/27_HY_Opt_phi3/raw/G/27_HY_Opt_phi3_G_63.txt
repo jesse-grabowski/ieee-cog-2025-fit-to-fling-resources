@@ -1,0 +1,19 @@
+```python
+def select_letter(c, n):
+    alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    
+if c == '-':
+        return "" # ignore dashes as per standard rules.
+
+# Handling lowercase entries without converting to uppercase or altering them in any other way
+    if not c.isupper(): 
+        return c
+        
+try:
+        n = int(n)
+    except ValueError:
+        # If the number is not an integer, we won't modify character 'c'. Instead, we will treat it as a non-numeric input and simply bypass processing.
+    
+index = (alphabet.find(c) if 0 <= n <= 25 else alphabet)[n%len(alphabet)]      
+    return c if index == "-" else alphabet[index]   # Return original 'c' for non-numeric inputs or out of the numeric bounds range (after normalization, it falls on '-'.
+```

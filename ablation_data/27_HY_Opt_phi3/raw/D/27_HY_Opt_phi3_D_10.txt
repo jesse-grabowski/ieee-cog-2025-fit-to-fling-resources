@@ -1,0 +1,11 @@
+```python
+drop_block('b13', 10)
+drop_block('b13', 10)
+```
+For this instruction, you are to determine the specific construction sequence required for building a structure represented by uppercase letter "I". The appropriate response based on the Vocabulary is as follows:
+
+```
+Output:
+drop_block('b13', 10)
+drop_block('b13', 10)
+```

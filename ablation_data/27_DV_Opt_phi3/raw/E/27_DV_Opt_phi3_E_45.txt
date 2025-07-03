@@ -1,0 +1,18 @@
+```python
+def drop_block(mapped, number):
+    print(f"drop_block('{mapped}', {number})")
+    
+input_str = "Z1|X0|X1 #|Z1|X1|X0|Z1"
+trailing_char = input_str.split(" #", 1)[-1] if "#" in input_string else ""
+tokens = input_str[:-len(trailing_char)].split("|")
+
+for token in tokens:
+    letter = token[0].upper()
+    
+    if (letter == 'Y'):
+        drop_block('b13', int(token[1:])) + trailing_char 
+    elif (letter == 'X'):
+      drop_block('b11', int(token[1:]))+ trailing_char  
+    else: # letter must be Z in this case, due to the mapping criteria provided above.
+        drop_block('b31', int(token[1:])) + trailing_char
+```

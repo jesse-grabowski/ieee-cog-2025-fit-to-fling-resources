@@ -1,0 +1,12 @@
+```json
+{
+"F1": {
+   "description": "Average temperature fluctuations for a range of temperatures",
+   "url": "/docs/references-api/#reference_f1"
+ },
+ "F3": {
+   "description": "Temporal series analysis showing data over time",
+   "url": "/docs/references-api/#reference_f3"
+ }
+}
+```

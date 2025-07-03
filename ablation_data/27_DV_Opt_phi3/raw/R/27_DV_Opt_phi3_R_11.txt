@@ -1,0 +1,4 @@
+``` 
+drop_block('b13', '0') #
+``` 
+I have processed the single-string token as per your instructions to transform it into a function call string, followed by an optional character if present in the original input. The example output is consistent with the formatting provided and includes careful preservation of all given details from the instruction.

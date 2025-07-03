@@ -1,0 +1,9 @@
+```
+drop_block('b31', 1)
+drop_block('b11', 0)
+drop_block('b11', 1) #
+drop_block('b31', 1)
+drop_block('b11', 0)
+droprun.js (8:26:12.745 UTC-08:00): log at processBlocks:8 -- dropped block Z1
+drop_block('b11', 1)
+```

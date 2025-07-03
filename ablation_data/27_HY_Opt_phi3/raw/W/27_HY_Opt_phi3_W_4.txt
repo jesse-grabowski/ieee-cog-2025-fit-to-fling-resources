@@ -1,0 +1,15 @@
+```w!
+```
+Input:  
+Letters: jk; Numbers: sixty-nine  
+Output:  
+JI*  
+
+# Task Solution Explanation
+For the input `Letter: w, Number: .150`, following these rules:   
+  - 'w' is an uppercase letter itself and its index in the alphabet is not affected by the number rule. The output remains unchanged except for the case of special considerations mentioned above.  
+  - Since `Number` has a decimal point, it suggests that `.150`, when rounded down gives us '15', which corresponds to the letter 'O'.
+  - The rule about multiple characters is not applicable here because 'w' comes after '.150'.  
+  - However,'t.hirty-five' needs to be calculated. "Thirty-Five" => 20 + 8 + 9 = 37, and 3+7%26 = 4; which maps to 'D', but since we are concerned with `Letter` from the first character in the string (j-k), it turns into 'J'.    
+So combining 'O' and ‘J’ according to rule 5 as they both come after `.150`, we have O|J=W.  
+Additionally, since 'Number': .150 is not a multiple of 10, there will be no '*' at the end. The final output remains `w!`.

@@ -1,0 +1,32 @@
+```python
+def parse_instructions(input):
+    mappings = {
+        'J': 'bJackson',
+        'A': 'bAnderson',
+        'C': 'bCharles',
+        'K': 'bKennedy',
+        'S': 'bSmith'
+    }
+    
+    split_tokens = input.split('|')
+    function_calls = []
+    prev_token = ''
+    for token in split_tokens:
+        if '#' in token:  # Handle tokens containing the special character '#'.
+            token, marker = token.split('#', maxsplit=1)
+            position = int(marker[1]) - 1  # '-1' to adjust '0'-based indexing of dropping.
+        else:
+            position = int(token[1:])  # Regular tokens don't have '#'.
+        
+        mapped_block = mappings.get(token[0], 'b') + token[0].lower() + ''*max(4 - len(mappings), 0) 
+        function_call = f"drop_{mapped_block}_{position}"  # The position is zero-based; adjust it accordingly in the output.
+        
+        if len(prev_token) > 1 and prev_token != token:  # If there was a previous block of more than one letter, insert '#' after its function call.
+            print("#", end='')
+            
+        print(f"{function_call}\n\t")
+    return ''
+
+input = "N0|N2 Z3 N4#|N0 #|Y6|Z9 N5 |N7 Y8 Y10 Y11#|Z1|X3 Z1 X2 Y4" 
+print(parse_instructions(input))
+```

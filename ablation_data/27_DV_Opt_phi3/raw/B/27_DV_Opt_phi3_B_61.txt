@@ -1,0 +1,42 @@
+```python
+def parse_and_convert(input):
+    # Define the block mappings based on letters Y, X, and Z.
+    mappings = {'Y': 'b13', 'X': 'b11', 'Z': 'b31'}
+
+    # Start building output with an opening triple backtick for string wrapping
+    output_lines = ['```']
+    
+    try:
+        # Split the input on pipe characters and iterate through each token.
+        tokens = input.split('|')
+        for token in tokens:
+            # Strip any trailing spaces and split the letter and number part of the token.
+            parts = token.rstrip().rsplit(maxsplit=1)
+            
+            if len(parts) == 2: 
+                char, num_str = [p for p in parts]
+            else:
+                # If no numbers are present, skip this part and continue to the next token.
+                output_lines.append('drop_block({}, {})'.format(mappings[char], int(char)))
+                continue
+            
+            mapper = mappings[char] 
+            num = int(num_str)   # Convert number string to an integer
+            block_id, comment = (f"({mapped},{number})", '#' + token.rsplit('|')[1]) if '|' in parts else ('', '')
+            
+            output_lines.append('drop_block({}, {}{}'.format(mapper.lower(), num, block_id)), comment)
+            # Append a newline after each function call to adhere to formatting requirements.
+    except ValueError: 
+        # If there's an error (like trying to convert letters into numbers), ignore the token and continue processing others.
+        pass
+
+    # Closing triple backtick to complete string wrapping.
+    output_lines.append('```')
+    
+    return '\n'.join(output_lines)
+
+# Example provided input for verification of task solution
+input_data = 'Z1|X0|X2 #|Z1|X2|X0|Z1'
+result = parse_and_convert(input_data)
+print(result)  # Output should match the expected block-dropping function calls sequence.
+```

@@ -1,0 +1,4 @@
+```plaintext
+```Y0|X0 #` → drop_block('b13', 0) #                   `
+drop_block('b11', 0)                                `#   
+```Z6|Z6|Z7#|X9|Y1|Y0|Z2 #

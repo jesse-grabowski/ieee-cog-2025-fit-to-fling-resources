@@ -1,0 +1,18 @@
+```pseudocode
+Starting with input "UNDONE"
+
+Step 1: Adjust characters based on Fibonacci indices (A=0, B=1, C=2, D=3...)
+F = -1; E becomes G due to backward shift; N remains without change because it was an even ASCII value. U->P after swapping with character at position (ASCII of P divided by 2) - 10 in alphabetical order (as 'U' is greater than 96 and its ASCII code doubled exceeds checksum rules), D becomes X, O remains same because it was numerically even.
+Placeholder text: ...  # Result so far: GPOXN...
+
+Step 2: Perform RuleSet-4bXZ transformation
+'['=B', ']' are no longer applicable (transformed into ASCII character sequence but not allowed in final result)
+Result so far: GBPQ[...]  
+Placeholder text indicating potential palindrome and formatting stripping...
+
+Step 3: Check the checksum error, considering whether it exceeds twice of initial ASCII code value. No errors were found at this stage from sample input "XYZ12345ABXYZ789[...]". Therefore, no further adjustment is necessary in encoded result placeholder text: ...
+```
+
+Placeholder for step execution and transformation result based on the instructions provided. Since I or J letters are not present after all transformations have been applied up to this point, continue with RuleSet-5MKQF. 
+
+The final expected sequence before any error cancellation due to critical trigger: ...

@@ -1,0 +1,7 @@
+```python
+Letter, Number = "T", 14
+if 0 <= (ord(Letter)%26 + Number) < 26:
+    Output = chr((ord(Letter) - ord('A') + int(Number)) % 26 + ord("A"))
+else:
+    Output = Letter  
+```

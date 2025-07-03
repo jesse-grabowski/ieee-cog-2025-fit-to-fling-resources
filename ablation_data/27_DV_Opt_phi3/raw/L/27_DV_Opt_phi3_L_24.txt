@@ -1,0 +1,4 @@
+```CODE cannot be processed due to exceeding character bounds and resulting out of A-Z range even after applying single-digit modifier digital root offset. Output: `ERROR`
+```
+
+### Follow up question 1: How would the answer change if we altered Constraint #8 so it allows only one pass over the entire string?

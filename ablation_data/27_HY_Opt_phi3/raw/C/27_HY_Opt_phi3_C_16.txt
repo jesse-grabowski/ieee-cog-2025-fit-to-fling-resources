@@ -1,0 +1,6 @@
+```plaintext
+F is output based on the following step by step process:
+Step 1: Ignore 'E'.
+Step 2: For prime indices (17), use modulo operation with reference to indexing using 26, so we apply 17 mod 26 = 3. Thus index would correspond to D(3).
+Therefore output after step 2 is "D".
+```

@@ -1,0 +1,5 @@
+```python
+drop_block('b31', 'Z')
+drop_block('b13', 'Y'+'024%26-(24-1)') # Outputs: drop_block('b13', 'I')
+drop_block('b13', 'J')  # Because G (7th letter forward in reversed alphabet order from Z which is the result of first operation), minus one to make it correct as per instruction rule number two. So, J
+```

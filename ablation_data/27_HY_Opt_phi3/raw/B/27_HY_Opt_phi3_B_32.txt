@@ -1,0 +1,2 @@
+Input: C, OR, CRUMB_INDEX:0; PRESS 26 steps forward or under water. (CRUMB is at index position [3,18,21,13,2] which adds up to 59 modulo 26 = UW) - Original remains the same because sum of index and itself gives no change for UW state. The odd round on water ('OR') transforms 'C' below using its position (index+58 modulo 26), resulting in a reversal to 'Z'. Thus "C" with its mirror would be "AZ".
+Output: AZ

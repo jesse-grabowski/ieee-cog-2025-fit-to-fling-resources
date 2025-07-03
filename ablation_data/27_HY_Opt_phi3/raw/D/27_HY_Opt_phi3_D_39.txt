@@ -1,0 +1,3 @@
+drop_block('b10', 9)
+drop_block('b10', 10)
+```

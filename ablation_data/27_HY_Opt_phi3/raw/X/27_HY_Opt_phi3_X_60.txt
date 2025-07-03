@@ -1,0 +1,13 @@
+```python
+def expert_letter_selector(input_letter):
+    if ord('A') <= ord(input_letter) <= ord('Z'):   # Ensure input is a uppercase letter A-Z.
+        Vocabulary = {
+            'A': """drop_block('b11', 8)\ndrop_block('b11', 10)\ndrop_block('b31', 9)\ndrop_block('b11', 8)\ndrop_block('b11', 10)
+            'B': """drop_block('b31', 9)\ndrop_block('b11', 11)\ndrop_block('b13', 8)\ndrop_block('b11', 11)""",25):  # and so on until
+                'P': """drop_block('b13', 9)\ndrop_block('b13', 10)\ndrop_block('b13', 6)
+                        \ndrop_block('b31', 9)\ndrop_block('b31', 10)"""}
+    
+    return Vocabulary.get(input_letter, input_letter)] # The original letter if not in range A-Z.
+        
+expert_letter_selector("P")  # Outputs: 'P'
+```

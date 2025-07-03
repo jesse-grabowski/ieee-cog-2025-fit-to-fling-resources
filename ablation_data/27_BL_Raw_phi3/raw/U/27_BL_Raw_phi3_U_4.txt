@@ -1,0 +1,15 @@
+```python
+# Output sequence for the input 'U' from the given VOCABULARY
+output = """
+print("drop_block('b31', 11)")
+print("print(\"drop_block('b31', 8)\")
+print("drop_block('b13', 7)")
+print("drop_block('b13', 12)")
+print("print(\"drop_block('b11', 7)\")
+print("drop_block('b11', 12)\")
+print("drop_block('b13', 6)")
+print("print(\"drop_block('b13', 13)\")
+print("print(\"drop_block('b11', 8)\")")    
+"""
+print(output.strip()) # removes leading and trailing newline characters to match output format
+```

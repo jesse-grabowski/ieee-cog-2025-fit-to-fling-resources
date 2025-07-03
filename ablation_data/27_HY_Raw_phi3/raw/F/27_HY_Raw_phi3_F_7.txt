@@ -1,0 +1,23 @@
+```python
+# Define the sequence for each input character according to the VOCABULARY, then concatenate them. 'F' corresponds to INPUT = M and 'G' corresponds to drop_block('b13', 6), so we'll use the given examples from "M" sequence as template:
+# First part of output (input M):
+drop_block('b13', 5)
+drop_block('b13', 6)
+drop_block('b13', 8)
+drop_block('b13', 10)
+drop_block('b13', 11)
+drop_block('b13', 13)
+drop_block('b13', 14)
+drop_block('b11', 6)
+# Add parts from "G":
+drop_block('b13', 6)
+drop_block('b11', 7)
+```
+print("""
+drop_block('b13', 5)
+drop_block('b13', 6)
+drop_block('b13', 8)
+drop_block('b13', 10)
+drop_block('b13', 11)
+drop_block('b11', 6)
+""")

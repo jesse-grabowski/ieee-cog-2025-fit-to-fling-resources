@@ -1,0 +1,126 @@
+{
+    "dataCount": 20,
+    "rate": 0.9607143402099609,
+    "raws": [
+        {
+            "tag": "competition/27_HY_Raw_phi3/levels/R/27_HY_Raw_phi3_R_10.xml",
+            "score": 1.0,
+            "startingObjects": 3,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/27_HY_Raw_phi3/levels/R/27_HY_Raw_phi3_R_11.xml",
+            "score": 1.0,
+            "startingObjects": 5,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/27_HY_Raw_phi3/levels/R/27_HY_Raw_phi3_R_12.xml",
+            "score": 0.6666666865348816,
+            "startingObjects": 6,
+            "movingObjects": 2
+        },
+        {
+            "tag": "competition/27_HY_Raw_phi3/levels/R/27_HY_Raw_phi3_R_13.xml",
+            "score": 1.0,
+            "startingObjects": 15,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/27_HY_Raw_phi3/levels/R/27_HY_Raw_phi3_R_15.xml",
+            "score": 0.8571428656578064,
+            "startingObjects": 7,
+            "movingObjects": 1
+        },
+        {
+            "tag": "competition/27_HY_Raw_phi3/levels/R/27_HY_Raw_phi3_R_16.xml",
+            "score": 0.8571428656578064,
+            "startingObjects": 7,
+            "movingObjects": 1
+        },
+        {
+            "tag": "competition/27_HY_Raw_phi3/levels/R/27_HY_Raw_phi3_R_17.xml",
+            "score": 0.8333333134651184,
+            "startingObjects": 6,
+            "movingObjects": 1
+        },
+        {
+            "tag": "competition/27_HY_Raw_phi3/levels/R/27_HY_Raw_phi3_R_20.xml",
+            "score": 1.0,
+            "startingObjects": 4,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/27_HY_Raw_phi3/levels/R/27_HY_Raw_phi3_R_22.xml",
+            "score": 1.0,
+            "startingObjects": 6,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/27_HY_Raw_phi3/levels/R/27_HY_Raw_phi3_R_23.xml",
+            "score": 1.0,
+            "startingObjects": 11,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/27_HY_Raw_phi3/levels/R/27_HY_Raw_phi3_R_24.xml",
+            "score": 1.0,
+            "startingObjects": 9,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/27_HY_Raw_phi3/levels/R/27_HY_Raw_phi3_R_25.xml",
+            "score": 1.0,
+            "startingObjects": 5,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/27_HY_Raw_phi3/levels/R/27_HY_Raw_phi3_R_26.xml",
+            "score": 1.0,
+            "startingObjects": 1,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/27_HY_Raw_phi3/levels/R/27_HY_Raw_phi3_R_3.xml",
+            "score": 1.0,
+            "startingObjects": 6,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/27_HY_Raw_phi3/levels/R/27_HY_Raw_phi3_R_30.xml",
+            "score": 1.0,
+            "startingObjects": 8,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/27_HY_Raw_phi3/levels/R/27_HY_Raw_phi3_R_5.xml",
+            "score": 1.0,
+            "startingObjects": 6,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/27_HY_Raw_phi3/levels/R/27_HY_Raw_phi3_R_6.xml",
+            "score": 1.0,
+            "startingObjects": 6,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/27_HY_Raw_phi3/levels/R/27_HY_Raw_phi3_R_7.xml",
+            "score": 1.0,
+            "startingObjects": 6,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/27_HY_Raw_phi3/levels/R/27_HY_Raw_phi3_R_8.xml",
+            "score": 1.0,
+            "startingObjects": 4,
+            "movingObjects": 0
+        },
+        {
+            "tag": "competition/27_HY_Raw_phi3/levels/R/27_HY_Raw_phi3_R_9.xml",
+            "score": 1.0,
+            "startingObjects": 2,
+            "movingObjects": 0
+        }
+    ]
+}

@@ -1,0 +1,5 @@
+There's no mapping defined for `M` in the instructions. Therefore, there would be an error or undefined behavior if provided with this input string. If needed to handle unmapped characters, the instruction set must be updated accordingly. Here is what a potential outcome might look like using a default "error" return:
+
+```
+drop_block('default', 0) # Error: Unrecognized block ID 'M'.
+```

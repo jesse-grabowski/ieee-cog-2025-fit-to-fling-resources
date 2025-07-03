@@ -1,0 +1,16 @@
+Frequency analysis relies on several key factors to determine its effectiveness when applied to decrypt substitution ciphers. The method's relevance hinges heavily on a few critical considerations:
+
+### Relevant Factors
+1. **Commonality of the Cipher Text Alphabet** — A consistent alphabet throughout all messages is crucial because it enables comparison across different texts and helps establish patterns in letter frequency that would be obscured by varied or random cipher text alphabets.
+2. **Length of the Texts** — The longer the intercepted encrypted message, the more reliable a frequency analysis becomes, as there's a greater sample size for statistical relevance. It increases the accuracy with which letter occurrences can be compared to typical language distributions.
+3. **Language and Encryption Context** — Employing knowledge of the expected language that was used when composing the plain text helps target specific letter frequencies. Messages encrypted in standard English benefit from known frequency distribution, while those using cryptograms with distorted mappings require adjustment to analysis techniques or even different analytical frameworks entirely.
+4. **Homogeneity of Encryption Method** — If a simple substitution cipher is used (where each plaintext letter corresponds to exactly one unique cipher text letter), this uniform approach makes frequency analysis more viable because it produces a distortion in frequencies that can be methodically analyzed and correlated with language.
+4. **Standardization of Letter Frequencies** — Comparing the intercepted message against standardized frequency charts or corpora (like those for English) becomes possible only when there is an expectation (or assumption) to which the cipher was constructed. 
+
+### Irrelevant Factors
+1. **The Subject Matter of the Messages** — The content, whether related to mundane everyday communication or highly specialized and technical discourse, doesn't inherently affect frequency analysis itself but rather informs guesses about probable word mappings later in the decryption process.
+2. **Complexity of the Encrypted Content** – While a single complex sentence structure can obscure patterns and frequencies for statistical tools like histograms or chi-squared tests, this complexity doesn't affect the core principle that certain letters appear more frequently than others within sufficiently large amounts of text in standardized English.
+3. **Time Periods When Messages Were Sent** — Unless language use (and thus frequency distributions) drastically vary at different historical periods beyond a few generations, temporal factors are not as significant to the immediate effectiveness of plain-text statistical frequencies. 
+4. **Encryption Key Strength and Complexity** — For simple substitution ciphers that Alice is likely using frequency analysis against, the relative strength (in terms of non-frequency based encryption techniques) doesn't necessarily impact the relevance of letter frequency as a decryption tool directly since it does not change text uniformities.
+
+### Irrelevant Factors Detailing Examples:

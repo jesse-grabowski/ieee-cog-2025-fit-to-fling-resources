@@ -1,0 +1,8 @@
+```python
+# Given INPUT as "JET", the corresponding output from the VOCABULARY is for input CHARACTER 'E' and TYPE 'T'.
+output = '''drop_block('b31', 10)''' + '\n''' + \
+        '''\ndrop_block('b11', 9)''' + '\n''' + \
+        '''\ndrop_block('b11', 10)''' + '\n''' + \
+        '''\ndrop_block('b31', 10)''' + \
+        '''\ndrop_block('b11', 9)'''
+output

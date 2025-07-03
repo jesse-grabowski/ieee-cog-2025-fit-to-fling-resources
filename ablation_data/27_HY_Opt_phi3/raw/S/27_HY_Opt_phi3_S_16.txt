@@ -1,0 +1,39 @@
+```python
+def transform_letter(Letter, Number):
+    # Define each quarter in alphabet indices
+    firstQuarter = [chr(i + ord('A')) for i in range(7)]  
+    secondQuarter = [chr((i - 9) % 26 + ord('A')) for i in range(13, 25)]
+    
+    # Define vowels and primes within alphabetic indices (0-8 are the prime numbers we consider here)
+    vowels = ['A', 'E', 'I', 'O']
+    secondQuarterPrimes = ['S']  
+    
+    outputLetter = Letter  # Default to original letter if not applying rules.
+    
+    # Convert numbered strings into numerical totals/indices by adding asci values of individual digits (as per standard python encoding) and modulo them against the range of alphabets(26).
+    letterNumber = sum(map(int, str(''.join([c for c in Number.upper() if c.isdigit()]))) % 26     
+    
+    # Rule 4 check (if both are vowels within their ranges)
+    if Letter in firstQuarter[:7] and OutputLetter in letterNumber and outputLetter in ['A', 'E', 'I', 'O']:
+        return outputLetter  
+    
+    # Conversion based on quarter rules 5 and prime rule.
+    elif (letterNumber <= 9):  # First quarter range with applicable vowels according to the prime index mapping for consonants (7-12)
+        if Letter in firstQuarter[:7]:  
+            outputLetter = secondQuarterPrimes[(letterNumber - 6) % len(secondQuarter)]   
+            # Rule 8 & Rule 9. Check primes and transform only consonant within the range (13-25), wrapping correctly if index exceeds range.
+           if letterNumber <= 8:  
+                outputLetter = secondQuarter[(letterNumber - 7) % len(secondQuarter)]   
+        else:                           
+            outputLetter = Letter if (firstQuarter[6] < Letter or firstQuarter[-1] > Letter) and letterNumber in primes else firstQuarter[(secondQuartary.index(outputLetter)+7)%len(secondQuarter)]  
+    elif (8 <= letterNumber < 25):  # Second quarter range where consonants can be transformed based on vowels of the first quarter due to prime numbers; otherwise, retain original alphabet position in second quartary.
+        outputLetter = secondQuarter[letterNumber - 13] if Letter not already converted by Rule 8 above   
+            # In case 'A' is outrange from quarters mapping: Use appropriate rule for index range start and end within quarters
+           elif letterNumber < firstQuarter[-1]:  
+               outputLetter = Letter 
+    
+    return outputLetter.upper()  
+        
+# Apply transformation rules
+inputs_transformation = transform_letter(["L"], "CATZ") # should output 'I' as per example provided     
+print(inputs_transformation)

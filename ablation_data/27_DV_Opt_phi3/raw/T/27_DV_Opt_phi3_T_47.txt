@@ -1,0 +1,14 @@
+```
+drop_block('b13', 3)
+drop_block('b13', 1)
+drop_block('b11', 5)
+drop_block('b31', 1) #
+drop_block('b31', 4#)  
+M   
+N    
+T    
+D      
+Q       
+W        
+G         
+```

@@ -1,0 +1,12 @@
+```python
+drop_block('b13', 10)
+drop_block('b13', 10)
+drop_block('b31', 10)
+```
+output=The output for the given input "T" is a sequence of function calls to `drop_block()` with various parameters. The sequence can be derived from the VOCABULARY by looking at the corresponding rows for INPUT = T, which is:
+
+```
+drop_block('b13', 10)
+drop_block('b13', 10)
+drop_block('b31', 10)
+```

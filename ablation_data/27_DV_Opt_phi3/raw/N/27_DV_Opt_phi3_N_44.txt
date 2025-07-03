@@ -1,0 +1,4 @@
+No block is dropped. No data available for the given code 'N'.
+
+# Explanation
+The input token starting with `N` does not have any mapping as per the instructions provided earlier, hence no corresponding function call can be made based on this mapper's functionality.

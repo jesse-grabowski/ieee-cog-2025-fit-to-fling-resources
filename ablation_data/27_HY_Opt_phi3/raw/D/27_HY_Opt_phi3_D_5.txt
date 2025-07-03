@@ -1,0 +1,11 @@
+&aBCdEFH
+
+---
+
+In the provided complex task, considering the Input `X` (which holds an ASCII value of 88 in uppercase) and `SymbolsSequence`: &ABCDEF&GHIJIU. Due to rule #10 stating not to perform operations combining the letter and SymbolsSequence, we do not have to use any arithmetic operation with 'X'. Instead, following:
+- Rule #9 directing that if `&`, `%` or `$` are present, output these symbols in lowercase followed by an exclamation mark (!) – this is given priority. So starting with the first encountered symbol, we get "&abcdefghiuj!" But there's additional complexity:
+- According to rule #6 repetitions of symbols should only be output once no matter what the previous rules might indicate, and from rule #1 (conversion based on positions/summing), since the 'X' would cycle through without needing this due to the presence of a specified symbol set in `SymbolsSequence` that overrides all other operations.
+We simply lowercase all non-special characters between '&', '%', `$`, and then proceed with an exclamation mark at the end but still considering repeated symbols are not outputted multiple times since they occur consecutively, except for any special conditions from special characters – which we have here only after a series of normal uppercase letters. 
+
+Therefore, `&ABCDEF&GHIJIU` translates to lowercase as `aBCdEFH`, but because the sequence starts with two ampersands and then continues in our rule-set we output `&abcdefghij!`. Since we only need a single character for each of these rules, we disregard '&' from being converted further or any additional symbols post-exclamation. Hence, we end up with:
+Output:  &ABCDEFH!

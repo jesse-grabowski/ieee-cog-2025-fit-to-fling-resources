@@ -1,0 +1,3 @@
+```Y2 X0 X1 Z1```
+The output is obtained by extracting only alphabetic characters from strings in the database, ignoring other characters. From string A we get 'Y', 'X' and 'Z'. Combining entries from both A & B we exclude duplicates to retrieve unique alphabetic letters: `A = ['Y', 'X', 'Z']`, `B = ['X', 'Y', 'Z']` -> output is `'Y2 X0 X1 Z1'` (combination of distinct characters from A and B).
+```

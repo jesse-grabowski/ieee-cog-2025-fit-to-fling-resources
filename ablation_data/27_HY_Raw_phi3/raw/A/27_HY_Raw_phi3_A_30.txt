@@ -1,0 +1,7 @@
+```python
+# Output the drop_block sequence for character "A" from the vocabulary.
+drop_block('b11', 8)
+drop_block('b11', 10)
+drop_block('b11', 8)
+drop_block('b11', 10)
+```

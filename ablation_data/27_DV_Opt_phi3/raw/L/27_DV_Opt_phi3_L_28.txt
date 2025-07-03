@@ -1,0 +1,4 @@
+```
+drop_block('Y', '')
+```
+This example shows that when a single character `L` is provided which corresponds to the letter `Y`, there are no digits following, so only `'b13'` and an empty number (indicating zero) should be passed to `drop_block`. The output still requires trailing characters if they were present.

@@ -1,0 +1,10 @@
+```python
+# Output sequence for the input 'S' from the given VOCABULARY
+output = """
+print("""
+drop_block('b31', 9)
+drop_block('b11', 9)
+drop_block('b11', 8)
+drop_block('b31', 9)
+print("""
+```

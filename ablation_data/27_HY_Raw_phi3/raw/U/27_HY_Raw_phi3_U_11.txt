@@ -1,0 +1,7 @@
+```python
+# Given INPUT "JU" we need to find the corresponding pattern from "INPUT = U" case in the VOCABULARY provided.
+
+OUTPUT = ```
+drop_block('b13', 9) # From 'I' input
+drop_block('b13', 10) # The second 'U' output, but we only have one 'J' related pattern.
+```

@@ -1,0 +1,8 @@
+drop_block('b11', 1) #
+drop_block('b13', 2)
+output:
+drop_block('b13', 0)
+output:
+drop_block('b13', 4) #
+output:
+drop_block('X1') #

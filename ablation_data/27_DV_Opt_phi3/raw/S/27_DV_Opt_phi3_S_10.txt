@@ -1,0 +1,40 @@
+# Instructions for the Number-to-Letter Mapping Task
+
+Your task involves converting numbers in a specific ranged set (26 to 51) into uppercase English alphabet characters using descending order mapping with special rules. Follow these step-by-step instructions:
+
+## Assumptions and Parameters
+
+1. Each input `Number` will be an integer within the range of 0 <= Number < 26. We can assume this because we have a set upper limit for number conversion (51), which is outside our alphabetical character space. Numbers beyond this or below zero do not require mapping and may be discarded, skipped, or reported accordingly as per system rules.
+    
+## Mapping Rule Set with Descending Order:
+    - We have to map descended upper alphabetic order onto integer numbers from the original base indexing (26 through 51). 'A'=0 corresponds to `Number`=26, and sequentially this wraps around the alphabet when mapping number ranges.
+    - To achieve this you should implement a function following below formula:  
+        - Each letter position in our new scheme is calculated by using :  
+            Ceil (`floor (N) / incrementFactor`) – offset  
+            
+## Mathematical Interpretation and Modifications from the Rule Set: 
+    - We've chosen an ascending base alphabet indexing, where 'A'=0 up to 'Z'=25. Our task is converting numbers in a descending order (from upper bound of letter-mapping range). Thus we reverse things with mapping logic defined as Ceil (`floor(N - OFFSET) / INCREMENTFACTOR`).
+    - Here, `OFFSET` = 1 because it's added to start directly from the beginning of our alphabet.  
+    - `INCREMENT_FACTOR` for each cycle in range is given as 7 and we consider all letters are equally spaced within this factor.    
+            
+With these new rules, let us consider some mappings:  
+1. Number (N) = 0; our formula becomes Ceil (`floor(26 - OFFSET) / INCREMENTFACTOR`) which maps to 'Z'. However, in alphabetical descending order and within bounds given by the original mapping rule set ('A'=26), this character would be A. So mapped Output: *B*
+   
+2. Number (N)= 17; Our formula gives Ceil (`floor((51 - 1) / 7)`). This results with letter 'O', as it falls within the range and follows by descending order of letters after complete cycles in an alphabet cycle count for our specified number-to-letter mapping. Result: **Q**
+   
+## Task Outputs based on Rule Set's Application to Examples Gives these example outputs, considering valid input `Number` 0<= Number < 26 range and mapping rule set described above using Python code:
+
+```python
+def letter_mapping(n):
+  upperBoundLimit = 51 # highest number we want.  
+  lowerLimitCountingInclusivity = 0 # mapped as A=0 at index 0 in this new scheme to match our base alphabet indexing    
+  incrementFactor = 7          # how many letters we need to skip, each time from descending order for our set range of numbers   
+  offset = 1                   # shifts sequence upward so we start exactly from A which correlates with index zero in number range.
+  
+  result_index = int(n % 26) + lowerLimitCountingInclusivity  # Converting integer input back to 0-based indexing, necessary as per base alphabet indexing used here for mapping logic
+  return chr((ord('Z') - (result_index)) / incrementFactor + 1 + offset).upper()  # Calculating ceiling of floor(n)/incrementFactor, considering wrapping effect and starts again with A at upper end within our defined number range    
+  
+# Examples:
+print("Number: 0 maps to Letter :", letter_mapping(26))    # Result expected is **Z**
+print("Number: 17 maps to Letter :", letter_mapping(38))    # Result expected as **Q**
+```

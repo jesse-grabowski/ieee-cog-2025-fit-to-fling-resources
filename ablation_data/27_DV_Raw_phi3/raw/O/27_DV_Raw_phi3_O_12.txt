@@ -1,0 +1,40 @@
+```python
+# Function to decode the tokens into drop_block instructions
+def parse_tokens(input_str):
+    mappings = {'Y': 'b13', 'X': 'b11', 'Z': 'b31'}
+    
+    # Split the input string and remove the enclosing triple backticks.
+    tokens = input_str[3:-3].split('|')
+    
+    # Convert each token to a drop block instruction based on mappings, preserving order.
+    instructions = []
+    for index, token in enumerate(tokens):
+        if '#' not in token:  # If the current token isn't a marker.
+            mapped_block = mappings[token[0]]
+            number = int(token[1:])  # Extract and convert trailing digit to integer
+            instruction = f"drop_block('{mapped_block}', {number})"
+            instructions.append(instruction)
+        
+        else:
+            last_token = tokens[index-1]
+            number = int(last_token[1:])  # Extract and convert trailing digit from the previous token
+            
+            instruction = f"drop_block('{mappings[last_token[0]]}', {number}) "
+            instructions.append("#")
+    
+    return "\n".join(instructions)
+
+# Content retrieval from databases K and O
+k_content = """K Content (from Database K): Y0|Y1|Y5|Z1|Z4|Y0|Y4"""
+o_content = """O Content (from Database O): Z1|Y0|Y2 #|Z1"""
+
+# Parsing the content into drop block instructions.
+k_instructions = parse_tokens("```K\n"+k_content+"```")
+o_instructions = parse_tokens("```O\n"+o_content+"```")
+  
+# Concatenating parsed results with source content description
+full_output = f"{k_content}\nContent (from Database K):\n```\n{k_instructions}```\n\n{o_content}\nContent (from Database O):\n```\n{o_instructions}```\n"
+
+# Full formatted output that follows the encapsulation instructions.
+print(f"```markdown\nKO content retrieval:\n{full_output}```")
+```

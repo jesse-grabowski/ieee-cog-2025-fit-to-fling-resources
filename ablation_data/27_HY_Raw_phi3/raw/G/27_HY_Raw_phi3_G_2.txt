@@ -1,0 +1,12 @@
+```python
+def drop_block(letter, number):
+    alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    index = (alphabet.index(letter) - int(number)) % 26
+    return f'drop_block({letter}, {str(number)})'
+```
+Example Usage:
+```python
+print(drop_block('E', 8)) # returns drop_block('b31', 10)
+print(drop_block('E', 9)) # returns drop_block('b11', 9)
+print(drop_block('E', 10)) # returns drop_block('b11', 10)
+```

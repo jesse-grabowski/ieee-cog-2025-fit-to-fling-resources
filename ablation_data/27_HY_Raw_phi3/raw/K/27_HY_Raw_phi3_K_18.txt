@@ -1,0 +1,64 @@
+```python
+# Output the drop_block sequence for character "R" from the vocabulary.
+
+def char_to_sequence(char):
+    if char == 'A':
+        return """
+drop_block('b11', 8)
+drop_block('b31', 9)
+"""
+    elif char == 'B':
+        return """
+drop_block('b31', 9)
+drop_block('b11', 10)
+"""
+    elif char == 'C':
+        return """
+drop_block('b13', 9)
+drop_block('b13', 10)
+"""
+    elif char == 'D':
+        return """
+drop_block('b31', 8)
+drop_block('b11', 9)
+drop_block('b13', 10)
+"""
+    elif char == 'E':
+        return """
+drop_block('b31', 10)
+drop_block('b11', 8)
+drop_block('b13', 9)
+"""
+    # add more branches for different characters here...
+    
+    elif char == 'R':
+        return """
+    drop_block('b13', 7)
+    drop_block('b13', 8)
+    drop_block('b13', 9)
+    drop_block('b31', 8)
+    
+drop_block('b11', 12)
+"""
+    
+    elif char == 'S':
+        return """
+drop_block('b31', 9)
+drop_block('b11', 9)
+drop_block('b11', 8)
+        drop_block('b31', 9)
+"""
+    
+    # add more branches for different characters here...
+    
+    elif char == 'T':
+        return """
+drop_block('b13', 7)
+        """
+        
+    else:
+        raise ValueError("Invalid character!")
+
+output = char_to_sequence('R') # example input
+print(output)
+```

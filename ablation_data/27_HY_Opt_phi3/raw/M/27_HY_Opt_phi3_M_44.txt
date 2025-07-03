@@ -1,0 +1,21 @@
+```
+drop_block('b13', 5)
+drop_block('b13', 6)
+drop_block('b13', 8)
+drop_block('b13', 10)
+drop_block('b13', 11)
+drop_block('b13', 13)
+drop_block('b13', 14)
+drop_block('b13', 5)
+drop_block('b13', 6)
+drop_block('b13', 8)
+drop_block('b13', 10)
+drop_block('b13', 11)
+drop_block('b13', 13)
+drop_block('b13', 14)
+drop_block('b31', 6)
+drop_block('b11', 8)
+drop_block('b31', 10)
+drop_block('b31', 13)
+```
+In Constructora, as the legendary architect, you have summoned the blueprint for letter `M`, which consists of these blocks that need to be added in sequence. This exact configuration will create the majestic structure attributed to letter M: first there are 5 blocks at position b13 followed by 6 at the same place, then 8 more and another 10 blocks before finishing with the last two positions, which again have a set of five and six respectively. The process repeats before shifting to block number 31 for two steps within the blueprint's structure. Then there is a shift back to b11 with eight and ten blocks consecutively, followed by three more from position 31 at consecutive levels 10 and 13. This sequence recreates an iconic pattern twice according to the mystical building standards of Constructora realm.

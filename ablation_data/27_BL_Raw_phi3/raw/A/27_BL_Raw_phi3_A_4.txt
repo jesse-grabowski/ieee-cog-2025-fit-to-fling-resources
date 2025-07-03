@@ -1,0 +1,11 @@
+```python
+# Given INPUT 'A' from the VOCABULARY
+OUTPUT = """
+drop_block('b13', 6)
+drop_block('b31', 7)
+drop_block('b11', 8)
+drop_block('b13', 8)
+drop_block('b11', 9)
+drop_block('b31', 8)
+"""
+```

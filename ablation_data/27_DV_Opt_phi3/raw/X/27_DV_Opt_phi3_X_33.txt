@@ -1,0 +1,9 @@
+```drop_block('b13', '0')
+drop_block('b13', '2') #
+drop_block('b31', '1')
+drop_block('b11', '1')
+drop_block('b13', '0')
+drop_block('b13', '2')
+```
+This example demonstrates that the numeric part can have one digit or two digits, and even when there is a letter code followed by only a single-digit number (e.g., `X0`), it should still map to `'<mapped>'`, with the numerical value attached directly following the block ID in quotes for clarity. 
+```

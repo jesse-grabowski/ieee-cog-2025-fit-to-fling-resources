@@ -1,0 +1,9 @@
+```python
+# Output sequence for the input 'H' from the given VOCABULARY
+output = """
+print("drop_block('b13', 9)")
+print("print('drop_block('b13', 10)")
+print("print('drop_block('b31', 10)")
+print("drop_block('b13', 9)")
+print("print('drop_block('b13', 11)")"""
+```

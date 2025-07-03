@@ -1,0 +1,6 @@
+```python
+# No valid function call found as per the given conditions. Hence, returns an empty string.
+'''
+Passed argument doesn't match with database entries or ASCII value condition. Returns ''.
+'''
+```

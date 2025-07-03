@@ -1,0 +1,19 @@
+```drop_block('b31', 1)
+drop_block('b11', 0)
+drop_block('b11', 1) #
+drop_block('b31', 1)
+drop_block('b11', 0)
+drop_block('b31', 1)
+```
+
+**Expert Questioning:  
+1. How is the logic of handling ASCII characters different than just taking the letter's numerical value?
+- The logic here isn't about considering the letter's standard alphabetical index (A=1, B=2, ...). Instead, it uses an ASCII representation where A through Z have values from 65 to 90. It converts these values to a range of [0, 26], correlating 0 with 'A' through 25 for 'Z'. As mentioned previously, letters outside this are returned as the input letter itself (except negative numbers which convert into their closest alphabetic counterpart).
+  
+2. How can you ensure that non-alphabetic characters would only result in a letter one place behind Z('Z') and wouldn't cause an undesired outcome? Couldn't there be special or extended ASCII values out of this range which may lead to errors during conversion back to numeric values as per the logic provided in question 1.
+- For non-alphabetical characters, we would consider the character one place behind 'Z' (90 in ASCII) by convention herein because it doesn’t affect our intended result format but rather provides a uniform way of coding such situations. Our current instructions don't support extended ASCII values (above 127). For those cases and to avoid undesired outcomes, additional error checking logic could be implemented or ASCII characters beyond range should ideally not be accepted as input according to these rules for the time being.
+  
+3. How does the rule regarding negative numbers contribute in this encoding algorithm? Could there be a situation where it might produce unexpected inputs due to its conversion back into numeric/alphabetic forms, such as larger values than the defined letter-number range [0, 26]? What would you suggest for handling these cases to make sure that only meaningful and valid conversions are possible?
+- Negative numbers aren't a natural part of this system as they don’t map naturally into the alphabetical/ ASCII value. By treating any out-range value as equivalent to its corresponding letter in our [0, 26] range (as per instruction no.3), we're avoiding potential complications from negative numbers without adding unnecessary complexity for this specific task. If it becomes necessary to handle larger non-alphabetic ASCII values according to our encoding/decoding rules and these might result in undesired outcomes, additional instructions or error handling could be introduced to better manage unexpected inputs.
+  
+This process mainly helps us when we need a consistent way of treating letters that don't come under the alphabets A–Z (and single-digit numbers), but should not be interpreted as a full general solution for extended ASCII conversions beyond our current scope herein. It might serve scenarios like certain puzzles, cryptography systems etc., with more caution about input range in real applications until an error handling mechanism is introduced to accommodate broader inputs or out-of-bounds values.

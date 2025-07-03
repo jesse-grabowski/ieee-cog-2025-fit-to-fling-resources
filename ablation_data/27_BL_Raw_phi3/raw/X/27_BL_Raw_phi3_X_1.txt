@@ -1,0 +1,19 @@
+```python
+# Given INPUT as 'X' from the VOCABULARY, map it to its corresponding OUTPUT sequence.
+vocabulary = {
+    "A": [
+        ("b11", 8), ("b11", 10), ("b11", 8), ("b11", 10), ("b31", 9), ("b11", 8), ("b11", 10), ("b31", 9)
+    ],
+    "B": [
+        ("b31", 9), ("b11", 11), ("b13", 8), ("b13", 10), ("b13", 11), ("b31", 9)], 
+    "C": ..., # And so on for other alphabet inputs from C to Z.
+    "X": [
+        ("b13", 9), ("b13", 11), ("b31", 10),("b11", 10), ("b31", 10), ("b13", 9)],
+}
+# Input variable for VOCABULARY key and OUTPUT sequence generation.
+vocab_key = input() if input().upper() == 'X' else ""   # Convert the provided input to uppercase, as case is not considered in mapping.
+input_sequence = vocabulary[vocab_key]  # Get the corresponding pattern from VOCABULARY for non-empty key lookup.
+# Output each drop_block() call on a new line using list comprehension and join method to create formatted output string.
+output_string = '\n'.join(f"drop_block('{block}', {p)}' for block, p in input_sequence) # Convert the tuples into f-strings representing the drop_block() function calls.
+print(output_string)    # Output the formatted string of drop_block() sequences from VOCABULARY based on the input.
+```

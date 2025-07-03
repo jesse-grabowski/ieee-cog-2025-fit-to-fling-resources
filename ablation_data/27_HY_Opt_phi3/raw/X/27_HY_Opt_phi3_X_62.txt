@@ -1,0 +1,12 @@
+
+Based on your requirements and input of 'X', here is the exact sequence to construct for this mystical blueprint X in Constructora:
+
+'''
+drop_block('b13', 9)
+drop_block('b13', 10)
+drop_block('b13', 9)
+drop_block('b13', 11)
+drop_block('b31', 9)
+drop_block('b11', 12)
+drop_block('b11', 8)
+'''

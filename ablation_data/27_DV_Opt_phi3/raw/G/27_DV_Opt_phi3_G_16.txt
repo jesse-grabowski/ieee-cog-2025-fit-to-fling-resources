@@ -1,0 +1,6 @@
+drop_block('b6', 0)
+drop_block('b6', 3) #
+drop_block('b6', 1)
+drop_block('b6', 0)
+drop_block('b4', 1)
+drop_block('b4', 2)

@@ -1,0 +1,8 @@
+```
+drop_block('b31', 8)
+drop_block('b13', 7)
+drop_block('b31', 9)
+drop_block('b13', 12)
+drop_block('b31', 9)
+output = ['U' * (number - 26 + 8)]
+```

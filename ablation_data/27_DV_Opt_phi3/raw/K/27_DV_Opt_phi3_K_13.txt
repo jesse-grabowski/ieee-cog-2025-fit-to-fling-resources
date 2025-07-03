@@ -1,0 +1,24 @@
+```python
+input_string = "Y0|X3 #|Y6|Z1|Z5|Y2|Y7"
+output_strings = []
+
+tokens = input_string.split('|')
+for token in tokens:
+    prefix, number_str = tuple(token.split()) if ' ' in token else (token[0], token[1:])
+    
+if prefix == "Y":  # 'b13' for Y
+        mapped = "'b13'"
+    elif prefix == "X":  # 'b11' for X
+        mapped = "'b11'"
+    elif prefix == "Z":  # 'b31' for Z
+        mapped = "'b31'"
+    
+output_string = f"\ndrop_block({mapped}, {number_str})"
+
+output_strings.append(f"```\n{output_string}\n```")
+
+if output_strings:
+    print("".join(output_strings))
+else:   # return W for No change in input string or K if no block types are present
+    print("W" * len(input_string), "K")[len(input_string)]
+```

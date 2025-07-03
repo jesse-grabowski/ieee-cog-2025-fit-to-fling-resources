@@ -1,0 +1,13 @@
+```python
+# Output sequence for the input 'Q' from the given VOCABULARY
+output = [
+"drop_block('b11', 12)",
+"drop_block('b31', 10)",
+"drop_block('b13', 9)",
+"drop_block('b13', 11)",
+"drop_block('b31', 10)"
+]
+
+# Return the output in the specified format
+print(output)
+```

@@ -1,0 +1,15 @@
+```python
+def drop_block(letter, number):
+    if letter == "S" or number >= 26:
+        return letter
+    
+    # Convert the uppercase ASCII code to alphabet index (A=0, B=1... Z=25)
+    index = ord(letter.upper()) - ord('A')
+
+    new_index = (index + number) % 26
+    if new_index < 0:
+        new_index += 26
+    
+    # Convert the alphabet index back to an uppercase ASCII code and letter
+    return chr(new_index + ord('A'))
+```

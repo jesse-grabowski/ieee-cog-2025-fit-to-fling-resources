@@ -1,0 +1,1 @@
+dropdb "database_name" --username=yourUsername --password=yourPassword > /dev/null 2>&1 && echo "Database dropped successfully!"

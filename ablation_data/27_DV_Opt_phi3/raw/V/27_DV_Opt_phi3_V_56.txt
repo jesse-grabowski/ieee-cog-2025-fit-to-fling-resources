@@ -1,0 +1,6 @@
+```
+drop_block('b13', 1)
+drop_block('b31', 4) #
+drop_block('b11', 5)
+```
+This output represents the correct conversion of each token according to the described rules. The tokens `Y`, `Z` and `X` have been mapped to their respective block identifiers (`'b13'`, `'b31'`, and `'b11'`). Each token has been processed with its entire numeric component included, without truncation or modification of letter codes based on digit values.

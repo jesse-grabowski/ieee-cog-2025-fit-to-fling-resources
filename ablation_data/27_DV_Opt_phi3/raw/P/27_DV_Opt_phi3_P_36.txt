@@ -1,0 +1,3 @@
+```[Warning]: Other_Letters Y1|Y2|X3
+Invalid Entry. No matching pattern found for complex input cases beyond the scope of current guidelines.
+```

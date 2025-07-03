@@ -1,0 +1,24 @@
+```python
+def parse_instructions(input_string):
+    tokens = input_string.split('|')
+    parsed_output = ""
+    
+    for token in tokens:
+        # Split the letter and digits parts, preserving trailing characters
+        letter, tail = token.rstrip('#'), ""
+        if not tail or tail[-1] == '#':  # Checks if there are any trailing characters to include after splitting
+            letter_tail_length = len(token) - len(letter) + (1 if tail else 0)  # Calculate original length for padding.
+            digits, tail = token[:-letter_tail_length], token[letter_tail_length:]
+        
+        block_id = {'Y': 'b13', 'X':'b11', 'Z':'b31'}[letters]
+        
+        # Ensure the letter component is exactly one character long for consistency
+        if len(digit) < 1:
+            parsed_output += f"drop_block('{ block_id}', '{ dig'0')'\n"
+        elif len(digits) == 1 or (len(digits) == 2 and digits[0] != '0'):
+            parsed_output += f"drop_block('{ block_id}', {digits}'\n".rstrip('# ') + tail  # Appends the trailing characters as is
+        else:
+            raise ValueError("Input token has leading zeroes in two-digit numbers.") # Invalid input case handling with error. In real implementation, output could be adjusted differently or skipped silently depending on requirements.
+    
+    return parsed_output.rstrip('\n')  # Remove the last newline character if exists.
+```

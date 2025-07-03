@@ -1,0 +1,3 @@
+```output
+drop_block('b31', Z0) #
+```

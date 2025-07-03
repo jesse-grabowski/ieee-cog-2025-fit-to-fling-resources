@@ -1,0 +1,9 @@
+Task 1 Output: N (prime between 26-78) -> as per advanced rules, it remains the same.  
+
+Task 2 Output: Q (binary conversion of number 1+7 = 8 is not considered here since not an even power) -> prime `Q` for Number modulo rule as `17 % 3 === 2`.   
+
+Task 3 Output: O -> the sum of digits of '2' + '4' gives us '6', which we reduce by one letter cyclically to get 'O'.   
+
+Task 4 Output: L (Since R is a consonant and an even number, but not <5, there’s no reversal or binary conversion here) -> modulo the sum of digits for primes greater than Y would start from V; since we do apply those rules first now -> O becomes N which represents that prime value.   
+
+Task 5 Output: K (Binary `Z` is not involved because there's no number >1, even powers are considered, so 'X' reducing one cyclically yields an odd letter) -> modulo by unique digits sum gives us X -> apply vowel and consonant rule together).

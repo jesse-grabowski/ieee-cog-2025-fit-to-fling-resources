@@ -1,0 +1,26 @@
+```
+drop_block('b31', 9)
+drop_block('b31', 9)
+drop_block('b13', 11)
+drop_block('b13', 11)
+```  
+
+Input:  
+Letter: E  
+Number: 6  
+Output:  
+E
+
+Input:  
+Letter: F  
+Number: -2  
+Output:  
+F
+
+Input:  
+Letter: L  
+Number: 3  
+Output:  
+L  
+
+input>

@@ -1,0 +1,9 @@
+```python
+# Output when the input is "C"
+drop_block('b31', 10) # from VOCABULARY OUTPUT for INPUT = C
+drop_block('b13', 9)   # previous line in sequence to maintain order from VOCABULARY OUTPUT
+drop_block('b13', 10)
+drop_block('b13', 9)   # continued
+drop_block('b13', 10)
+drop_block('b31', 10)    # last line from VOCABULARY OUTPUT for INPUT = C
+```

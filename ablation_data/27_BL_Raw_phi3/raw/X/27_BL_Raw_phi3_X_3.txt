@@ -1,0 +1,4 @@
+```python
+# Output
+"drop_block('b13', 9)\ndrop_block('b11', 10)\ndrop_block('b31', 10)\ndrop_block('b13', 9)\ndrop_block('b13', 11)"
+```

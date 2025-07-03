@@ -1,0 +1,35 @@
+```python
+def parse_drops(input_string):
+    # Define mapping of symbolic tokens to function calls in the format 'drop_block("<mapped>")'
+    block_mapping = {
+        "W": "b18",
+        "R": "b2",
+        "C": "b5",
+        "I": "b9",
+        "V": "b4",
+        "Q": "b3"
+    }
+    
+    # Split the input string into tokens using the pipe character as a separator
+    tokens = input_string.split('|')
+
+    # Initialize an empty list to store formatted strings
+    formatted_strings = []
+
+    for token in tokens:
+        if '#' in token:
+            block, xyz, number = token[:-2], token[-2], int(token[-1])  # Extract components of the special marker line
+            drop_string = f"drop_block('{block_mapping[xyz]}', {number}) #"
+        else:
+            mapped_type, number = block_mapping[token[:-1]], int(token[-1])  # Extract map type and convert to the desired format
+            drop_string = f"drop_block('{mapped_type}', {number})"
+            
+        formatted_strings.append(drop_string)
+    
+    return "\n".join(formatted_strings)
+
+# Input for the function
+input_data = "W4|R8|C7|I9|V5|Q3"
+output = parse_drops(input_data)
+print("```\n" + output + "\n```")
+```

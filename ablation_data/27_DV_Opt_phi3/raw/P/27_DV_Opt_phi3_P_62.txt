@@ -1,0 +1,8 @@
+```drop_block('b13', 0)
+drop_block('b13', 3) #
+drop_block('b11', 0)
+drop_block('b11', 2)
+drop_block('b31', 1)
+```
+
+Explanation: Each token is parsed into the desired function call format, preserving trailing characters and maintaining alignment in accordance with instruction #3.

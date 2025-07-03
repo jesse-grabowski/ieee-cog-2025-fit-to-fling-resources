@@ -1,0 +1,8 @@
+```text
+OLOLJL OU L# TRAEFOREMSMNAION
+```
+
+Transforming the word "Example12#Transformation" according to the described rules, we start by ignoring non-alphabetic characters and applying vowel transformations for the letters EANA while adding a fixed 10 prime number on each consonant. The resulting string after transformation is:
+'O', 'L', 'o', 't', 'R', 'l', '# ', 'T', 'r', 'a', 'n', 's', 'f', 'o', 'rm', 'at', 'i', 'o', 'n'. When compiling the characters to form a sequence, we get:
+
+Output Word: "OLOTRL # TRANSFORMATION", ignoring invalid transformations as instructed

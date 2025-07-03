@@ -1,0 +1,30 @@
+# Python Code to Select a Specific Uppercase Letter based on Numeric Input
+```python
+def expert_letter_selector(number):
+    if not number.isdigit() or int(number) < 0 or int(number) > 25:
+        raise ValueError("Number must be between 0 and 25 inclusive.")
+    
+    # Convert numeric value to letter directly, using character encoding
+    return chr((ord('A') + int(number)) % 26 + ord('A')
+
+# Testing the function with given values for B (digit=5) resulting in F and G (digit=3) resulting in J.  
+print("Testing")  # Letter B, Number 5
+output = expert_letter_selector("5")
+expected_outcome = 'F'        
+assert output == expected_outcome , "Error in step 1"
+        
+# Success test for reverse alphabet from G to Y - where 'G'(0) is 7 -> J, and Y(24) added with a shift of +5 (as per example logic provided) gives you E.
+number = input("Enter numeric value between A and Z in range from 0-25: ")        
+if len(number) != 1 or not number.isdigit():
+    print("Invalid input!")
+else:
+    output_letter = expert_letter_selector(int(number))
+    
+print(f"Output: {output_letter}") # the final letter after adding the corresponding numeric value to 'A's location in alphabet
+    
+# Testing user provided values
+print("Testing reverse alphabet, G to Y") 
+expected_outcome = 'E'        
+assert output == expected_outcome , "Error in step 1"
+```
+Output:

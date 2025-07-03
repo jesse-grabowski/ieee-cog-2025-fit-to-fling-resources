@@ -1,0 +1,25 @@
+```python
+def parse_string(input_str):
+    mapping = {'Y': 'b13', 'X': 'b11', 'Z': 'b31'}
+    
+    # Split the input string by "|" (pipe character) into tokens.
+    tokens = input_str.split('|')
+    
+    output_lines = []
+    for token in tokens:        
+        letter, nums, extra = '', '', ''  # Initializing variables to hold parts of each token.
+        
+        if len(token) >= 2 and 'Y' <= token[0] <= 'Z':
+            letter = mapping[token[0]]     # Map uppercase letters to block IDs based on the mappings provided.
+            nums, extra = token[(len('b13')):].split('#', 1) if '#' in token else (token[2:], '')   # Extract numeric portion and any trailing characters
+            
+        if len(nums):               
+            output_lines.append(f"drop_block('{letter}', {nums}){extra}")     # Add the formatted function call for each valid token to list.
+     
+    return '\n'.join(output_lines)   # Return joined function calls on newlines as specified in instructions.
+            
+# Example usage: 
+input_str = "Z1|X0|X2 #|Z1|X2|X0|Z1"
+parsed_output = parse_string(input_str)
+print(parsed_output)          
+```

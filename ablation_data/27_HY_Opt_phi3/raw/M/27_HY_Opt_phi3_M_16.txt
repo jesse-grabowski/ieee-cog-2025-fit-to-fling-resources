@@ -1,0 +1,5 @@
+```markdown
+z
+```
+
+(The Letter 'H' corresponds to the numeric value of 7, so adding Number 26 would make us reach 'A'. The letter Q is a prime number identifier and has an index value of 16. Summing these two yields 23 which itself is a prime number. However, rule 4 requires we take the next logical sequence prime number after summing; since 23 is already a prime, no further steps are taken from 'A'. So, we stay at 'A' and considering H as a symbolic name equivalent to 7 (Theta), Rule 1 applies for two characters. The rule 5 states that outputting 'z' if the process does not result in A-Z; hence after applying all rules, since there are no additional letters summed based on their numeric prime equivalencies and considering 'T' is a prime but represented by Theta which results in skipping to next logical sequence prime number, we end up with lowercase `z` because it does not fit our usual output format. This is the only reasonable option provided all constraints have been met.)

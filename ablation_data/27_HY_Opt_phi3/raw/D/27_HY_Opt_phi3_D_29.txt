@@ -1,0 +1,8 @@
+```
+drop_block('b13', 7)
+drop_block('b13', 9)
+drop_block('b31', 12)
+drop_block('b13', 9)
+drop_block('b13', 8)
+... (Rest of the required blueprint sequence for 'H' from above, excluding additional lines as they are not part of this exercise)
+```

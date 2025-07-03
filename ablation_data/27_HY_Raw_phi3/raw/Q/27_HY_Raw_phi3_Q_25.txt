@@ -1,0 +1,9 @@
+```python
+# Output based on the given input "X" from the VOCABULARY
+drop_block('b13', 9)
+drop_block('b13', 11)
+drop_block('b11', 10)
+drop_block('b31', 10)
+drop_block('b13', 9)
+drop_block('b13', 11)
+```

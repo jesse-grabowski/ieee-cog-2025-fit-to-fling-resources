@@ -1,0 +1,6 @@
+The given input does not match the specified format and contains letters that are not part of our mapping dictionary. Therefore, there is nothing to parse or convert into function calls using the block-dropping simulation instruction set. However, I will provide an output string based on our rules for unmapped tokens just in case some special behavior needs to be applied:
+
+``` 
+unexpected_token('KNOPQR')
+(not found in the Database)
+```

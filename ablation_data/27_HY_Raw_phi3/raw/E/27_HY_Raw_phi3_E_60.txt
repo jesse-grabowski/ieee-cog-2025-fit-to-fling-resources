@@ -1,0 +1,10 @@
+```python
+def drop_block(block, size):
+    print("drop_block", block, size)
+print("drop_block('b31', 10)")
+print("drop_block('b11', 9)")
+print("drop_block('b11', 10)")
+print("drop_block('b31', 10)")
+print("drop_block('b11', 9)")
+print("drop_block('b11', 10)")
+```

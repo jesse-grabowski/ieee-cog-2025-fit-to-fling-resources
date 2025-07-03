@@ -1,0 +1,15 @@
+```Z6
+drop_block('b31', 6)
+Y7
+drop_block('b11', 7)
+Z9
+drop_block('b13', 4)
+drop_block('b13', 4)
+Y7
+drop_block('b11', 10)
+drop_block('b11', 10)
+X4
+drop_block('b11', 5)
+Y9
+X9
+```

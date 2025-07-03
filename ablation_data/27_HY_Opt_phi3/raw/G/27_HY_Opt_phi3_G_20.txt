@@ -1,0 +1,1 @@
+The result of running `expert_letter_selector` function with inputs 'G' and `19` will be ``T`` because the ASCII value corresponding to index `19` is a lowercase letter `'t'` which, when converted to upper case using `.upper()` method in python, gives  `'T'`. Hence the output for input G will still remain G as it falls outside of range 0-25.

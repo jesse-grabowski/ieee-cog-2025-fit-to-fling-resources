@@ -1,0 +1,8 @@
+For **INPUT: X**, the exact sequence from the Vocabulary section to construct the structure is as follows:
+```
+drop_block('b13', 9)
+drop_block('b13', 10)
+drop_block('b31', 10)
+drop_block('b13', 9)
+drop_block('b13', 11)
+```

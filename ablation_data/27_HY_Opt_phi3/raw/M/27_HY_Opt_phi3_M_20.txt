@@ -1,0 +1,24 @@
+Given Letter: B, Number: 3
+- Step 1: Apply a prime number rule (Rule - B): Triple the Fibonacci number 3 -> 3 * 3 = 9.  
+    Rule 1 is not applicable because 'B' follows a prime vowel in order; it should be tripled. Thus, B remains unchanged as we don't go beyond alphabetical bounds (26) for non-vowels that follow vowels and are primes. The resulting number stays within the range of 0 to 25. Therefore, the corresponding output is 'B'.
+    Output: **B**
+    
+Given Letter: S, Fibonacci(5)
+- Step 1: Identify that the Fibonacci numbers start with 1 and progress exponentially (the fourth Fibonacci number which is non-prime but after a prime).  
+    Rule 2 doesn't apply.
+    
+Rule - B does not apply either because 'S' isn't following after vowels. Instead, we proceed to Rule 3: Check whether the number (the fourth Fibonacci number) is also fibonaci – yes. Thus, we move to S + 1 in the alphabet and find a consonant just beyond prime numbers.  
+    S(19)+5=24 - 'X'. So, our letter for this input will be 'X', but since it exceeds Y (as Z is excluded), rule 6 applies here: This is an error case. The resulting string would've gotten us beyond the boundary; therefore we must provide output "E".
+    Output: **E**
+    
+Given Letter: O, Number: 17 - Apply step for vowels (Rule A):  
+- Step 2: The number is not a double of any input 'O', so no changes due to the Number.  
+    Rule 4 does not apply because no modulo operation or subtraction with O needed for our letter case here, it's a simple check if we exceed Y which doesn't happen as the number provided (17) is too large and thus outside the scope of A-Y range due to Vowel Rule B doubling. Since 34 does not fit into this constraint (A=0, Y=25), we output an error with "E". No multiplication by two occurs since O is a vowel that follows another letter.
+    Output: **E**  
+    
+Given Letter: T, Number: 26 - Apply step for halfway letters (Rule C):  
+- Step 2a: Since Rule E mandates using the input directly with no modifications if it's 'T'. Therefore, output is "T". No need to convert or any other operations.  
+    Because number doesn't affect T and it does not have an adjacent letter as required by its special rule of being in the middle and unmodified, we ignore Rule B for numbers after vowels which could turn it into 'U', but here, no operation is needed because 'T' would exceed the A-Y range anyway.  
+    Output: **E** (Error due to reaching out of valid range)
+    
+Output based on rules provided and steps applied: T

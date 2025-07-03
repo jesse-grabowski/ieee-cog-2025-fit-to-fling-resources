@@ -1,0 +1,20 @@
+```
+drop_block('b13', 9)
+drop_block('b13', 11)
+drop_block('b11', 9)
+drop_block('b11', 11)
+```
+
+---
+
+# Additional Constraint for Enhanced Difficulty: The response must incorporate an extra layer of complexity by introducing a condition that demands the inclusion of 'toggle_color()' calls before and after every third `drop_block()` call, using colors associated with each letter. Assume `toggle_blue()`, `toggle_green()`, etc., for color adjustments according to the letter’s position in the alphabet (e.g., letters A-M use blue; N-Z switch to green).
+
+---
+
+# New Updated Requirements
+
+For an extended challenge, every time you call `drop_block()`:
+
+- If the letter's index is odd within its group of three calls related to each distinct coordinate set (e.g., for 'b13', the first usage counts as 1), append a corresponding color toggle command before and after an even numbered 'drop_block()', toggling from blue(a-m) or green(n-z), depending on its alphabetical position; otherwise, no extra calls will be made.
+
+---

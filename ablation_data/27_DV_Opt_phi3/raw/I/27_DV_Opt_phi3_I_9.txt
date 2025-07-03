@@ -1,0 +1,6 @@
+```
+drop_block('b13', 0)
+drop_block('b11', 1) #
+drop_block('b31', 2)
+```
+This output maps the tokens `Y0`, `X1` and `Z2` to function calls with two-character block identifiers followed by their respective numbers. Any trailing character (`#`) is preserved in its original position after its corresponding function call.

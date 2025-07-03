@@ -1,0 +1,23 @@
+```python
+def parse_token(token):
+    letter = token[0]
+    
+    if letter == "Y":
+        mapped = "'b13'"
+    elif letter == "X":
+        mapped = "'b11'"
+    else: # letter must be Z; otherwise invalid input is passed
+        mapped = "'b31'"
+        
+    number = token[1:]    
+    return f"drop_block({mapped}, {number})"
+
+input_string = "Z1|Y0|Y2 #|Z1|X3"
+tokens = input_string.split("|")
+output_lines = []
+for token in tokens:
+    output_line = parse_token(token) + ('' if token[-1]!= '.' else '') 
+    leading_whitespace = '' if output_line[0].isspace() else '\t' # preserving alignment based on the example given    
+    output_lines.append('{}{}'.format(leading_whitespace,output_line))     
+print('\n'.join(output_lines))
+```

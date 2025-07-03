@@ -1,0 +1,13 @@
+```python
+drop_block('b13', 3)
+drop_block('b11', 8) #
+drop_block('b9', 19)
+drop_block('b7', 5)
+drop_block('b24', 0)
+drop_block('b32', 2)  
+drop_block('b6', 4)
+drop_block('b8', 7)
+drop_block('b9', 11)
+drop_block('b15', 3)
+drop_block('b16', 6)
+```

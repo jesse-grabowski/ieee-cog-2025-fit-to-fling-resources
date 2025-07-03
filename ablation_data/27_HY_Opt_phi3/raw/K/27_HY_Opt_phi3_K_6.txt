@@ -1,0 +1,8 @@
+```drop_block('b6', 7)
+drop_block('b5', 8)
+drop_block('b4', 9)
+drop_block('b3', 10)
+drop_block('b2', 11)
+drop_block('b9', 6)
+drop_block('b8', 7)
+```

@@ -1,0 +1,4 @@
+```python
+# Output sequence for the input character "J"
+drop_block('b11', 10), drop_block('b13', 11), drop_block('b13', 11)
+```

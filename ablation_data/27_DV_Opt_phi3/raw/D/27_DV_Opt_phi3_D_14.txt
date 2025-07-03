@@ -1,0 +1,8 @@
+```
+drop_block('b13', 0)
+drop_block('b13', 1) #
+drop_block('b31', 1)
+drop_block('b11', 1)
+drop_block('b11', 2)
+# drop_block('X1', 0) should not be converted because 'X' is not mapped to any block (as per the given instructions). Similarly, '#' at the end of line 2 is a trailing character and must be preserved. Therefore, it appears on its own following 'drop_block('b31', 1)'.
+```

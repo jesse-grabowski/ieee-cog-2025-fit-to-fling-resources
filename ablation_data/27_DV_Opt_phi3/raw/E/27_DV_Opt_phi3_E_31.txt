@@ -1,0 +1,19 @@
+```python
+def drop_block(letter, number):
+    mappings = {'Y': 'b13', 'X': 'b11', 'Z': 'b31'}
+    block_id = mappings[letter]
+    
+    return f"drop_block('{block_id}', {number})"
+``` 
+Input:
+
+```python
+input_str = "Y0|X0#|Z6#|Y4|Z1|X9|Z2"
+tokens = input_str.split("|")
+output = ""
+
+for token in tokens:
+    letter, number = token[:-1], int(token[-1])  # Extract the last character as a numeric value
+    
+    output += f"\n{drop_block(letter, number)}{' ' + '#' if '#' in token else ''}"
+```

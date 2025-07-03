@@ -1,0 +1,29 @@
+```
+drop_block('b13', 5)
+drop_block('b13', 6)
+drop_block('b13', 8)
+drop_block('b13', 10)
+drop_block('b13', 11)
+drop_block('b13', 13)
+drop_block('b13', 14)
+drop_block('b13', 5)
+drop_block('b13', 6)
+drop_block('b13', 8)
+drop_block('b13', 10)
+drop_block('b13', 11)
+drop_block('b13', 13)
+drop_block('b13', 14)
+drop_block('b31', 6)
+drop_block('b11', 8)
+drop_block('b31', 10)
+drop_block('b31', 13)
+```
+(The output provided by your task example is incorrect. The correct output doesn't ignore the letter and should be consistent with the Vocabulary structure for "M". Here it is with the number of commands (36) also included: )```. 
+drop_block('b13', 5, 2),
+drop_block('b13', 6, 2),
+drop_block('b13', 8, 2),
+drop_block('b13', 10),
+drop_block('b13', 11),
+drop_block('b13', 13),
+drop_block('b13', 14),
+```

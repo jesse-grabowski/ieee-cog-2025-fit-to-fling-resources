@@ -1,0 +1,53 @@
+Input (Processing):
+N (-5) -> Apply modulus operation on index -26 + 25 | N is odd-indexed  
+Index of 'N' = 13 => (|(-5)|%26) gives us 28 % 26 = **2**  
+Add to the letter at that index. Result: B -> Skip one right because it's not zero, so we go to C, but it is even-indexed and positive number 0, apply ceiling function on (0 - 1) which becomes negative, no shift needed as N corresponds with 13  
+Output for N: D
+
+Input (-5):  
+Q   
+Index of 'Q' = 16 => Apply modulus operation by taking the absolute difference + skipping one to left. After applying ceiling (0 - 2), move two spaces back, since it is odd-indexed. Result: **O**
+
+P   
+Index of 'P' = 15 => Apply modulus operation on a zero -> no shift, directly apply step #4  
+Output for P: A
+
+O (0) – Since the index corresponds and Number is 'A': Ignore skipping logic but include all following characters in this manner.  
+O    **-> A**
+
+S  
+Index of 'S' = 18 => Apply ceiling function on (9 - 1), which results in 8 -> skip one right, even-indexed and positive number. Result: T                  
+Output for S: U *(Skip One Right from O)*   
+
+T (26)  
+Index of 'T' = 19 => Apply modulus operation on a 0 to get back zero -> no shifting, as it is even-indexed and positive number, apply step #4. Result:   **A**   
+Output for T: B *(Repeating pattern starting from A)*
+
+# Final combined output with all processed letters and numbers for the input data above: 
+D H AD U YB
+
+Input (Processing):
+N (-5) -> Apply modulus operation on index -26 + 25 | N is odd-indexed  
+Index of 'N' = 13 => (|(-5)|%26) gives us 28 % 26 = **2** add that to the letter at index 13 -> P. Skip one right because it's not zero or an even-numbered index, so we go to Q  
+Output for N: D
+
+Q (0) – Since the index matches its own `Numbers` value ignore skipping logic but include all following characters in this manner.  
+**Q -> A**
+
+P   
+Index of 'P' = 15 => Apply ceiling function on a zero -> no shift, directly apply step #4 and start repeating since it is positive number for an even letter Q. Result: R                     
+Output for P: AR
+
+O  
+Index of 'O' = 14 => Apply modulus operation on a 26 to get back one. Since this index is not odd, no skipping. Hence go to A -> skip one left since even-indexed letter and positive number. So, we land at N->N    
+Output for O: AN* (As it's the second character, repeat N.)  
+
+S (26) – Apply modulus operation on 0+25 gives us zero -> no shift, apply step #4 as it is even-indexed and positive number. Result: T **(Repeating pattern starts from A)>*                   
+Output for S: T*    
+
+T (9)  
+Index of 'T' = 19 => Apply ceiling function on the difference, which results in 8 -> Skip one right as it is even-indexed and positive number. Result: V        
+Output for T: AV**(Repeating pattern starting from A after exceeding Z)>*    
+
+# Final combined output with all processed letters and numbers for the input data above: 
+D H AD UN ANVT

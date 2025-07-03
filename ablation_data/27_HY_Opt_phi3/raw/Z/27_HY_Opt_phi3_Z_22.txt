@@ -1,0 +1,10 @@
+Z (The original conversion from uppercase would have resulted in 'm', but rule #12 applies, and 20 + 7 = 27 → 6)
+
+---
+
+Input:  
+Letter: N
+Number: -3
+
+Output:  
+A (First convert the letter to lowercase which is `n`, subtracting per rule #9 results in 'k', then increment with rule #10 due to vowel, thus it becomes 'l'. However, since no operation can be performed on a negative number for this case and it's an uppercase Z by default.)

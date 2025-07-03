@@ -1,0 +1,6 @@
+```
+drop_block('Y0', 0) #
+drop_block('b31', 1) ##
+drop_block('b08', 0) 
+drop_block('b26', 4)  
+ ```

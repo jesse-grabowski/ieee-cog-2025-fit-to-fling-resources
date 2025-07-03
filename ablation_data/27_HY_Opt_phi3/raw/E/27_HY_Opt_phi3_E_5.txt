@@ -1,0 +1,6 @@
+Input: I
+Output:
+```
+drop_block('b13', 10)
+drop_block('b13', 10)
+```

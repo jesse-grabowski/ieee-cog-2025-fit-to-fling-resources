@@ -1,0 +1,11 @@
+```Brackets[]
+[A > E, B less than U]
+```
+
+Please note that for the input involving numbers like [5 + B, 20 - C], we do not replace them with their corresponding letters because they fall outside of indexes A-Z range. Therefore:
+
+# Advanced Example Response based on Input: ['U / X', 'Z < V']  
+Output:  
+```Brackets[]
+[unknown divided by unknown, letter Z is smaller]
+```

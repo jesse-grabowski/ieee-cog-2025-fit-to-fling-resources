@@ -1,0 +1,11 @@
+Here is the parsed output sequence according to the instructions provided and using the mappings for tokens starting with `K`:
+
+````
+drop_block('bX', 0) #
+drop_block('b13', 1)
+drop_block('b5', 3)
+drop_block('bZ', 1)
+drop_block('b4', 0)
+drop_block('b26', 4)
+drop_block('bX', 0) #
+````

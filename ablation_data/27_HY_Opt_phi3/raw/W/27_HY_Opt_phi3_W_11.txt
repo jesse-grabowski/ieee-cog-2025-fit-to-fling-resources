@@ -1,0 +1,4 @@
+Letter: M  
+Number: 21  
+Output:  
+O * ❗ (M(13) + 21 % 26 = R(18), since the original letter is a vowel, we will append an asterisk and perform additional shift check. O is a valid uppercase English letter and after a shift it's also a vowel within -13 ≤ Modulus < 14 so * appended)

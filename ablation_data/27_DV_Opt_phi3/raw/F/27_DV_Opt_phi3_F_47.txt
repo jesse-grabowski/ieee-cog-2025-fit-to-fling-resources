@@ -1,0 +1,17 @@
+```json
+{
+  "A": "Description pour A",
+  "B": {
+    "C": "{Contenu du sous-élément}",
+    "D": "Suite des descriptions"
+  },
+  "E": [1,2,3]
+} # Continuation of other keys and values...
+```
+En entrant 'A', l'agent d'extraction doit produire la chaîne suivante enveloppée dans un bloc de code triple inverse :
+
+```json
+{
+  "A": "Description pour A"
+}
+```

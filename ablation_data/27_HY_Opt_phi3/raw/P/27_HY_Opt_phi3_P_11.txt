@@ -1,0 +1,26 @@
+```python
+# Define function for applying the letter selection and transformation rules based on input condition.
+def select_letter(uppercase_letter, number, condition):
+    # Mapping of alphabets to their indices (0-25) according to A=0, B=1...  
+    alphabet_indices = {chr(65 + i): i for i in range(26)}  
+    
+    letter_index = alphabet_indices[uppercase_letter]
+    
+    # Check if the input meets the condition requirements as per rules
+    if not (number >= 26 and uppercase_letter.isalpha() and uppercase_letter.startswith(("A", "E", "I", "O", "U")):  
+        letter_adjustment = letter_index + condition * (condition)
+    else:  
+        letter_adjustment = number % 26 if not number >= 50 else uppercase_letter.isalpha() and ("A" <= uppercase_letter <= "Z")
+    
+    # If the resulting index exceeds the standard alphabet range, modulo it back into indices  
+    adjusted_index = letter_adjustment % 26 if number < 50 else 0  # Always output unchanged for 'Number' == 50 starting vowel rule  
+    
+    return chr(letter_adjustment + 65)
+
+# Inputs: Uppercase Letter, Number and Condition (True/False). Output the selected letter.
+user_input = list(map(str, input().split()))  
+uppercase_letter, number, condition = user_input[0], int(user_input[1]), user_input[2].lower() == "true"  # Get inputs and convert number to int   
+selected_letter = select_letter(*user_input)  # Call the selection function with inputs  
+print(f'Selected Letter: {selected_letter}')   
+```
+Given inputs for M, 15 and Condition as True results in F.

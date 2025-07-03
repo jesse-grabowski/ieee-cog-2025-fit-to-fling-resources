@@ -1,0 +1,8 @@
+Here's the output sequence that builds the mystical edifice for input `X`, repeated according to the number given (exactly three times):
+```
+drop_block('b13', 9)
+drop_block('b13', 10)
+drop_block('b31', 9)
+drop_block('b31', 12)
+drop_block('b31', 11)
+```

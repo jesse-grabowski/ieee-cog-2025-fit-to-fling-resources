@@ -1,0 +1,22 @@
+```
+drop_block('b13', 5)
+drop_block('b13', 6)
+drop_block('b13', 8)
+drop_block('b13', 10)
+drop_block('b13', 11)
+drop_block('b13', 13)
+drop_block('b13', 14)
+drop_block('b13', 5)
+drop_block('b13', 6)
+drop_block('b13', 8)
+drop_block('b13', 10)
+drop_block('b13', 11)
+drop_block('b13', 13)
+drop_block('b13', 14)
+drop_block('b31', 6)
+drop_block('b11', 8)
+drop_block('b31', 10)
+drop_block('b31', 13)
+```
+
+This output exactly reflects the intricate and repetitive nature of architecture in Constructora, ensuring that master builder can faithfully resurrect these mystical structures from ancient blueprint.

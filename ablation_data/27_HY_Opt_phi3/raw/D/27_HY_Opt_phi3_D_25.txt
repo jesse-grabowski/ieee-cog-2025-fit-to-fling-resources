@@ -1,0 +1,12 @@
+Here's the output sequence that builds the structure for letter `Y`:
+
+```
+drop_block('b31', 8)
+drop_block('b31', 8)
+drop_block('b31', 11)
+drop_block('b31', 11)
+drop_block('b11', 7)
+drop_block('b11', 8)
+drop_block('b31', 8)
+drop_block('b31', 8)
+```

@@ -1,0 +1,12 @@
+```python
+# Output sequence for the input character "O" from the given VOCABULARY
+print("""")
+drop_block('b31', 10)
+drop_block('b31', 10)
+drop_block('b11', 9)
+drop_block('b11', 11)
+drop_block('b11', 9)
+drop_block('b11', 11)
+drop_block('b31', 10)
+drop_block('b31', 10)
+```

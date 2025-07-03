@@ -1,0 +1,4 @@
+```python
+def expert_letter_selector(Letter, Number):
+    return Letter if Number >= 25 else chr(ord('A') + Number)
+```

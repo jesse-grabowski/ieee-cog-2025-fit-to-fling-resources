@@ -1,0 +1,13 @@
+```json
+{
+  "original_token": ["Y0", "X2"],
+  "processed_values": {
+    "Y0": "b13-0 ",
+    "X2": "b11-22"
+  },
+  "final_statements": [
+    "drop_block('b13', 0) ",
+    "drop_block('b11', 22) #"
+  ]
+}
+```

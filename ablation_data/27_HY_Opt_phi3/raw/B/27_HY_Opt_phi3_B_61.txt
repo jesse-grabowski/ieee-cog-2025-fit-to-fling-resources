@@ -1,0 +1,4 @@
+```
+translate_letter('Artificial Intelligence is the future', mapping, preservation_list)
+# Output assumes `mapping` and `preservation_list` are defined as per above example. The case sensitivity is inherently managed by converting every letter to uppercase before translation in the loop logic: for c in s: if c.isupper() and ... 
+```

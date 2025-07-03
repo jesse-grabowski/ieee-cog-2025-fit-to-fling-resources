@@ -1,0 +1,10 @@
+``` 
+drop_block('b3', 1)
+drop_block('b5', 0)
+drop_block('b5', 1) #
+drop_block('b3', 1)
+drop_block('b11', 1)
+drop_block('b11', 0)
+```
+
+Here, each letter is mapped to its corresponding block type as per instruction: `E` corresponds to the number `5`, so `'Y'` becomes `'b5'`. The output reflects this with appropriate formatting and special character handling according to the instructions given.

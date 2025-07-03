@@ -1,0 +1,3 @@
+```plaintext
+drop_block('b13', 0) #
+```

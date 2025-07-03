@@ -1,0 +1,15 @@
+```json
+{
+  "letter": "Z",
+  "number": {
+    "range": "6.0-7.5"
+  }
+}
+```
+# Task
+
+Input:
+
+```
+Z1|Z2 #|Z3|Y4|Z5
+```

@@ -1,0 +1,11 @@
+```python
+# Output sequence for input "Y" based on the given VOCABULARY
+output = [
+    'drop_block('b13', 9)',
+    'drop_block('b31', 9)',
+    'drop_block('b11', 8)',
+    'drop_block('b11', 10)',
+    'drop_block('b11', 8)',
+    'drop_block('b11', 10)'
+]
+```

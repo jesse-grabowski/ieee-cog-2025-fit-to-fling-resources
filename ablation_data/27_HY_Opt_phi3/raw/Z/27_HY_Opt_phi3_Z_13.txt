@@ -1,0 +1,16 @@
+```drop_block('b13', 9)
+drop_block('b31', 9)
+output drop_block('b11', 8)
+output drop_block('b11', 10)```
+ 
+For input letter Y, following the blueprints with a multiplier of 3:
+``` 
+drop_block('b31', 24)
+drop_block('b11', 27)
+output drop_block('b11', 28)```
+
+And for input letter K, following the blueprints with a multiplier of 28:
+``` 
+drop_block('b13', 264)
+output drop_block('b11', 504)
+displaying ```

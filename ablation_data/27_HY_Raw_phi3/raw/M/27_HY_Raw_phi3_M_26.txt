@@ -1,0 +1,6 @@
+```python
+drop_block('b11', 8)
+drop_block('b11', 11)
+drop_block('b13', 9)
+drop_block('b13', 11)
+```

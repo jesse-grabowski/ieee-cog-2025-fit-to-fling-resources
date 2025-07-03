@@ -1,0 +1,9 @@
+Input: R
+Number: 17
+
+**Step by step justification:**  
+- Since the number isn't a direct alphabetical position nor within the valid range of 0-25, we ignore it and keep the Letter (R).
+- Number is odd; add 3 positions from 'R', which gives us U. (U → F)
+- The letter R doesn't complete any other rule conditions in this context so no additional transformations are necessary.
+
+Output: R

@@ -1,0 +1,12 @@
+```
+Temperature threshold crossing at 200°C; Material deformation observed in the tensile test phase initially set to TENSILE-ID=543, with sequential stress points documented up to STEP#78T.
+```  
+
+Explanation for Constraints Adherence:
+1. Only included entries within material science context (constraint 3).
+2. Excluded genome project references that don't follow "Preliminary" phase directly without additional adjectives or qualifiers between (constraint 2; assuming an exclusion based on the criteria given since there are no suitable entries up to M mentioned in this example).  
+3. Specific temperature threshold values exceeding standard room conditions, mention 'initial'.
+4. Ignored content beyond the letter M inclusively within the data output.
+   
+(No material property or tensile test phases were identified between letters L and M as per instruction to exclude all content beyond the letter M.)
+```

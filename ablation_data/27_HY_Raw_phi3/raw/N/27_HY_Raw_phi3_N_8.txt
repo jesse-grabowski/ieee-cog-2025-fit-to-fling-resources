@@ -1,0 +1,25 @@
+```python
+def drop_block(letter, number):
+    if letter == 'A':
+        for _ in range(number % 26): # A starts at index 0 so no need to shift.
+            pass
+        
+        idx = (ord('a') - ord('0')) + number // 10 * 30 - 26
+    elif letter == 'B':
+        for _ in range(number % 2): # B starts at index 31.
+            pass
+        idx = (ord('b') - ord('a')) + (number % 3) * 5
+    
+    # For C to Z we will shift A, B and perform similar operations for other letters based on the provided INPUT/OUTPUT patterns:
+        
+        pass # Extend this block to include `C` to `Z` with suitable pattern replication from VOCABULARY.
+
+    if idx < 0 or idx > ord('z') - ord('a'):
+        return None
+    else:
+        c = chr(idx + ord('a')) # Convert index back to corresponding character
+        print("drop_block(\"" + letter + '\","' + str(number) + "\"" if number < 26 or idx < (ord('M') - ord('A')) \
+            else drop_block("b", abs((idx - 30))) # Handle numbers >= 26, and shift to the 'B' starting at index 31.
+    return c
+print(drop_block('E',4)) # Example from INPUT = E; Output: E is printed with number shifts based on given patterns.
+```

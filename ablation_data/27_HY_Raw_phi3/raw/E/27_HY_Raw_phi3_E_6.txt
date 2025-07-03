@@ -1,0 +1,15 @@
+```python
+# Define the function that takes a character input and returns the corresponding output.
+def get_output(input_char):
+    vocabulary = {
+        'A': """drop_block('b11', 8) drop_block('b11', 10) drop_block('b31', 9)""",
+        'B': """drop_block('b31', 9) drop_block('b11', 11) drop_block('b13', 8) drop_block('b13', 10) ...""", # More lines are omitted for brevity.
+        # Define other character inputs and their sequences here...
+    }
+    
+    if input_char in vocabulary:
+            return "\n".join(vocabulary[input_char]) + """```"
+    
+# Get the output sequence from the VOCABULARY for JOINT.
+output = get_output("JOINT")
+print(output)

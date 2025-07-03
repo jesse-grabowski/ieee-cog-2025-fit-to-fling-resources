@@ -1,0 +1,15 @@
+```python
+def expert_letter_selector(letter, number):
+    if len(letter) != 1 or not letter.isalpha():
+        raise ValueError("First input must be an uppercase single alphabet character.")
+    if not number.isdigit() or int(number) < 0 or int(number) > 25:
+        raise ValueError("Second input must be a digit between 0 and 25 inclusive.")
+    
+    # Convert numeric value to letter as per given rules (if applicable)
+    if 0 <= int(number) <= 25:
+        return chr(ord('A') + int(number))
+    
+    # Returns original number input as uppercase letter by default
+    else:
+        return letter
+```

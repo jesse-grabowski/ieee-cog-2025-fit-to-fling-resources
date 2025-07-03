@@ -1,0 +1,20 @@
+```python
+input_string = "X0|Z1 #|Z1|X0|X2"
+function_calls = []
+tokens = input_string.split("|")
+for token in tokens:
+    if len(token) > 0:  # Skip empty string at the end due to trailing '|' separator
+        letter, number = token[0], token[1:]
+        block_id = ""
+        
+        if letter == "Y":
+            block_id = "'b13'"
+        elif letter == "X":
+            block_id = "'b11'"
+        elif letter == "Z":
+            block_id = "'b31'"
+        
+        function_calls.append(f"drop_block(\042{block_id}\042, {number})")
+            
+formatted_output = "\n".join(function_calls)
+print(```""

@@ -1,0 +1,23 @@
+```python
+def mystical_blueprint(letter, number):
+    if letter == '' or not letter.isalpha() or len(letter) > 1 or not letter.isupper():
+        return "Invalid Input"
+        
+    import string
+    
+    blueprints = {}
+    for l in string.ascii_uppercase:
+        blueprints[l] = """drop_block('b13', 5)
+drop_block('b13', 6)
+drop_block('b13', 8)
+drop_block('b13', 10)
+drop_block('b13', 11)
+drop_block('b13', 13)
+drop_block('b13', 14)
+""" + letter[letters.index(l):]""".join([v for k, v in blueprints.items() if len(k) < or else string.ascii_uppercase.replace(letter, '').split(',')[position]].strip() \ 
+    .format(**{l1: str(2+string.ascii_uppercase.find(l)-number*-1 for l1 in blueprints})[0]*(5 if len(label) else 6)]
+        
+    return "Invalid Number" if number < 0 or number > 25 else blueprints.get(letter, letter).strip()
+
+mystical_blueprint('H', 9)\
+'''

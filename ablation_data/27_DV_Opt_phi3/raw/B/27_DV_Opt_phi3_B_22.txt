@@ -1,0 +1,25 @@
+```python
+input_str = "Y0|X0 #|Y3|Y6|X6|Z1|Z5"
+output_str = ""
+
+tokens = input_str.split("|")
+for token in tokens:
+    mapped_id = ''
+
+    if 'Y' in token:
+        mapped_id = "b13"
+    elif 'X' in token:
+        mapped_id = "b11"
+    elif 'Z' in token:
+        mapped_id = "b31"
+    
+    number = token[token.index('Y')+1:] if 'Y' in token else token[token.index('X')+1:] if 'X' in token else token[token.index('Z')+1:]
+    output_line = f"drop_block('{mapped_id}', {number}) "
+    
+    # Preserve trailing characters (if present) directly after the number, attached to the line.
+    if len(token) != len(output_line):
+        output_str += output_string[len(output_string)-1:-2] + '\n'
+      
+output_str += output_string + "\n"
+print("```python\n"+ "".join(output_str)+"\n```")
+``

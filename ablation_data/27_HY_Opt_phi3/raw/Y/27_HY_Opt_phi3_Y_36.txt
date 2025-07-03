@@ -1,0 +1,8 @@
+```python
+drop_block('b13', 9)
+drop_block('b13', 11)
+drop_block('b11', 8)
+drop_block('b11', 10)
+
+# Note that we can't generate the above output sequence as `number` is not defined for these examples. Letter 'N' and letter 'H' with the given numbers are invalid since no sequences have been provided in the Vocabulary section corresponding to those inputs. Similarly, there is no sequence available for `K:99`. These would be considered outside of the scope set by Constructora.
+```

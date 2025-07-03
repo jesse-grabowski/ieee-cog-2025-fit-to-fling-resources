@@ -1,0 +1,3 @@
+```python
+drop_block('b13', 1)
+```

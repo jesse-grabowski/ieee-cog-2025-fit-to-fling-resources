@@ -1,0 +1,20 @@
+```
+drop_block('b31', 11)
+drop_block('b31', 8)
+drop_block('b13', 7)
+drop_block('b13', 12)
+```
+
+**INPUT: U**
+```python
+# Drop a magical block with ID b31 at row 11, column 8.
+drop_block('b31', 11, 8)
+# Drop another magical block with ID b31 at row 11, column 9 (one unit over).
+drop_block('b31', 12, 8)
+# Next, a mystic fragment of the blueprint 'U' requires us to place two blocks. We start with drop_block which shapes them:
+# The first instance at row 13, column 7 in the edifice is necessary.
+drop_block('b13', 7, 7) # Placing this block forms one half of 'U'.
+# To complete the reflection across a vertical axis we create an identical structure mirrored on the other side:
+drop_block('b31', 8, 8)  
+drop_block('b31', 9, 7) # Align this with top-down symmetry.
+```

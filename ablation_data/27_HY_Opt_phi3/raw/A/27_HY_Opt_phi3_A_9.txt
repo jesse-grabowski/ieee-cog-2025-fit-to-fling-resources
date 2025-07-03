@@ -1,0 +1,2 @@
+```"INVALID"```
+#### Rule Application: The 'D's index is `3`. Since 68 has a remainder of 20 when divided by 26 (which isn't equal to its alphabetical index nor half the number. However, since there are no instructions for this operation and 'Number = 68' falls outside all criteria defined above, it returns "INVALID".

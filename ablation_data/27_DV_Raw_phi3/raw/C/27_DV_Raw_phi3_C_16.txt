@@ -1,0 +1,34 @@
+```python
+def parse_tokens(input_string):
+    mappings = {'Y': 'b13', 'X': 'b11', 'Z': 'b31'}
+    output_lines = []
+    last_is_special = False
+    
+    for word in input_string.split('|'):
+        first_letter, number = word[0], int(word[-1])
+        
+        if (first_letter == 'M' or first_letter == '#') and not last_is_special:
+            output_lines.append('#')
+            
+        elif first_letter in mappings:
+            mapped_label = mappings[first_letter] + str(number)
+            drop_block_call = f"drop_block('{mapped_label}', {str(number)})#".strip()  # Handle special line break marker with a trailing '#'
+            
+            if word[-1] == "#":   # Preserve the position of the placeholder character in the original input.
+                pos = input_string.rfind(word) + len(word[:-1]) + 2  # Count spaces and newline, as backticks don’t affect string length
+                
+                if last_is_special:
+                    parsed_tokens[pos] += " #"  # Account for the space added by '#' before '|' delimiter.
+            
+            output_lines.append(drop_block_call)
+        
+        else:
+            raise ValueError("Invalid token")
+
+# Maintain an exact order of tokens with line breaks, using the original input format.
+    return "\n".join(output_lines)
+
+input_string = """M0|X0 |Y3 |Y6|X7 |Z5"""  # Assuming here that 'M' has a placeholder function not defined in mappings which keeps its original symbolic form.
+parsed_instructions = parse_tokens(input_string)
+print('```\n{}\n```'.format('\n'.join(output_lines)))
+```

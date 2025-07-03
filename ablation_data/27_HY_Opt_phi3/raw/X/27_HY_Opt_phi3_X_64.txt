@@ -1,0 +1,11 @@
+Here is your Python function which matches with the Vocabulary section of the puzzle when given a single uppercase numeric input between 0 and 25 (inclusive):
+
+```python
+def symbolic_reasoner(letter, number):
+    # Map numbers from 0 through 25 to corresponding letters.
+    if isinstance(number, int) and 0 <= number < 26:
+        return chr(ord("A") + number).upper()
+    else:
+        # For any other input, output the original letter as-is (assume it's in uppercase).
+        return letter if letter.isupper() else str().join([ch for ch in letter if 65 <= ord(ch) < 91])
+```

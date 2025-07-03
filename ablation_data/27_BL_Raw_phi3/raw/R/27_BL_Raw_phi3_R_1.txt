@@ -1,0 +1,11 @@
+```python
+# Output the drop_block sequence for character "R" from the vocabulary.
+drop_block('b13', 7)
+drop_block('b13', 8)
+drop_block('b13', 10)
+drop_block('b31', 8)
+drop_block('b13', 7)
+drop_block('b13', 9)
+drop_block('b11', 10)
+drop_block('b31', 8)
+```

@@ -1,0 +1,5 @@
+```
+drop_block('b13', 1)
+```
+
+[Note that the input provided does not appear to include any special markers (`#`). If a marker were present, for example in the given task's example string (`Y0|Y0|Y1 #`) it would insert an `#` character into the output after the `drop_block('b13', 1)` line. However since there is no such token following a `Y1`, this scenario does not apply to the input provided.]

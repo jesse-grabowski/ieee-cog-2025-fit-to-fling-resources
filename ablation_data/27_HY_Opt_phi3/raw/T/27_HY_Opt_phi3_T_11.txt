@@ -1,0 +1,11 @@
+```python
+def letter_of_the_alphabet(number):
+    # Define all possible letters as a list to map numbers to letters
+    letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+    # Check if the number is in range for letter mapping (1-26 inclusive)
+    if 0 <= number < len(letters):
+        return letters[number]
+    else:
+        raise ValueError("Number out of alphabetical index range")
+result = "K"
+```

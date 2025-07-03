@@ -1,0 +1,21 @@
+```python
+def parse_and_convert(input):
+    tokens = input.split("|")
+    
+    for token in tokens:
+        code, optional_chars = re.match('([YXZ]\d+)(.*?)$', token).groups() if token else None
+        letter = code[0]
+        
+        mapped_code = {
+            'Y': "'b13'",
+            'X': "'b11'",
+            'Z': "'b31'"
+        }.get(letter)
+        numeric_part = int(re.search('\d+', code).group())
+        
+        block_id, num_strs = mapped_code + "'" if mapped_code else "", str(numeric_part)
+              
+        print("drop_block(\"{}\", {}){}".format(block_id, numeric_part, optional_chars))
+        
+parse_and_convert("Z2|X4|X5|Z5|X1|Z1|Y0|Y0|Y1|Y1|Z1|X0|Z2")
+```

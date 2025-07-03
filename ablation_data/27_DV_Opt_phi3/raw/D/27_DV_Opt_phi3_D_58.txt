@@ -1,0 +1,1 @@
+There's no valid block dropping simulation output for this input as it doesn't contain any of the required letter tokens that map to block IDs.

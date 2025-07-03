@@ -1,0 +1,7 @@
+Letter = L  
+Number = 34   
+Output is M, the letter obtained by subtracting Number from maximum index value of alphabet (26 in this case) and using modulus operation with total letters count(26). As per task description - if number ≥ 26, get remainder of division. For instance, for L (position as per 0-indexed English alphabets is A=0, B=1,...,Z=25), positioning letter M at index [34 modulo 26] = 8 corresponds to I if 0-indexed and thus G when 1-indexed. But here, since we are subtracting from max(26)=26 itself, this number maps directly to 'M' (which is the result of L-e=(number - max)/length_Of_Alphabets)
+So for positional alphabet mapping with one extra index after Z i.e., A=1,...,Z=27 as per the question instructions, G would also map to M itself when we subtract 9(M's Index starting from zero).  
+Output: M or G based on instructions.
+Explanation: For L, letter mapped with our rule and using modulus operation for excessive number gives us G (alphabet count is A=0,..., Z=26) and therefore output as 'G' by subtracting position of L from 9 in a cycle of English alphabet. If we interpret the instructions to start counting alphabets from index 1 instead of zero, then this example outputs M.
+Output:

@@ -1,0 +1,22 @@
+```python
+input_string = "Y0|X0 #|Y3|Y6|X6|Z1|Z5"
+output_strings = []
+
+tokens = input_string.split("|")
+for token in tokens:
+    mapped_token = ""
+
+    for i, char in enumerate(token):
+        if not char.isdigit():
+            mapped_token += f'drop_block(\042{char}\042, {token[i+1:]}) '
+            
+    output_strings.append(''.join([output + '\n' for output in mapped_token.split()]))
+
+# Remove trailing spaces from the last command if any
+if output_strings[-1][-3:] == '\n':
+    output = f"""{output_strings} #"""[0:-2] + f"""\n#{output_strings[-1][-3:]}#"""
+else:
+    output = ''.join(output_strings)
+
+print(f"```\n{output}```")
+```

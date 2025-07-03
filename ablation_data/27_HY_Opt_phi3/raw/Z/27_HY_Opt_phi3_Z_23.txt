@@ -1,0 +1,39 @@
+```python
+def advanced_selector(letter, number):
+    # Step 1
+    if letter.isdigit():
+        return chr((int(''.join([str(ord(char) - ord('A') for char in letter]))
+    
+    original_constraint = (number <= len(letters)) and letters[number] == "!":
+    # Step 10
+    if len(letter) > 0 and isalpha():
+        return chr(ord('Z') - ord(letter.upper()) + 1) if letter.upper() in 'BCDFGHJKLMNPQRSTVWXYZ' else None    
+    # Step 12
+    vowels = 'AEIOU'
+    if letter.lower() in vowels:
+        number += 1
+        for k,v in reversed_letters.items():
+            if k == ord(letter.upper()) - ord('A'):  
+                return "!"
+    
+    # Step 13
+    non_ambiguous = all(ord(char) < ord('I') or letter not in vowels for char in letters[number][2:].replace(',', ''))
+        return chr((ord(letters[number][0]) + [9, -5][non_ambiguous] % 26)   # modulo operation after step 10 and before Step 14 is applied.
+    else:
+        if number < len(uppercase):
+            return (letter + letters[number][0 : -2])if non_ambiguous
+        elif letter.lower() in vowels:
+            return "!"
+        
+    # Step 9
+    result = chr((ord(letters[(ord(letter) - ord('A')) % 26]
+        if original_constraint == True or (original_constraint == False and result != '!') else None
+    
+    return result.upper() if number <= len(uppercase_letters()) and result else "-"   # Default output of Step 14 handling vowel increment collision.
+
+# Constants for the task
+letter = "M"
+number = 23
+output = advanced_selector(letter, number)
+print("Output:", f"```\n{output}```")
+```

@@ -1,0 +1,10 @@
+```drop_block('b31', 6)
+drop_block('b13', 10) #
+drop_block('b31', 9)
+drop_block('b31', 6)
+drop_block('b11', 5)
+drop_block('b13', 7)
+drop_block('b31', 6)
+```
+
+Please note that since 'X' does not have a predefined number in the given instruction, we default to its positional alphabetical order after all numbers with decimals are parsed. The "#" character is preserved directly following each corresponding function call without any space or manipulation of other tokens.

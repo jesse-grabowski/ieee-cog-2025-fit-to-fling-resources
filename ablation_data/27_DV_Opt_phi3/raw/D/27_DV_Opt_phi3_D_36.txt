@@ -1,0 +1,13 @@
+```python
+def parse_tokens(input_str):
+    tokens = input_str.split('|')    
+    output_lines = []     
+
+    for token in tokens:       
+        letter, number_part = token[0], token[1:]   # Split the input into letters and digits         
+        block_id = ('b'+letter) if letter == 'Y' else ('bb' + str(int('Z'+number_part)))    
+        
+        output_line = f"drop_block('{block_id}', {token[1:])}"   
+        output_lines.append(output_line)  
+    return '\n'.join(output_lines) 
+```

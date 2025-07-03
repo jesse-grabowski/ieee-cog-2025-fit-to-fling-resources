@@ -1,0 +1,11 @@
+```python
+# Given INPUT as "ADF", we can break it down to individual letters and use the corresponding output mapping from VOCABULARY
+letter1 = 'A'
+letter2 = 'D'
+letter3 = 'F'
+
+output_from_Vocabulary = (INPUT, letter1) + ", "  # first input is always b11 with value 8 (as per the pattern from INPUT to OUTPUT mapping in VOCABULARY)
+output_from_Vocabulary += drop_block('b31', str(int(letter2)+1)) + ";"
+output_from_Vocabulary += drop_block('b11', "8") + ";"  # second letter maps to output with 'out-num' = (9 for letters B, D), incrementing by last letter ('F' -> 5+6) from INPUT sequence
+output_from_Vocabulary += drop_block('b31', str(int(letter2)+(str.islower(letter3))) + ";" # third letter: 'F' - 'A' = last number in output (with condition of using previous sequence as starting point)
+```

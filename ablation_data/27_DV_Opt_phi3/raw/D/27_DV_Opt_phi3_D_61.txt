@@ -1,0 +1,29 @@
+```python
+def parse_tokens(input_str):
+    tokens = input_str.split('|')  
+    output_lines = []                    
+    for token in tokens:               
+        letter, number = token[:1], int(token[1:])              
+        base_id = ''            
+        if letter == 'Y': 
+            base_id = 'b13'
+        elif letter == 'X': 
+            base_id = 'b11'
+        elif letter == 'Z': 
+            base_id = 'b31'
+          
+        output_line = f"drop_block('{base_id}', {number})" + token[len(str(number)):]  
+        output_lines.append(f"#{output_line}\n#") if len(token) > len(str(number)) else output_lines.append(f"{output_line}\n#")  
+          
+    return '```\n' + '\n'.join(output_lines) + '\n```'
+
+input_str = "Y0|Y1 #|X2|Y3|Z1"
+
+print(parse_tokens(input_str))
+
+# ```
+# drop_block('b13', 0)
+# drop_block('b13', 1) #
+# drop_block('b11', 2)
+# drop_block('b13', 3)
+# drop_block('b31', 1)```

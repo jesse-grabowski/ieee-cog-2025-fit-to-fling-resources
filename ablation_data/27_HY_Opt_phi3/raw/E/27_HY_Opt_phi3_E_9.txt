@@ -1,0 +1,37 @@
+```python
+def expert_mystical_builder(input):
+    vocabulary = {
+        'A': [
+            "drop_block('b11', 8)",
+            "drop_block('b11', 10)",
+            "drop_block('b31', 9)",
+            "drop_block('b11', 8)",
+            "drop_block('b11', 10)",
+            "drop_block('b31', 9)",
+            "drop_block('b11', 8)",
+            "drop_block('b11', 10)"
+        ],
+        'B': [
+            "drop_block('b31', 9)",
+            "drop_block('b11', 11)",
+            "drop_block('b13', 8)",
+            "drop_block('b13', 10)",
+            "drop_block('b13', 11)",
+            "drop_block('b31', 9)",
+            "drop_block('b11', 11)",
+            "drop_block('b11', 8)",
+            "drop_block('b11', 10)"]},
+        'C': [
+            "drop_block('b31', 10)",
+            "drop_block('b13', 9)",
+            "drop_block('b13', 10)"],
+        # Continue defining others...
+    }
+    
+    if input in vocabulary:
+        return '\n'.join(vocabulary[input])
+    else:
+        return f'No mystical blueprint for {input}'
+```
+--- 
+Use `expert_mystical_builder('I')` to create the structure corresponding to 'I' in Constructora.

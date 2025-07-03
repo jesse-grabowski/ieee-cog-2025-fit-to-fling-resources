@@ -1,0 +1,11 @@
+```python
+def drop_block(letter):
+    alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    index = ord(letter.upper()) - ord('A') + (26 if number > 0 else 0)
+    encrypted_char = chr((index + number) % 26 + ord('A'))
+    return f'drop_block(\'{encrypted_char}\')'
+```
+input_letter = 'N'
+number = 6
+output = drop_block(input_letter, number)
+print("Output:", output)

@@ -1,0 +1,37 @@
+```python
+# Mapping of letters to block IDs according to the instructions provided
+mapping = {'Y': 'b13', 'X': 'b11', 'Z': 'b31'}
+
+def parse_input(user_input):
+    # Splitting user input by a pipe ('|') separator into tokens
+    tokens = [token.strip() for token in user_input.split("|")]
+    
+    parsed_output = []  # To store the final output
+    
+    for token in tokens:
+        letter, num_and_trailing_chars = "", ""
+        
+        if len(token) > 1:  # There are trailing characters apart from the number
+            for i, char in enumerate(token):
+                if not char.isalpha() and (i == 1 or token[0].isupper()) \
+                        and char.isdigit():  # If character is a digit after an uppercase letter...
+                    num_and_trailing_chars = token[i:]   
+                else:  # Otherwise, it's part of the input block ID
+                    letter += char          
+        
+        output = f"drop_block('{mapping.get(letter, '')}', {num_and_trailing_chars})" \
+                 if token and (letters := [i for i in range(len(token)) if not token[i].isdigit()])\
+                             else ""   # Rule 9: Ignore non valid input characters.
+        
+        output += f" #{num_and_trailing_chars}" if num_and_trailing_chars and num_and_trailing_chars[0] == "#"\
+            and token != "" else ""   # Rule 5: Preserve trailing characters with the function call.   
+        
+        parsed_output.append(output)      
+    
+    return "\n".join(parsed_output)
+
+# Example using the function - Inserting a new command for Y -> Y
+user_input = "Z1|X0|X1 #|Z1|X1|X0|Z1"  # User's command with example tokens.
+parsed_command = parse_input(user_input)   
+print("```\n{}".format(parsed_command) if user_input else "")  # Formatting the final output as specified in Rule 7: Output should be encased within triple backticks (```) and separated by new lines.
+```

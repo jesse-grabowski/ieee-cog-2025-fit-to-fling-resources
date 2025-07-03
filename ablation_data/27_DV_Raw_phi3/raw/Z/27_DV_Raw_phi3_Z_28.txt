@@ -1,0 +1,20 @@
+```python
+# Define the token mappings as a dictionary for easy lookup.
+mappings = {
+    'Y': 'b13',
+    'X': 'b11',
+    'Z': 'b31'
+}
+
+# Input wrapped in triple backticks are removed.
+input_string = "Z6|Z6|Z9|Z9|X5|X6|Z6 #|Z6|X6|X7|Z6|Z6"
+tokens = input_string.split('|')
+formatted_outputs = []
+# Iterate over each token in the list.
+for i, token in enumerate(tokens):
+    if '#' in token:  # Handle special marker case.
+        drop_block = ['drop_block(\'' + mappings[token[:1]] + '\', '+ token[-1] + ')']
+        formatted_outputs.append('\n'.join(drop_block))  # Join lines using newline character.
+    else:
+        
+            drop_block('b31', int(token[0]))  # Normal block dropping case with conversion to integer.

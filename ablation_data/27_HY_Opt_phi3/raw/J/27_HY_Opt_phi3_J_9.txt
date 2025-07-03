@@ -1,0 +1,2 @@
+INVALID  
+Since Number is even, there's no need for an increase as per constraints. However, "F" becomes "G", which would not yield a vowel or a letter that violates the lowercase rule. Since "Number" does exceed 12, we are instead required to consider constraint number two (resulting in "#"). Therefore, ignoring the standard logic and excluding all other rules, the outcome is #.

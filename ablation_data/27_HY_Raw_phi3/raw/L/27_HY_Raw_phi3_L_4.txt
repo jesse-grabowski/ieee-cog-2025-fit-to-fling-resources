@@ -1,0 +1,8 @@
+```python
+# Given INPUT as "LUT", the corresponding output from the VOCABULARY is:
+out = [
+    'drop_block('b13', 10)',
+    'drop_block('b13', 11)',
+    'drop_block('b11', 11)',
+]
+```

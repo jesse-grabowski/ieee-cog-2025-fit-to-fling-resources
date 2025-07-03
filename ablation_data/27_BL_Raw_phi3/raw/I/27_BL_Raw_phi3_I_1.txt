@@ -1,0 +1,6 @@
+```python
+# Output from VOCABULARY for input "I"
+
+drop_block('b13', 10)
+drop_block('b13', 10)
+```

@@ -1,0 +1,6 @@
+```
+drop_block('b13', 1)
+drop_block('b31', 5) #
+drop_block('b11', 2)
+```
+This output respects the rules by converting each input token into `drop_block(<mapped>, <full number>)` calls with the correct mappings and full numerical values preserved.

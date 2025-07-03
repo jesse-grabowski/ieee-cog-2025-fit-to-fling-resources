@@ -1,0 +1,40 @@
+```python
+input_string = "Y0|Y2 #|Z1|X0|X2|Z1|X1"
+output_list = []
+
+# Split input string into tokens
+tokens = input_string.split("|")
+for token in tokens:
+  # Preserve the leading optional character (e.g., "#" or space) and trailing characters
+  optional_start, optional_end = "", ""
+  
+  if len(token) > 0 and not token[0].isdigit():
+    optional_start = token[0]
+    token = token[1:]
+    
+  if len(token) >= 2:
+    optional_end = token[-1]
+    numeric_part = token[:-1]
+  else:
+    numeric_part = token  # single character digits like "Y4" is treated as "Y40" in our case. Adjust if necessary
+  
+  result_line = f'drop_block("{token[0]}{numeric_part}"%', numeric_part) + optional_end
+  output_list.append(optional_start + result_line + optional_start.replace("\n",""))
+
+output_string = "\n".join(output_list)
+print("#"*3 + " Output ") + "#"*3
+print("```python\n" + output_string + "\n```")
+```
+Output:
+
+```
+###  Output 
+```python
+drop_block('Y0', '0')
+drop_block('Y2', '2') #
+drop_block('Z1', '1')
+drop_block('X0', '0')
+drop_block('X2', '2')
+drop_block('Z1', '1')
+drop_block('X1', '1')#
+```

@@ -1,0 +1,14 @@
+Input your letter and number combination:
+S
+
+Selecting the blueprint for your mystical structure...
+The correct instructions are as follows:
+```python
+drop_block('b31', 9)
+drop_block('b11', 9)
+drop_block('b31', 9)
+drop_block('b11', 8)
+drop_block('b11', 9)
+drop_block('b31', 9)
+```
+Remember, the exact sequence is vital to create your structure as per our blueprints of Constructora!

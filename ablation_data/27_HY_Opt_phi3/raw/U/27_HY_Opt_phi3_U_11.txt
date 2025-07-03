@@ -1,0 +1,9 @@
+```
+drop_block('b13', 7)
+drop_block('b13', 8)
+drop_block('b13', 10)
+drop_block('b31', 8)
+drop_block('b13', 9)
+
+# Error: This response does not match the given output and vocabulary. The correct output for 'D' or any negative number is unknown since such values are undefined in the mystical blueprints of Constructora.  
+```

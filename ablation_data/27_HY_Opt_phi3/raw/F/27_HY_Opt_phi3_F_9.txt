@@ -1,0 +1,10 @@
+``` 
+Z
+```
+
+Input your mystical blueprints as a character and index number. For example, type `G` for the 0th position (which is 'A') or `H` for the 7th place (which remains 'H'). Should you seek the letter at Number 26, enter any Letter with it:  
+
+```
+Letter: U   Number: 15   Output: N   
+Input: L  3   Output: D
+```

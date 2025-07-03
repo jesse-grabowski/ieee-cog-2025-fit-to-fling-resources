@@ -1,0 +1,11 @@
+```
+drop_block('b13', 9)
+drop_block('b31', 10)
+drop_block('b13', 9)
+drop_block('b13', 11)
+```
+
+---
+**Explanation:** Letter `S` in uppercase corresponds to number 8 (H). Subtracting this from one more than 26 gives us the number 19. However, when we consider a circular pattern that wraps around after Z back to A, 19 represents letter H and not I (`I` would have been 7 or 0 in our defined range of 0-25). The output sequence hence matches with the blueprint for `H`.
+
+---

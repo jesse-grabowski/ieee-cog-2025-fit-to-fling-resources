@@ -1,0 +1,41 @@
+```python
+""" Parsing block-dropping instructions """
+
+def parse(input_str):
+    # Establish mappings for letters to respective block IDs.
+    mapping = {
+        'Y': 'b13',
+        'X': 'b11',
+        'Z': 'b31'
+    }
+    
+    # Split the input string into tokens based on `|`.
+    tokens = input_str.split('|')
+    
+    output = []  # List to store formatted drop block calls.
+
+    for token in tokens:
+        # Break down each token to letter and number parts (assuming single digit by default).
+        letter, _sep, num = token[:1], '', token[1:]
+        
+        # Map the number of character digits after a potential delimiter-like char if one exists.
+        idx = next((i for i in range(len(num)) if not num[i].isdigit()), None)  # find non digit index position or return None.
+        if idx and (idx < len(token)):
+            letter, num = token[:1], token[(idx + 1):]
+        
+        try:    # To convert numeric part to integer ensuring leading zeros are maintained.
+            num_str = chr(30) * int('5' if idx else (num or '').lstrip('0'))  
+        except ValueError:    # Avoid conversion error in case of non-numeric characters other than digits after the letter.
+            output.append(f"drop_block('{mapping[letter]}', '{token}')")
+            
+        else:
+            if idx and (idx < len(token)):  # Append trailing characters only when present.
+                num_str += token[(idx + 1):]
+            output.append(f"drop_block('{mapping[letter]}', '{num_str}')")
+    
+    return '\n'.join(output)
+        
+# Input string to the function
+parsed_code = parse("Ybbcdaeifjk")  
+print(parsed_code)  # Output: drop_block('b13', 'bbcd'), drop_block('b13', 'aeij')...
+```

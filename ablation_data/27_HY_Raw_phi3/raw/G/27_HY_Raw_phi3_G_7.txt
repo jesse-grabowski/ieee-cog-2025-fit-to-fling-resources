@@ -1,0 +1,27 @@
+```python
+# Given INPUT as "GATES", we need to extract individual characters 'G', 'A', and 'T' from the input. Each character corresponds to a sequence of output commands in VOCABULARY, with an incrementing identifier for each command that follows it, starting at 'b1'. The function drop_block() will have inputs formatted as 'bXX', where XX is the incremented numerical value after the initial two-letter codes.
+
+# G -> Output starts from b13 and increments by 6
+G output:
+```
+drop_block('b13', 6)
+drop_block('b13', 7)
+drop_block('b13', 9)
+drop_block('b13', 12)
+drop_block('b13', 8)
+```
+# A -> Output starts from b31 and increments by 5, resetting to 'b1' after reaching end (from 'A' it goes up to z before starting over with b1.
+    output:
+```
+drop_block('b31', 6)
+drop_block('b31', 7)
+```
+# T -> Output starts from b10 and increments by 2 after reaching the end.
+input 'GATES' gives us following sequence for G, A and T:
+output:
+```
+drop_block('b13', 6)
+drop_block('b31', 6)
+drop_block('b8', 9)
+drop_block('b8', 10)
+```

@@ -1,0 +1,9 @@
+```python
+# Output sequence for character "L" based on the given VOCABULARY
+output = [
+    'drop_block('b13', 10)', 
+    'drop_block('b11', 11)',
+    'drop_block("b13", 10)',
+]
+print(*output, sep='\n')
+```

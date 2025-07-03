@@ -1,0 +1,19 @@
+For **INPUT:** E, the correct output would be:
+
+```
+drop_block('b31', 10)
+drop_block('b11', 9)
+drop_block('b11', 10)
+drop_block('b31', 10)
+drop_block('b11', 9)
+drop_block('b11', 10)
+```
+For **INPUT:** X, the correct output would be:
+
+```
+drop_block('b13', 9)
+drop_block('b13', 10)
+drop_block('b31', 10)
+drop_block('b13', 9)
+drop_block('b13', 10)
+```

@@ -1,0 +1,12 @@
+# The expert_letter_selector function works in the following way:
+- It receives two input parameters, `Letter`, which should be an uppercase character between A and Z (inclusive), and `Number` that can be any number.
+    - If `Letter` is a valid string representing a single letter of the English alphabet and it's in uppercase, then:
+        - It calculates zero-based index for `letter` using ASCII value (`ord(letter) - 65`). This converts A to 0, B to 1,..., Z to 25.
+    - The function checks if `Number` is within the range of 0 (for 'A') and 25 (for 'Z'). If so:
+        - It returns the letter from English alphabet corresponding as a output based on calculated index and summed with the Number.
+    - However, if input conditions are not met or if `Number` is >= 26, it simply prints the originally given character in the same way without doing any operations. This includes non-alphabetical uppercase letters from input or numbers greater than 25 for Numbers parameter.  
+    
+For our case with letter K, assuming Number (0..25) as 8:
+```python
+print(expert_letter_selector('K', 8))  # Outputs 'S' - the eighth character after 'K'.
+```

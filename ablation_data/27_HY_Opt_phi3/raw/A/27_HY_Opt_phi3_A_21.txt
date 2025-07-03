@@ -1,0 +1,16 @@
+For clarity's sake: The advanced task output examples are provided as follows, showing the outcome based on the input given above with consideration of all constraints and how precedence was determined for each scenario according to the instructions specified:  
+---
+Example #1 – Letter C and Number -35428976  
+Output: A  
+In this example, we first apply modulo congruence on our large negative number. For simplification's sake, let us assume it results in an index of B (using a small number as the divisor for simplicity). Considering that -B is not valid here and using the provided prime constraint rule, which requires us to find a letter with an alphabetical position reflective of the closest preceding prime smaller than our computed index. From our list of known primes, one such possible result would be A corresponding loosely with a 2nd English alphabetic character. Thus:  
+Output is **A**. The additional constraints take precedence in scenarios where numbers exceed valid range; hence closest preceding prime rule overrides the basic letter choice logic as per rules given herein.
+
+Example #2 – Letter L and Number 107    
+The modulo application may yield any index depending on the divisor chosen due to its large size, but considering we apply a 'large numeral rule' that brings us into negative territory or above our typical index range, closest prime constraint is again applied. Assuming L corresponds with an N in alphabet order (12th letter), and as per precomputed primes list, the largest prime just smaller than 48 would give:  
+Output which is **M**  
+The reason here we take M because it's closer to our large number after applying modulo congruence with a small number and taking into account rules of closest prior prime. Note that 'large numeral rule' precedes both Fibonacci and negative equivalences.
+
+Example #3 – Letter G and Number -107  
+The negative value triggers our new constraining rules, as the modulus operation might imply AA in standard operations but not applicable to alphabet characters (since we have A-Z). Therefore, looking at closest preceding prime for index 6 results:  
+Output is **E**. Here, additional constraints again take precedence due to exceeding valid range and negativity of Number which invalidates direct correspondence. Closest prior primes are then considered for outputs per the instructed constraint priority.
+---
