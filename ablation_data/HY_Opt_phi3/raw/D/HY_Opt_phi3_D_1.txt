@@ -1,0 +1,8 @@
+```
+drop_block('b11', 8)
+drop_block('b11', 10)
+drop_block('b11', 8)
+drop_block('b11', 10)
+...
+(Repeating the same pattern for input A, as given in the vocabulary)
+```

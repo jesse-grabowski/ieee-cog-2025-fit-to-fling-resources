@@ -1,0 +1,8 @@
+```
+drop_block('b31', 9)
+drop_block('b11', 9)
+drop_block('b11', 10)
+drop_block('b31', 9)
+```markdown
+The function calls for input "S" are:
+```
