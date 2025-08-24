@@ -4,9 +4,7 @@ This repository includes supplemental code and data for the Fit to Fling competi
 
 ## ablation_data
 
-The results of our ablation trials for Phi3 on one seed (24). This data was also used to populate our results for Section V.
-
-As our full dataset is 12GB, it won't fit in Anonymous GitHub. This repository includes a representative sample; after the paper is reviewed we will publish the entire dataset on GitHub.
+The results of our ablation trials for all models across five seeds (24-28). This data was also used to populate our results for Section V.
 
 This data is in the LLMs4PCG competition script format, so any tooling that works there should work on it as well.
 
